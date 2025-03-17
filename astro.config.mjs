@@ -4,8 +4,8 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://improved-winner-pr5gz4m.pages.github.io/',
-	base: '',
+	site: 'https://webtec-2024.github.io/website/',
+	base: 'website',
 	integrations: [
 		starlight({
 			title: 'Kursen webtec',
