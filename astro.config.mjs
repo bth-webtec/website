@@ -5,7 +5,7 @@ import starlight from '@astrojs/starlight';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://webtec-2024.github.io/website/',
-	base: 'website',
+	base: '/website',
 	integrations: [
 		starlight({
 			title: 'Kursen webtec',
@@ -15,9 +15,20 @@ export default defineConfig({
 			customCss: [
 				'./src/styles/dbwebb.css',
 			],
+			editLink: {
+				baseUrl: 'https://github.com/webtec-2024/website/tree/main',
+			},
 			social: {
 				github: 'https://github.com/webtec-2024/website',
 			},
+			head: [
+				{
+				  tag: 'base',
+				  attrs: {
+					href: '/website/'
+				  }
+				}
+			],
 			sidebar: [
 				{
 					label: 'Introduktion',
