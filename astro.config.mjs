@@ -9,6 +9,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Kursen webtec',
+			favicon: 'favicon.png',
 			logo: {
 				src: './src/assets/leaf_256x256.png',
 			},
