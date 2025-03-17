@@ -9,8 +9,6 @@ Vi tar hjälp av validatorer för att kontrollera att vi skriver koden på ett k
 
 Samtidigt som vi bygger webbplatsen bekantar vi oss med en resurser som är bra för att lära sig mer om de tekniker vi använder.
 
-_(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt – planera och prioritera var du vill lägga tiden.)_
-
 
 
 ## Labbmiljö
@@ -19,7 +17,7 @@ _(2-4 studietimmar)_
 
 Se till att du har kursens labbmiljö installerad.
 
-1. Jobba igenom "[Installera kursens labbmiljö]()" för att komma igång med din labb- och utvecklingsmiljö för kursen.
+1. Jobba igenom "[Installera kursens labbmiljö](./labbmiljo)" för att komma igång med din labb- och utvecklingsmiljö för kursen.
 
 
 
@@ -36,9 +34,9 @@ Här kan du på egen hand studera och förbereda dig inför övningar och uppgif
 
 Titta på följande inspelade föreläsningar. Föreläsningarna kan innehålla tips om läsanvisningar.
 
-1. Webbteknologier
-1. HTML
-1. CSS
+1. [Introduktion till Webbteknologier](./laromaterial/forelasning/introduktion-till-webbteknologier)
+1. [Introduktion till HTML](./laromaterial/forelasning/introduktion-till-html)
+1. [Introduktion till CSS](./laromaterial/forelasning/introduktion-till-css)
 1. JavaScript
 
 
@@ -132,7 +130,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 
 _(1-2 studietimmar)_
 
-Läs [instruktionen om hur du skall redovisa]().
+Läs [instruktionen om hur du skall redovisa](./laromaterial/instruktion/resultat-och-redovisning).
 
 Se till att följande frågor besvaras i din redovisningstext.
 

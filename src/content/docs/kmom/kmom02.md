@@ -17,8 +17,6 @@ _En stylad webbplats när övningen är klar._
 
 Lycka till när du nu kastar dig in i en underbar värld av CSS konstruktioner.
 
-_(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt – planera och prioritera var du vill lägga tiden.)_
-
 
 
 ## Läs & Studera

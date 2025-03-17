@@ -33,14 +33,17 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Introduktion',
+					collapsed: true,
 					autogenerate: { directory: 'intro' },
 				},
 				{
 					label: 'Labbmiljö',
+					collapsed: true,
 					autogenerate: { directory: 'labbmiljo' },
 				},
 				{
 					label: 'Kursrepo',
+					collapsed: true,
 					autogenerate: { directory: 'kursrepo' },
 				},
 				{
@@ -48,7 +51,13 @@ export default defineConfig({
 					autogenerate: { directory: 'kmom' },
 				},
 				{
+					label: 'Läromaterial',
+					collapsed: true,
+					autogenerate: { directory: 'laromaterial' },
+				},
+				{
 					label: 'Studieguide',
+					collapsed: true,
 					autogenerate: { directory: 'studieguide' },
 					/* items: [
 						{ label: 'Example Guide', slug: 'guides/example' },
@@ -56,6 +65,7 @@ export default defineConfig({
 				},
 				{
 					label: 'Reference',
+					collapsed: true,
 					autogenerate: { directory: 'reference' },
 				},
 			],
