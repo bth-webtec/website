@@ -11,16 +11,6 @@ Samtidigt som vi bygger webbplatsen bekantar vi oss med en resurser som är bra 
 
 
 
-## Labbmiljö
-
-_(2-4 studietimmar)_
-
-Se till att du har kursens labbmiljö installerad.
-
-1. Jobba igenom "[Installera kursens labbmiljö](./labbmiljo)" för att komma igång med din labb- och utvecklingsmiljö för kursen.
-
-
-
 ## Läs & Studera
 
 _(2-4 studietimmar)_

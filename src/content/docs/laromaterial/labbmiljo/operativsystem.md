@@ -1,6 +1,8 @@
 ---
 title: "Operativsystem" 
 description: No description.
+sidebar:
+    order: 110
 ---
 
 Du kan jobba med godtyckligt operativsystem och de vanligaste är dessa:

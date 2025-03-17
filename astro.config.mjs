@@ -37,16 +37,6 @@ export default defineConfig({
 					autogenerate: { directory: 'intro' },
 				},
 				{
-					label: 'Labbmiljö',
-					collapsed: true,
-					autogenerate: { directory: 'labbmiljo' },
-				},
-				{
-					label: 'Kursrepo',
-					collapsed: true,
-					autogenerate: { directory: 'kursrepo' },
-				},
-				{
 					label: 'Kursmoment',
 					autogenerate: { directory: 'kmom' },
 				},
