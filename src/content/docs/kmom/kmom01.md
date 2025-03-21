@@ -100,7 +100,7 @@ _(8-12 studietimmar)_
 
 Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 
-1. Jobba igenom övningen "Skapa en webbsida med HTML, CSS och JavaScript" som hjälper dig bygga en webbplats med HTML, CSS och JavaScript.
+1. Jobba igenom övningen "[Skapa en webbsida med HTML, CSS och JavaScript](./laromaterial/ovning/skapa-en-webbsida-med-html-css-och-javascript)" som hjälper dig bygga en webbplats med HTML, CSS och JavaScript.
 
 1. (läromaterial för att komma igång inför labben i js)
 
