@@ -5,8 +5,6 @@ sidebar:
     order: 150
 ---
 
-import { Card } from '@astrojs/starlight/components';
-
 ![Nodejs logo](./../../../../assets/nodejs-logo.png)
 
 Installera Node.js och npm
@@ -55,11 +53,9 @@ Nu kan du se de installerade versionerna med `$ nvm ls`.
 
 Vi kan även använda nvm för att skifta mellan installerade versioner men det är inget vi behöver göra i kursen.
 
-<Card title="Tips" icon="seti:yml">
-  För att din miljö ska känna till det nyinstallerade `node` behöver du starta om terminalen.
-</Card>
-
-
+:::caution
+För att din miljö ska känna till det nyinstallerade `node` behöver du starta om terminalen.
+:::
 
 Verifiera att Node.js fungerar
 -------------------------------
