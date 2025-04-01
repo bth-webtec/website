@@ -1,11 +1,15 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import { remarkReadingTime } from './src/plugins/remark-reading-time.mjs';
 import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://webtec-2024.github.io/website/',
 	base: '/website',
+	markdown: {
+		remarkPlugins: [remarkReadingTime],
+	},
 	integrations: [
 		starlight({
 			title: 'Kursen webtec',
