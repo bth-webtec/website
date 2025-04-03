@@ -19,7 +19,8 @@ export default defineConfig({
 			title: 'Kursen webtec',
 			favicon: 'favicon.png',
 			logo: {
-				src: './src/assets/leaf_256x256.png',
+				//src: './src/assets/leaf_256x256.png',
+				src: '@assets/leaf_256x256.png',
 			},
 			customCss: [
 				'./src/styles/dbwebb.css',

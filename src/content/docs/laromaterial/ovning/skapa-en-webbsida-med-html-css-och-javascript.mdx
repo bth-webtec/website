@@ -11,8 +11,18 @@ revision:
     "2015-04-29": "(A, mos) Första utgåvan inför htmlphp version 2."
 ---
 
+---
+
 import Figure from '@components/Figure.astro';
 import YouTube from '@components/YouTube.astro';
+
+import { Image } from 'astro:assets'
+import localBirdImage from '@assets/leaf_256x256.png';
+
+<Image 
+    src={localBirdImage}
+    alt="Resultatet från denna övningsartikel, en webbplats, en me-sida."
+/>
 
 <Figure 
     src="https://dbwebb.se/image/webtec/html-css-php/style_php_me.png"
@@ -77,7 +87,7 @@ Vi sparar allt vårt arbete i kursrepot i katalogen `me/kmom01`. Låt mig visa h
 
 Öppna din terminal och gå till ditt kursrepo.
 
-```bash
+```console
 # Ställ dig i rooten av kursrepot
 
 # Gå till arbetskatalogen
@@ -89,7 +99,7 @@ ls -al
 
 Nu skapar jag ett par kataloger för att ge en grundstruktur till webbplatsen. Tanken är att katalogen `public/` innehåller allt som behöver vara publikt och tillgängligt på webbplatsen och övriga kataloger är sådant som inte behöver vara tillgängligt via webbservern. Det är en bra start.
 
-```bash
+```console
 # Skapa kataloger för den publika delen
 mkdir public
 mkdir public/img
@@ -102,7 +112,7 @@ mkdir view
 
 Nu tänker jag skapa ett par tomma filer, det är dessa filer som vi senare skall fylla med innehåll.
 
-```bash
+```console
 # Skapa tomma filer som är blivande webbsidor, sidkontroller
 touch public/me.php
 touch public/about.php
@@ -122,8 +132,7 @@ touch view/footer.php
 
 Bra, då är vi nästan klara. Jag tänkte ladda hem ett par bilder först. För din egen del så kan du använda dessa bilder först, senare kan du själv ersätta dem med andra bilder.
 
-```bash
-# Hämta hem bilder från nätet via en webblänk och spara lokalt
+```console title="Hämta hem bilder från nätet via en webblänk och spara lokalt"
 wget -O public/img/favicon.png https://dbwebb.se/img/bth-leaf.png
 wget -O public/img/me.png https://dbwebb.se/img/prata-med-ankan.png
 wget -O public/img/me_small.jpg https://dbwebb.se/img/mikael-roos/mos-tjaro-square.jpg
@@ -134,7 +143,7 @@ Kommandot `mkdir` skapar nya kataloger, kommandot `touch` skapar nya tomma filer
 
 När vi är klara så ser strukturen ut så här. Du kan själv kolla din egen struktur via kommandot `ls -lR` eller om du installerar kommandot `tree` med din pakethanterare, tex `apt install tree` eller `brew install tree`.
 
-```bash
+```console title="Katalogstruktur när du är klar"
 $ tree .
 .                           
 ├── config                  
@@ -314,7 +323,7 @@ Så här blev det för mig.
 
 Först publicerar jag sidan.
 
-```bash title="Publisera din webbplats"
+```console title="Publicera din webbplats"
 dbwebb publish kmom01
 ```
 
