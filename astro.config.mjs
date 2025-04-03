@@ -61,11 +61,11 @@ export default defineConfig({
 						{ label: 'Example Guide', slug: 'guides/example' },
 					],*/
 				},
-				{
+				/*{
 					label: 'Reference',
 					collapsed: true,
 					autogenerate: { directory: 'reference' },
-				},
+				},*/
 			],
 		}),
 	],
