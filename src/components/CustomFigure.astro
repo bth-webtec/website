@@ -14,7 +14,6 @@ const { src, alt, caption, width = 800, height = 400 } = Astro.props;
   {caption && <figcaption>{caption}</figcaption>}
 </figure>
 
-<!-- Fullscreen Modal -->
 <div id="imageModal" style="display:none;">
   <span id="closeModal" style="position: absolute; top: 20px; right: 20px; font-size: 30px; cursor: pointer;">&times;</span>
   <img id="modalImage" style="width: 100%; max-width: 100%;" />
@@ -22,26 +21,20 @@ const { src, alt, caption, width = 800, height = 400 } = Astro.props;
 </div>
 
 <script>
-// Wait until the page is fully loaded before adding event listeners
 window.addEventListener('load', function() {
-  // Get the figure and modal elements
   const figure = document.getElementById("imageFigure");
   const modal = document.getElementById("imageModal");
   const modalImg = document.getElementById("modalImage") as HTMLImageElement;
   const captionText = document.getElementById("caption") as HTMLElement;
 
-  // Ensure the modal and figure exist before adding event listeners
   if (figure && modal && modalImg && captionText) {
-    // Add click event listener to the figure (image)
     figure.addEventListener("click", function(event: MouseEvent) {
       const clickedImg = event.target as HTMLImageElement;
 
       if (clickedImg && modalImg) {
-        // Open the modal and display the clicked image
         modal.style.display = "block";
         modalImg.src = clickedImg.src;
 
-        // Set the caption
         const caption = clickedImg.nextElementSibling;
         if (caption && caption.nodeName === 'FIGCAPTION') {
           captionText.innerHTML = caption.innerHTML;
@@ -49,7 +42,6 @@ window.addEventListener('load', function() {
       }
     });
 
-    // Add click event to close the modal when the close button is clicked
     const closeModalButton = document.getElementById("closeModal");
     if (closeModalButton) {
       closeModalButton.addEventListener("click", function() {
@@ -57,7 +49,6 @@ window.addEventListener('load', function() {
       });
     }
 
-    // Close the modal if clicked outside the image
     window.addEventListener("click", function(event: MouseEvent) {
       if (event.target === modalImg || event.target === modal) {
         modal.style.display = "none";
@@ -68,29 +59,27 @@ window.addEventListener('load', function() {
 </script>
 
 <style>
-  /* Modal Styles */
   #imageModal {
     position: fixed;
-    top: 50%; /* Center the modal vertically */
-    left: 50%; /* Center the modal horizontally */
-    transform: translate(-50%, -50%); /* Adjust position to ensure it's centered */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 1000;
     display: none;
-    width: 80%; /* Limit the width of the modal to 80% of the viewport */
-    max-width: 900px; /* You can set a maximum width for the modal */
-    max-height: 80%; /* Limit the modal's height */
-    border-radius: 8px; /* Optional: Adds rounded corners */
-    overflow: hidden; /* Ensures content doesn't overflow */
+    width: 80%;
+    max-width: 900px;
+    max-height: 80%;
+    border-radius: 8px;
+    overflow: hidden;
     padding: 20px;
-    box-sizing: border-box; /* Ensures padding doesn't increase the total width */
+    box-sizing: border-box;
   }
 
-  /* Image inside the modal */
   #modalImage {
-    max-width: 100%;  /* Image takes up 100% of the modal width */
-    max-height: 100%; /* Image takes up 100% of the modal height */
-    object-fit: contain; /* Ensure the image scales properly without distortion */
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
   }
 
   #caption {
