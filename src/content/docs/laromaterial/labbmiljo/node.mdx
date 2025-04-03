@@ -33,9 +33,10 @@ Installationsanvisningar
 
 Dessa anvisningar göller för Windows (WSL), Mac eller Linux
 
-En vanlig metod för att installera och hantera Nodejs är att använda "nvm" (node version manager). Vi börjar med att installera programmet cURL, som används för att hämta filer från internet via terminalen. Om det är installerat redan kan du skippa den installationen.
+En vanlig metod för att installera och hantera Nodejs är att använda "nvm" (node version manager).
+{/* Vi börjar med att installera programmet cURL, som används för att hämta filer från internet via terminalen. Om det är installerat redan kan du skippa den installationen. */}
 
-Du kan se om det är installerat med följande kommando:
+{/* Du kan se om det är installerat med följande kommando:
 ```console
 $ which curl
 /usr/bin/curl
@@ -48,20 +49,18 @@ Om du inte ser en sökväg likt ovan kan du enkelt installera cURL:
 $ sudo apt install curl
 ```
 
-Bra, nu kan vi hämta och installera nvm enligt nedan:
+Bra, nu kan vi hämta och installera nvm enligt nedan: */}
 
-```console
-$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+
+```console title="Hämta nvm med cURL"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 ```
 
-Installera senaste LTS versionen:
+:
 
-```console
-$ nvm install --lts
-# I skrivande stund är det v22.14.0
+```console title="Installera senaste LTS versionen"
+nvm install --lts
 ```
-
-Nu kan du se de installerade versionerna med `$ nvm ls`.
 
 Vi kan även använda nvm för att skifta mellan installerade versioner men det är inget vi behöver göra i kursen.
 
@@ -74,16 +73,14 @@ Verifiera att Node.js fungerar
 
 Du kan nu köra JavaScript med node. Pröva följande.
 
-```console
-$ node --help
-$ node --eval "console.log('Hello World')"
-Hello World
+```console title="Skriv ut 'Hello World' med node"
+node --eval "console.log('Hello World')"
 ```
 
 Du kan också köra node interaktivt och evaluera JavaScript rad för rad. Programmet visar att den är redo för inmatning med prompten `>`.
 
 
-```console
+```console title="Starta node interaktivt"
 $ node
 > console.log("Hej")
 Hej
@@ -92,10 +89,10 @@ Hej
 
 Du kan också låta nodejs köra JavaScript-program som finns i filer.
 
-```console
-$ echo "console.log('Hello')" > hello.js
+```console title="Exekvera JavaScript från en fil"
+$ echo "console.log('Hej')" > hello.js
 $ node hello.js
-Hello
+Hej
 ```
 
 
