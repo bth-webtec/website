@@ -1,9 +1,25 @@
 ---
 title: "Kom igång" 
-description: No description.
+description: Hur du förbereder dig för att påbörja det första kursmomentet.
 ---
 
-Lä om vad ett kursmoment handlar om och hur du förbereder dig för att påbörja det första kursmomentet.
+:::danger
+Denna del är ännu inte påbörjad eller genomgången.
+:::
+
+Utför följande instruktioner för att förbereda dig inför kursen.
+
+
+
+## Kursintro
+
+Här är en video som "pratar" dig igenom kursens upplägg och delar av innehållet i detta dokumentet.
+
+<YouTube
+    id="K7F5IVgK1bg"
+    caption="Kursintroduktion till kursen webtec med Mikael."
+/>
+
 
 
 

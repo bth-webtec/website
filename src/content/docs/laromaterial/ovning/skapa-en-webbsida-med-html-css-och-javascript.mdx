@@ -14,19 +14,25 @@ revision:
 ---
 
 import Figure from '@components/Figure.astro';
+import CustomFigure from '@components/CustomFigure.astro';
 import YouTube from '@components/YouTube.astro';
 
 import { Image } from 'astro:assets'
 import localBirdImage from '@assets/leaf_256x256.png';
 
-<Image 
-    src={localBirdImage}
+<CustomFigure 
+    src="https://dbwebb.se/image/webtec/html-css-php/style_php_me.png"
     alt="Resultatet från denna övningsartikel, en webbplats, en me-sida."
 />
 
 <Figure 
     src="https://dbwebb.se/image/webtec/html-css-php/style_php_me.png"
     caption="Resultatet från denna övningsartikel, en webbplats, en me-sida."
+/>
+
+<Image 
+    src={localBirdImage}
+    alt="Resultatet från denna övningsartikel, en webbplats, en me-sida."
 />
 
 Vill man bli webbprogrammerare så behöver man lära sig flera tekniker och hur de samverkar. Låt oss därför, steg för steg, skapa en liten webbplats med HTML, CSS och PHP.

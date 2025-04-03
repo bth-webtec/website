@@ -3,6 +3,10 @@ title: "Kmom10: Projekt och examination"
 description: No description.
 ---
 
+:::danger
+Denna del är under arbete pch inte klar.
+:::
+
 Detta kursmoment avslutar och examinerar kursen.
 
 Du jobbar enskilt och tar inte hjälp av någon.

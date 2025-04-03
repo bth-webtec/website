@@ -1,15 +1,13 @@
 ---
 title: Studieplanering och schema
-description: No description.
+description: Detaljer om schema, rekommenderad studieplanering och lektionsplan.
+sidebar:
+    order: 130
 ---
 
-Lyft ut detaljer om schema, rekommenderad studieplanering och eventuell lektionsplan hit.
-
-## Planering och studieplaner
-
-
-Planering och studieplaner
----------------------------------------------
+:::danger
+Fundera på hur kursens planering skall visualiseras för studenterna, därefter uppdatera detta dokumentet.
+:::
 
 Eftersom kursen ges kombinerat på campus och distans så är kursens planering fördelad på ett antal olika dokument. Bekanta dig med dem så att du har koll på hur kursens upplägg fungerar och vilket som är en normaltakt för kursen.
 

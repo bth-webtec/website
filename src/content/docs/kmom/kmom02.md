@@ -3,6 +3,10 @@ title: "Kmom02: Styla en webbplats"
 description: No description.
 ---
 
+:::danger
+Denna del är under arbete pch inte klar.
+:::
+
 Vi fortsätter att jobba på den webbplats vi byggde i förra kursmomentet och nu handlar det om att styla upp webbplatsens olika delar och lära oss mer om CSS.
 
 Vi utgår från en ostylad sida, likt följande.

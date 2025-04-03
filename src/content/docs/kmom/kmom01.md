@@ -3,6 +3,10 @@ title: "Kmom01: Kom igång med HTML, CSS och JavaScript"
 description: Första kmomet.
 ---
 
+:::danger
+Denna del är under arbete pch inte klar.
+:::
+
 Vi börjar med att bygga en enkel webbplats med grunderna i HTML, CSS och JavaScript. Vi skapar en god struktur och uppdelning av filer och kataloger som förbereder oss för större projekt. Vi lär oss grundeläggande begrepp som används när man bygger en webbplats.
 
 Vi tar hjälp av validatorer för att kontrollera att vi skriver koden på ett korrekt sätt.
