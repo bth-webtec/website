@@ -5,12 +5,16 @@ sidebar:
     order: 150
 ---
 
-import { Image } from 'astro:assets';
 import nodejslogo from '@assets/nodejs-logo.png';
+import CustomFigure from '@components/CustomFigure.astro'
 
-<Image 
-    src={nodejslogo}
-    alt="node js logo"
+
+<CustomFigure
+  src={nodejslogo}
+  alt="Node.js Logo"
+  caption="This is the Node.js logo"
+  width={200}
+  height={300}
 />
 
 
