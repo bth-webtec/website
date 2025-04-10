@@ -1,0 +1,10 @@
+body {
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: #ccc;
+}
+
+main {
+    background-color: lightgreen;
+    padding: 1em;
+}
