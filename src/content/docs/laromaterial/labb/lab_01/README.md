@@ -42,18 +42,11 @@ cd lab_01
 Nu skall vi hämta fyra filer från nätet som behövs för att komma igång med labben. Skriv följande kommandon i powershell.
 
 ```
-LAB_SOURCE="https://raw.githubusercontent.com/webtec-2024/website/refs/heads/main/src/content/docs/laromaterial/labb/lab_01" \
-    && LAB_FILE="lab.html"  curl --silent $LAB_SOURCE/$LAB_FILE > $LAB_FILE \
-    && LAB_FILE="main.js"   curl --silent $LAB_SOURCE/$LAB_FILE > $LAB_FILE \
-    && LAB_FILE="lab.js"    curl --silent $LAB_SOURCE/$LAB_FILE > $LAB_FILE \
-    && LAB_FILE="module.js" curl --silent $LAB_SOURCE/$LAB_FILE > $LAB_FILE 
+curl -sS -o lab.html https://raw.githubusercontent.com/webtec-2024/website/refs/heads/main/src/content/docs/laromaterial/labb/lab_01/lab.html
+curl -sS -o main.js https://raw.githubusercontent.com/webtec-2024/website/refs/heads/main/src/content/docs/laromaterial/labb/lab_01/main.js
+curl -sS -o lab.js https://raw.githubusercontent.com/webtec-2024/website/refs/heads/main/src/content/docs/laromaterial/labb/lab_01/lab.js
+curl -sS -o module.js https://raw.githubusercontent.com/webtec-2024/website/refs/heads/main/src/content/docs/laromaterial/labb/lab_01/module.js
 ```
-
-wget -OutFile lab.html https://gitlab.com/mikael-roos/webbutveckling2/-/raw/main/lab/lab_03/lab.html
-wget -OutFile main.js https://gitlab.com/mikael-roos/webbutveckling2/-/raw/main/lab/lab_03/main.js
-wget -OutFile lab.js https://gitlab.com/mikael-roos/webbutveckling2/-/raw/main/lab/lab_03/lab.js
-wget -OutFile module.js https://gitlab.com/mikael-roos/webbutveckling2/-/raw/main/lab/lab_03/module.js
-
 
 När du är klar kan det se ut så här.
 
