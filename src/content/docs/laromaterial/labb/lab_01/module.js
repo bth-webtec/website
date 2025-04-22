@@ -10,7 +10,7 @@
  */
 export function hello () {
     // TODO: Write your code here.
-    return "";
+    return "Hello world";
 }
 
 
@@ -22,127 +22,166 @@ export function hello () {
  */
 export function magicNumber () {
     // TODO: Write your code here.
+    return 42;
 }
 
 
 
 /**
- * Checks the incoming value and returns boolean TRUE if it is higher than 42 or FALSE if it is 
- * lower than 42 or 0 when the incoming number is equal to 42.
+ * Returns the length of the word "Hello world".
  *
- * @param {number} number - The number to compare with 42.
- * @returns {number} The numeric value 42.
+ * @returns {number} The length of the string "Hello world".
  */
-export function compare (number) {
+export function stringLength () {
     // TODO: Write your code here.
+    return "Hello world".length;
 }
 
 
 
 /**
- * Convert celcius degrees to fahrenheit degrees.
+ * Returns the product of 7 and 6.
  *
- * @param {number} celcius - The degree value in celcius.
- * @returns {number} The degree value in fahrenheit.
+ * @returns {number} The product of 7 and 6.
  */
-export function celsiusToFahrenheit (celcius) {
+export function product () {
     // TODO: Write your code here.
+    return 7 * 6;
 }
 
 
 
 /**
- * Sum all values from 1 up to the argument n.
+ * Returns the sum of two float values.
  *
- * @param {number} n - Last value to sum.
- * @returns {number} Sum of all integers between 1 and up to n.
+ * @returns {number} The sum of 42.2 and 34.5.
  */
-export function sumToN (n) {
+export function sumFloat () {
     // TODO: Write your code here.
+    return 42.2 + 34.5;
 }
 
 
 
 /**
- * Check if a number is odd.
+ * Returns the sum of two float values, rounded to the lower integer value.
  *
- * @param {number} number - A number to check.
- * @returns {boolean} True if the number is odd, otherwise false.
+ * @returns {number} The sum of 42.2345 and 34.55452, rounded to lower integer value.
  */
-export function isOdd (number) {
+export function sumFloatRoundedLower () {
     // TODO: Write your code here.
+    return Math.floor(42.2345 + 34.55452);
 }
 
 
 
 /**
- * Sum all values in an array.
+ * Returns the sum of two float values, rounded to the higher integer value.
  *
- * @param {number[]} numbers - All values to sum.
- * @returns {number} Sum of all numbers in the array.
+ * @returns {number} The sum of 42.2345 and 34.55452, rounded to the higher integer value.
  */
-export function sum (numbers) {
+export function sumFloatRoundedHigher () {
     // TODO: Write your code here.
+    return Math.ceil(42.2345 + 34.55452);
 }
 
 
 
 /**
- * Find the highest number in an array.
+ * Returns the difference between two float values, rounded to two decimals.
  *
- * @param {number[]} numbers - All values to to search in.
- * @returns {number} Highest value in the array.
+ * @returns {number} The difference between 42.543265 and 76.887585, rounded to two decimals.
  */
-export function max (numbers) {
+export function diffFloatRoundedActual () {
+    // Hint: To round a value to four decimals you can use: Math.round(value*10000)/10000
+    // Where <value> is the number to be rounded
+    
     // TODO: Write your code here.
+    let value =  76.887585 - 42.543265;
+
+    return Math.round(value*100)/100;
 }
 
 
 
 /**
- * Reverse a string.
+ * Returns the value of PI, rounded to four decimals. PI can be found in Math.PI.
  *
- * @param {string} str - A string.
- * @returns {string} The reversed represention of the string.
+ * @returns {number} The value of PI, rounded to four decimals.
  */
-export function reverseString (str) {
+export function roundPI () {    
     // TODO: Write your code here.
+
+    return Math.round(Math.PI*10000)/10000;
 }
 
 
 
 /**
- * Count the number of words in a string where the word separator is a space.
+ * Returns a concatinated string, with a space between the words.
  *
- * @param {string} str - A string.
- * @returns {number} Number of words in the string.
+ * @returns {string} The concatinated string from "Hello" and "everyone".
  */
-export function countWords (str) {
+export function concatinateString () {    
     // TODO: Write your code here.
+    let first = "Hello"
+    let second = "everyone"
+
+    return first + " " + second;
 }
 
 
 
 /**
- * Count the number of swedish vowels in a string.
+ * Returns the character at index 4 using the built-in method charAt().
  *
- * @param {string} str - A string.
- * @returns {number} Number of vowels in the string.
+ * @returns {string} The character at index 4 in "JavaScript".
  */
-export function countVowels (str) {
+export function charAtPosition () {    
     // TODO: Write your code here.
+
+    return "JavaScript".charAt(4);
 }
 
 
 
 /**
- * Check if the string is a palindrom.
+ * Returns the string "programming" in uppercase.
  *
- * @param {string} str - A string.
- * @returns {boolean} True if the string is a palindrom, otherwise false.
+ * @returns {string} The string "programming" in uppercase.
  */
-export function isPalindrom (str) {
+export function upper () {    
     // TODO: Write your code here.
+
+    return "programming".toUpperCase();
+}
+
+
+
+/**
+ * Returns the string "programming" with the first character in uppercase.
+ * Hint: slice()
+ * @returns {string} The string "programming", with the first character in uppercase.
+ */
+export function upperFirst () {    
+    // TODO: Write your code here.
+    let word = "programming"
+    return word.charAt(0).toUpperCase() + word.slice(1);
+}
+
+
+
+/**
+ * Returns the last three characters in the word "Polarbear".
+ * Hint: substr()
+ *
+ * @returns {string} last three characters in the word "Polarbear".
+ */
+export function substring () {
+    
+    // TODO: Write your code here.
+    let word = "Polarbear"
+    return word.substring(word.length-3);
 }
 
 

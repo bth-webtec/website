@@ -10,40 +10,28 @@ console.log(lab.assert(module.hello, [], "Hello world"))
 
 console.log(lab.assert(module.magicNumber, [], 42))
 
-console.log(lab.assert(module.compare, [50], true))
-console.log(lab.assert(module.compare, [40], false))
-console.log(lab.assert(module.compare, [42], 0))
+console.log(lab.assert(module.stringLength, [], 11))
 
-console.log(lab.assert(module.celsiusToFahrenheit, [0], 32))
-console.log(lab.assert(module.celsiusToFahrenheit, [20], 68))
-console.log(lab.assert(module.celsiusToFahrenheit, [-20], -4))
+console.log(lab.assert(module.product, [], 42))
 
-console.log(lab.assert(module.sumToN, [1], 1))
-console.log(lab.assert(module.sumToN, [2], 3))
-console.log(lab.assert(module.sumToN, [4], 10))
+console.log(lab.assert(module.sumFloat, [], 76.7))
 
-console.log(lab.assert(module.isOdd, [1], true))
-console.log(lab.assert(module.isOdd, [42], false))
+console.log(lab.assert(module.sumFloatRoundedLower, [], 76))
 
-console.log(lab.assert(module.sum, [[1, 2, 3]], 6))
-console.log(lab.assert(module.sum, [[1]], 1))
-console.log(lab.assert(module.sum, [[]], 0))
+console.log(lab.assert(module.sumFloatRoundedHigher, [], 77))
 
-console.log(lab.assert(module.max, [[1, 2, 3, 6, 5, 4]], 6))
-console.log(lab.assert(module.max, [[1, -1]], 1))
-console.log(lab.assert(module.max, [[10, 9, 8, -10]], 10))
+console.log(lab.assert(module.diffFloatRoundedActual, [], 34.34))
 
-console.log(lab.assert(module.reverseString, ['abc'], 'cba'))
-console.log(lab.assert(module.reverseString, ['Mikael'], 'leakiM'))
+console.log(lab.assert(module.roundPI, [], 3.1416))
 
-console.log(lab.assert(module.countWords, ['Mumintrollet bor i skogen.'], 4))
-console.log(lab.assert(module.countWords, [' Hej jag heter Mikael '], 4))
+console.log(lab.assert(module.concatinateString, [], "Hello everyone"))
 
-console.log(lab.assert(module.countVowels, ['aeiouyåäö.'], 9))
-console.log(lab.assert(module.countVowels, ['Mumintrollet bor i skogen.'], 8))
+console.log(lab.assert(module.charAtPosition, [], "S"))
 
-console.log(lab.assert(module.isPalindrom, ['AbccbA'], true))
-console.log(lab.assert(module.isPalindrom, ['AbcbA'], true))
-console.log(lab.assert(module.isPalindrom, ['Mumintroll'], false))
+console.log(lab.assert(module.upper, [], "PROGRAMMING"))
+
+console.log(lab.assert(module.upperFirst, [], "Programming"))
+
+console.log(lab.assert(module.substring, [], "ear"))
 
 console.log(lab.done())
