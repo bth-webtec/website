@@ -7,7 +7,7 @@ sidebar:
 
 import nodejslogo from '@assets/nodejs-logo.png';
 import CustomFigure from '@components/CustomFigure.astro'
-
+import { Steps } from '@astrojs/starlight/components';
 
 <CustomFigure
   src={nodejslogo}
@@ -34,18 +34,19 @@ Installationsanvisningar
 Dessa anvisningar göller för Windows (WSL), Mac eller Linux
 
 En vanlig metod för att installera och hantera Nodejs är att använda "nvm" (node version manager).
+<Steps>
 
+1. ```console title="Hämta nvm med cURL"
+   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+   ```
 
+   
 
-```console title="Hämta nvm med cURL"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
-```
+2. ```console title="Installera senaste LTS versionen"
+   nvm install --lts
+   ```
 
-:
-
-```console title="Installera senaste LTS versionen"
-nvm install --lts
-```
+</Steps>
 
 Vi kan även använda nvm för att skifta mellan installerade versioner men det är inget vi behöver göra i kursen.
 
