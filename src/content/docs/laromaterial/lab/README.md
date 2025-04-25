@@ -61,7 +61,7 @@ $ node lab_01/lab
 ```
 
 ```console title="Kör en av labbarna med 'solution'-filen med -s."
-$ node lab_01_FIXED/lab -s
+$ node lab_01/lab -s
 ✅ 1p. hello(), expected: "Hello world", actual: "Hello world"
 ✅ 1p. magicNumber(), expected: 42, actual: 42
 ✅ 1p. stringNumber(42), expected: "42", actual: "42"
@@ -95,9 +95,67 @@ $ node lab_01_FIXED/lab -s
 
 
 
+## Poängberäkning i labben
+
+Labbverktyget är hårdkodat så att följande nivåer gäller för poängen som kan uppnås i en labb.
+
+```js
+  static PASS = 15
+  static PASS_W_HONOUR = 19
+  static PASS_TOTAL = 21
+```
+
+Feedbacken till studenten, i form av emojis, är beroende av dessa hårdkodade gränser.
+
+```js
+    if (points === 0) {
+      msg = "Try to earn 1 point to get started... 😏"
+    } else if (points === 1) {
+      msg = "Nice work, lets go, do another! 😉"
+    } else if (points === this.PASS - 3) {
+      msg = "Just three more to PASS. Lets go. 😅"
+    } else if (points === this.PASS - 2) {
+      msg = "Just two more to PASS. Lets go. 😅"
+    } else if (points === this.PASS - 1) {
+      msg = "Just one more to PASS. Lets go. 😅"
+    } else if (points === this.PASS) {
+      msg = "Excellent, you have PASSED. One more? 😁"
+    } else if (points === this.PASS_W_HONOUR - 2) {
+      msg = "Two more to PASS WITH HONOUR! Lets go. 😅"
+    } else if (points === this.PASS_W_HONOUR - 1) {
+      msg = "One more to PASS WITH HONOUR! Lets go. 😅"
+    } else if (points === this.PASS_W_HONOUR) {
+      msg = "That is the way, you PASSED WITH HONOUR! 😍"
+    } else if (points === this.PASS_TOTAL) {
+      msg = "What can I say. You impress me. 🙌"
+    }
+```
+
+Labben är uppbyggd av funktioner. En funktion kan ta argument och skall returnera ett värde. En funktion kan testas av en eller flera assertions. Alla assertions måste passeras för att man skall få poäng för funktionen.
+
+Default är att varje funktion ger 1 poäng, vill man att en funktion skall vara värd mer så anger man det med ett optionellt fjärde argument, första gången man gör en assert på den funktionen.
+
+```js ins="5"
+dbw.assert(lab.isPalindrom, ['AbccbA'], true, 5)
+dbw.assert(lab.isPalindrom, ['AbcbA'], true)
+dbw.assert(lab.isPalindrom, ['Mumintroll'], false)
+```
+
+I ovan kod så är det 5 poäng för funktionen `isPalindrom`. Man anger poängen vid den första assertionen.
+
+En lab kan innehålla godtyckligt antal funktioner, normalt vore max 21 funktioner (har inte testat eller funderat på att ge en halv poäng för en uppgift).
+
+Troligen har man ofta färre antal funktioner på en labb och måste då finna en poängsättning så att totalpoängen alltid blir 21.
+
+Flexibiliteten ligger alltså i att du kan ha godtydligt antal funktioner som du väljer poängsättning för men du skall alltid summera till 21.
+
+Var inte rädd för att ge 5 poäng för en enklare funktion och sätta 1 poäng för de svåra funktionerna, även om det kan kännas avigt. Med poängen kan du styra vilka delar av labben som studenten utför.
+
+
+
 ## Använd utvecklingsverktyg
 
-Du kan köra eslint när du står i översta katalogen.
+Du kan köra eslint när du står i översta katalogen där labbarna finns.
 
 ```console title="Varianter att köra eslint."
 # Kör eslint för alla labbar
@@ -131,16 +189,16 @@ export function add (value1, value2) {
 Utför en eller flera asserts för att testa funktionen, placera dessa asserts i filen `lab.js`.
 
 ```js
-dbw.assert(lab.add, [], undefined)
+dbw.assert(lab.add, [], null)
 ```
 
-Argumenten till assert-funktionen är namnet på funktionen som skall testas, en array med argument som skickas till funktionen samt vad funktionen förväntas returnera.
+Argumenten till assert-funktionen är namnet på funktionen som skall testas `lab.add`, en array med argument som skickas till funktionen `[]` samt vad funktionen förväntas returnera `null`.
 
-Kör labben och försäkra dig om att det blir ett ❌ för testfallet. m det inte blir utfallet så väljer du att returnera ett dummy-värde från funktionen så att det alltid blir en negativ assert till att börja med.
+Kör labben och försäkra dig om att det blir ett ❌ för testfallet. Om det inte blir utfallet så väljer du att returnera ett dummy-värde från funktionen så att det alltid blir en misslyckad assert till att börja med.
 
-I detta exempel väljer jag att returnera -1 vilket gör att asserten ger fel.
+I detta exempel väljer jag att returnera -1 vilket gör att asserten inte uppfylls. I detta fallet kan jag även helt utelämna att returnera något, om det ger en misslyckad assert.
 
-```js
+```diff lang="js"
 /**
  * Returns the sum of two integer values.
  * 
@@ -150,15 +208,66 @@ I detta exempel väljer jag att returnera -1 vilket gör att asserten ger fel.
  */
 export function add (value1, value2) {
   // TODO: Write your code here.
-  return -1
++  return -1
 }
 ```
 
 Nu fyller vi på med fler testfall i form av assertions.
 
 ```js
-
+dbw.assert(lab.add, [], null)
+dbw.assert(lab.add, [1], null)
+dbw.assert(lab.add, [1, 1], 2)
 ```
+
+Kör labben så att du ser att alla assertions misslyckas.
+
+```console title="Alla assertions misslyckas nu."
+$ node lab
+❌ 1p. add(), expected: null, actual: -1
+❌ 1p. add(1), expected: null, actual: -1
+❌ 1p. add(1, 1), expected: 2, actual: -1
+```
+
+Nu kan du kopiera funktionen till `solution.js` och implementera den med ett lösningsförslag. När du är klar så kör du labben med lösningsfilen, för att dubbelkolla att alla assertions passerar.
+
+```console title="Alla assertions bör passera när solutions används."
+$ node lab -s
+✅ 1p. add(), expected: null, actual: null
+✅ 1p. add(1), expected: null, actual: null
+✅ 1p. add(1, 1), expected: 2, actual: 2
+```
+
+Nu är du redo att lägga till ytterligare en funktion i din labb.
+
+
+
+## Utmaningen att skriva bra funktioner till labben
+
+Det finns en utmaning i att skriva bra funktioner till labbarna.
+
+Det kan vara lämpligt att inleda med enkla funktioner så att studenten kommer igång. Därefter gör man funktionerna svårare och svåra medans de allra sista kan vara lagom utmanande.
+
+När labbarna blir allt svårare så kan man även låta studenterna återanvända funktioner de tidigare skrivit i labben.
+
+När man gör labbar med klasser (eller moduler) så kan de definieras i externa filer som importeras till `answer.js` och på det sättet blir varje funktion i labben som en litet main-program.
+
+Man bör testa och fila på sina labb-funktioner så att de ger önskat lär-resultat för studenten, med tanke på de lärmoment man utför tillsammans med labben.
+
+Gör även efterföljande uppgifter där studenten kan dra nytta av lärdomar från labben. Det ger ytterligare motivation till att utföra labben innan man gör uppgifterna.
+
+Det är troligen rimligt att låta studenten ta del av `solutions.js` så att den själv kan bestämma om den vill tjuvkika på lösningar. Ibland kan det vara bra att visa olika typer av lösningar, när det är lämpligt. Till exempel kan man lösa en uppgift med antingen `for()` eller `foreach()` och båda lösningarna kan visas.
+
+Använd gärna labb-funktioner som material för genomgång och handledning. Det ger en möjlighet att skriva små kodstycken med ett tydligt fokus och det ger möjlighet att fokusera på hur läraren tänker kring problemlösning då koden skapas steg för steg.
+
+Försök finna en råd tråd genom labben så att uppgifterna hänger ihop på ett lämpligt sätt.
+
+Gör funktioner så att studenten kan gå tillbaka till labben för att se hur de löste en viss sak i labben.
+
+Se till att du kan hjälpa studenten med liknande kommentarer:
+
+> Ah, men du minns kanske att vi löste ett sådant problem i slutet av lab 2, eller hur?
+
 
 
 ## Att göra
@@ -186,3 +295,31 @@ Man kan begränsa utskriften för studenten så att det enbart blir en utskrift 
 Om en assertion går fel så skriver man ut alla assertions för den funktionen.
 
 Det bör finnas med en debug-variant där samliga assertions skrivs ut.
+
+
+
+## Dokumentation
+
+En labb består av följande filer.
+
+| Filnamn | Innehåll |
+|---------|----------|
+| `dbw.js` | Verktyget för att köra labben, här finns insamling av statistik, funktioner för att utföra assertions och för att skriva ut en avslutande summering av labben. |
+| `lab.js` | Main-programmet för att köra labben med assertions, här importeras det som behövs och alla assertions körs. |
+| `answer.js` | Alla funktioner som studenten skall implementera för att utföra labben. |
+| `solution.js` | Lösningar till labben, studenten kan ha tillgång till dessa för att se olika alternativ för implementation av en funktion. |
+| `lab.html` | Kör denna filen i webbläsaren och labben exekveras i devtools console. |
+
+
+
+## Distribution av labb till studentens repo
+
+Exakt format för hur vi väljer att distribuera labben till studentens repo kvarstår att bestämma.
+
+En variant är att vi minskar antalet filer som studenten behöver och inkluderar `dbw.js` in i `lab.js`.
+
+En variant är att importera allt som behövs överst i `lab.js` från en webbplats och på det sättet behöver studenten enbart en fil i sitt repo.
+
+Studenten kan använda `curl` för att ladda hem en lab. Om en lab består av flera filer kan nedladdning alternativt ske genom ett skript sin finns på github och pipas in i bash.
+
+Studenten kan välja att köra labben via node `node lab` eller via webbläsaren `lab.html`.

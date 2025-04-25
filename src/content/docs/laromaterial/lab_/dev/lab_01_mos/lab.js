@@ -15,7 +15,9 @@ const lab = process.argv[2] === '-s' ? labs : laba
 
 dbw.assert(lab.hello, [], "Hello world")
 
-dbw.assert(lab.add, [], undefined)
+dbw.assert(lab.add, [], null)
+dbw.assert(lab.add, [1], null)
+dbw.assert(lab.add, [1, 1], 2)
 
 dbw.assert(lab.magicNumber, [], 42)
 
@@ -42,7 +44,7 @@ dbw.assert(lab.max, [[1, 2, 3, 6, 5, 4]], 6)
 dbw.assert(lab.max, [[1, -1]], 1)
 dbw.assert(lab.max, [[10, 9, 8, -10]], 10)
 
-dbw.assert(lab.reverseString, ['abc'], 'cba', 2)
+dbw.assert(lab.reverseString, ['abc'], 'cba')
 dbw.assert(lab.reverseString, ['Mikael'], 'leakiM')
 
 dbw.assert(lab.countWords, ['Mumintrollet bor i skogen.'], 4, 3)

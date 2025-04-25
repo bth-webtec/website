@@ -21,6 +21,20 @@ export function hello () {
 
 
 /**
+ * Returns the sum of two integer values.
+ * 
+ * @param {number} value1 - The first number to add.
+ * @param {number} value2 - The second number to add.
+ * @returns {number} The sum of the two values.
+ */
+export function add (value1, value2) {
+  // TODO: Write your code here.
+  return value1 + value2
+}
+
+
+
+/**
  * Returns the numeric value 42.
  *
  * @returns {number} The numeric value 42.
