@@ -283,7 +283,7 @@ Följande är förbättringsförslag.
 Det kan vara svårt att se raden som visar antalet "poäng" och de funktioner/poäng som man "träffat".
 
 ```console title="Inga poäng är tagna."
-|  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  😁  ⦾  ⦾  ⦾  😍  ⦾  🙌  ⦾ 
+|  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  😁  ⦾  ⦾  ⦾  😍  ⦾  🙌 
 ```
 
 ```console title="10 poäng är avklarade."
