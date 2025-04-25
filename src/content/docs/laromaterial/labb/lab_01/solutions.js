@@ -19,174 +19,218 @@ export function hello () {
  */
 export function magicNumber () {
     // TODO: Write your code here.
-    return 42
+    return 42;
 }
 
 
 
 /**
- * Checks the incoming value and returns boolean TRUE if it is higher than 42 or FALSE if it is 
- * lower than 42 or 0 when the incoming number is equal to 42.
- *
- * @param {number} number - The number to compare with 42.
- * @returns {number} The numeric value 42.
+ * Returns the string representation of the incoming number.
+ * Hint: toString()
+ * 
+ * @param {number} value - The number to cast to string.
+ * @returns {string} The string representation.
  */
-export function compare (number) {
+export function stringNumber (value) {
+  // TODO: Write your code here.
+
+  return value.toString();
+}
+
+
+
+/**
+ * Returns the length of the incoming string.
+ *
+ * @param {string} word - The string to use.
+ * @returns {number} The length of the string.
+ */
+export function stringLength (word) {
     // TODO: Write your code here.
-    if (number > 42) {
-        return true
-    } else if (number < 42) {
-        return false
-    }
-    return 0
+    return word.length;
 }
 
 
 
 /**
- * Convert celcius degrees to fahrenheit degrees.
+ * Returns the product of the incoming numbers.
  *
- * @param {number} celcius - The degree value in celcius.
- * @returns {number} The degree value in fahrenheit.
+ * @param {number} value1 - The first number to use.
+ * @param {number} value2 - The second number to use.
+ * @returns {number} The product.
  */
-export function celsiusToFahrenheit (celcius) {
+export function product (value1, value2) {
     // TODO: Write your code here.
-    return 9/5 * celcius + 32
+    return value1 * value2;
 }
 
 
 
 /**
- * Sum all values from 1 up to the argument n.
+ * Returns the sum of two incoming numbers.
  *
- * @param {number} n - Last value to sum.
- * @returns {number} Sum of all integers between 1 and up to n.
+ * @param {number} value1 - The first number to use.
+ * @param {number} value2 - The second number to use.
+ * @returns {number} The sum.
  */
-export function sumToN (n) {
+export function sumValues (value1, value2) {
+  // TODO: Write your code here.
+
+  return value1 + value2;
+}
+
+
+
+/**
+ * Returns the sum of two incoming float values, rounded to the lower integer value.
+ * Hint: Math.floor()
+ * 
+ * @param {number} value1 - The first number to use.
+ * @param {number} value2 - The second number to use.
+ * @returns {number} The sum of value1 and value2, rounded to lower integer value.
+ */
+export function sumFloatRoundedLower (value1, value2) {
     // TODO: Write your code here.
-    let sum = 0
-    for (let i = 1; i <= n; i++) {
-        sum += i
-    }
-    return sum
+
+    return Math.floor(value1 + value2);
 }
 
 
 
 /**
- * Check if a number is odd.
- *
- * @param {number} number - A number to check.
- * @returns {boolean} True if the number is odd, otherwise false.
+ * Returns the sum of incoming two float values, rounded to the higher integer value.
+ * Hint: Math.ceil()
+ * 
+ * @param {number} value1 - The first number to use.
+ * @param {number} value2 - The second number to use.
+ * @returns {number} The sum of value1 and value2, rounded to the higher integer value.
  */
-export function isOdd (number) {
-    // TODO: Write your code here. 
-    return number % 2 == 1 ? true : false
-}
-
-
-
-/**
- * Sum all values in an array.
- *
- * @param {number[]} numbers - All values to sum.
- * @returns {number} Sum of all numbers in the array.
- */
-export function sum (numbers) {
+export function sumFloatRoundedHigher (value1, value2) {
     // TODO: Write your code here.
-    let sum = 0;
-    for (const element of numbers) {
-        sum += element
-    }
-    return sum
+
+    return Math.ceil(value1 + value2);
 }
 
 
 
 /**
- * Find the highest number in an array.
- *
- * @param {number[]} numbers - All values to to search in.
- * @returns {number} Highest value in the array.
+ * Returns the difference between two incoming float values, rounded to two decimals.
+ * Hint: To round a value to four decimals you can use: Math.round(value*10000)/10000
+ * 
+ * @param {number} value1 - The first number to use.
+ * @param {number} value2 - The second number to use.
+ * @returns {number} The difference between value1 and value2, rounded to two decimals.
  */
-export function max (numbers) {
+export function diffFloatRoundedActual (value1, value2) {   
     // TODO: Write your code here.
-    return Math.max(...numbers)
+
+    let difference =  value1 - value2;
+
+    return Math.round(difference*100)/100;
 }
 
 
 
 /**
- * Reverse a string.
+ * Returns the value of PI, rounded to four decimals.
+ * Hint: Math.PI
  *
- * @param {string} str - A string.
- * @returns {string} The reversed represention of the string.
+ * @returns {number} The value of PI, rounded to four decimals.
  */
-export function reverseString (str) {
+export function roundPI () {    
     // TODO: Write your code here.
-    let reverse = ''
-    for (let i = str.length - 1; i >= 0; i--) {
-        reverse += str[i]
-    }
-    return reverse
+
+    return Math.round(Math.PI*10000)/10000;
 }
 
 
 
 /**
- * Count the number of words in a string where the word separator is a space.
+ * Returns a concatinated string of the incoming string, with a space between the words.
  *
- * @param {string} str - A string.
- * @returns {number} Number of words in the string.
+ * @param {string} word1 - The first string to use.
+ * @param {string} word2 - The second number to use.
+ * @returns {string} The concatinated string.
  */
-export function countWords (str) {
+export function concatinateString (word1, word2) {    
     // TODO: Write your code here.
-    str = str.trim()
-    let countSpace = 0
-    for (let i = 0; i < str.length; i++) {
-        if (str[i] === ' ') {
-            countSpace++
-        }
-    }
-    return countSpace + 1
+
+    return word1 + " " + word2;
 }
 
 
 
 /**
- * Count the number of swedish vowels in a string.
- *
- * @param {string} str - A string.
- * @returns {number} Number of vowels in the string.
+ * Returns the character at index 4 of the incoming string.
+ * Hint: charAt()
+ * 
+ * @param {string} word - The string to use.
+ * @returns {string} The character at index 4 in the incoming string.
  */
-export function countVowels (str) {
+export function charAtPosition (word) {    
     // TODO: Write your code here.
-    const vowel = ['a', 'e', 'i', 'o', 'u', 'y', 'å', 'ä', 'ö']
-    let numVowel = 0
-    for (let i = 0; i < str.length; i++) {
-        if (vowel.includes(str[i])) {
-            numVowel++
-        }
-    }
-    return numVowel
+
+    return word.charAt(4);
 }
 
 
 
 /**
- * Check if the string is a palindrom.
- *
- * @param {string} str - A string.
- * @returns {boolean} True if the string is a palindrom, otherwise false.
+ * Returns the incoming string in uppercase.
+ * Hint: toUpperCase()
+ * 
+ * @param {string} word - The string to use.
+ * @returns {string} The string in uppercase.
  */
-export function isPalindrom (str) {
+export function upper (word) {    
     // TODO: Write your code here.
-    for (let i = 0; i < str.length; i++) {
-        if (str[i] !== str[str.length - 1 - i]) {
-            return false
-        }
-    }
-    return true
+
+    return word.toUpperCase();
+}
+
+
+
+/**
+ * Returns the incoming string with the first character in uppercase.
+ * Hint: slice()
+ * 
+ * @param {string} word - The string to use.
+ * @returns {string} A string with the first character in uppercase.
+ */
+export function upperFirst (word) {    
+    // TODO: Write your code here.
+
+    return word.charAt(0).toUpperCase() + word.slice(1);
+}
+
+
+
+/**
+ * Returns the last three characters in the incoming string.
+ * Hint: substring()
+ *
+ * @param {string} word - The string to use.
+ * @returns {string} The last three characters.
+ */
+export function substring (word) {
+    // TODO: Write your code here.
+
+    return word.substring(word.length-3);
+}
+
+
+
+/**
+ * Returns a boolean weither the incoming string includes the letter "a".
+ * Hint: includes()
+ *
+ * @param {string} word - The string to use.
+ * @returns {boolean} If the incoming string includes the letter "a", return true, eler false.
+ */
+export function wordIncludes (word) {
+  // TODO: Write your code here.
+
+  return word.includes("a");
 }
 
 
