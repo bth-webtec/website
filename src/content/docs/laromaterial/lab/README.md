@@ -330,6 +330,6 @@ En variant är att vi minskar antalet filer som studenten behöver och inkludera
 
 En variant är att importera allt som behövs överst i `lab.js` från en webbplats och på det sättet behöver studenten enbart en fil i sitt repo.
 
-Studenten kan använda `curl` för att ladda hem en lab. Om en lab består av flera filer kan nedladdning alternativt ske genom ett skript sin finns på github och pipas in i bash.
+Studenten kan använda `curl` för att ladda hem en lab. Om en lab består av flera filer kan nedladdning alternativt ske genom ett skript som laddas med curl från github och pipas in i bash.
 
 Studenten kan välja att köra labben via node `node lab` eller via webbläsaren `lab.html`.
