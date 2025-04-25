@@ -99,7 +99,7 @@ $ node lab_01/lab -s
 
 ## Poängberäkning i labben
 
-Labbverktyget är hårdkodat så att följande nivåer gäller för poängen som kan uppnås i en labb.
+Poängberäkningen i labbverktyget är delvis hårdkodat så att följande nivåer gäller för poängen som kan uppnås i en labb.
 
 ```js
   static PASS = 15
