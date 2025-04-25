@@ -1,10 +1,12 @@
 ---
 title: "README" 
 description: No description.
+revision:
+    2025-04-25: (A, mos) Första versionen. 
 ---
 
 :::note
-Dett dokument är enbart för lärare.
+Detta dokument är enbart för lärare.
 :::
 
 Detta dokument beskriver hur lärarna jobbar med utvecklingen av labbarna och hur labbar driftsätts hos studenterna.
