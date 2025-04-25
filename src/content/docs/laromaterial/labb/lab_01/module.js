@@ -28,84 +28,115 @@ export function magicNumber () {
 
 
 /**
- * Returns the length of the word "Hello world".
- *
- * @returns {number} The length of the string "Hello world".
+ * Returns the string representation of the incoming number.
+ * Hint: toString()
+ * 
+ * @param {number} value - The number to cast to string.
+ * @returns {string} The string representation.
  */
-export function stringLength () {
-    // TODO: Write your code here.
-    return "Hello world".length;
+export function stringNumber (value) {
+  // TODO: Write your code here.
+
+  return value.toString();
 }
 
 
 
 /**
- * Returns the product of 7 and 6.
+ * Returns the length of the incoming string.
  *
- * @returns {number} The product of 7 and 6.
+ * @param {string} word - The string to use.
+ * @returns {number} The length of the string.
  */
-export function product () {
+export function stringLength (word) {
     // TODO: Write your code here.
-    return 7 * 6;
+    return word.length;
 }
 
 
 
 /**
- * Returns the sum of two float values.
+ * Returns the product of the incoming numbers.
  *
- * @returns {number} The sum of 42.2 and 34.5.
+ * @param {number} value1 - The first number to use.
+ * @param {number} value2 - The second number to use.
+ * @returns {number} The product.
  */
-export function sumFloat () {
+export function product (value1, value2) {
     // TODO: Write your code here.
-    return 42.2 + 34.5;
+    return value1 * value2;
 }
 
 
 
 /**
- * Returns the sum of two float values, rounded to the lower integer value.
+ * Returns the sum of two incoming numbers.
  *
- * @returns {number} The sum of 42.2345 and 34.55452, rounded to lower integer value.
+ * @param {number} value1 - The first number to use.
+ * @param {number} value2 - The second number to use.
+ * @returns {number} The sum.
  */
-export function sumFloatRoundedLower () {
-    // TODO: Write your code here.
-    return Math.floor(42.2345 + 34.55452);
+export function sumValues (value1, value2) {
+  // TODO: Write your code here.
+
+  return value1 + value2;
 }
 
 
 
 /**
- * Returns the sum of two float values, rounded to the higher integer value.
- *
- * @returns {number} The sum of 42.2345 and 34.55452, rounded to the higher integer value.
+ * Returns the sum of two incoming float values, rounded to the lower integer value.
+ * Hint: Math.floor()
+ * 
+ * @param {number} value1 - The first number to use.
+ * @param {number} value2 - The second number to use.
+ * @returns {number} The sum of value1 and value2, rounded to lower integer value.
  */
-export function sumFloatRoundedHigher () {
+export function sumFloatRoundedLower (value1, value2) {
     // TODO: Write your code here.
-    return Math.ceil(42.2345 + 34.55452);
+
+    return Math.floor(value1 + value2);
 }
 
 
 
 /**
- * Returns the difference between two float values, rounded to two decimals.
- *
- * @returns {number} The difference between 42.543265 and 76.887585, rounded to two decimals.
+ * Returns the sum of incoming two float values, rounded to the higher integer value.
+ * Hint: Math.ceil()
+ * 
+ * @param {number} value1 - The first number to use.
+ * @param {number} value2 - The second number to use.
+ * @returns {number} The sum of value1 and value2, rounded to the higher integer value.
  */
-export function diffFloatRoundedActual () {
-    // Hint: To round a value to four decimals you can use: Math.round(value*10000)/10000
-    // Where <value> is the number to be rounded
-    
+export function sumFloatRoundedHigher (value1, value2) {
     // TODO: Write your code here.
-    let value =  76.887585 - 42.543265;
 
-    return Math.round(value*100)/100;
+    return Math.ceil(value1 + value2);
 }
 
 
 
 /**
- * Returns the value of PI, rounded to four decimals. PI can be found in Math.PI.
+ * Returns the difference between two incoming float values, rounded to two decimals.
+ * Hint: To round a value to four decimals you can use: Math.round(value*10000)/10000
+ * 
+ * @param {number} value1 - The first number to use.
+ * @param {number} value2 - The second number to use.
+ * @returns {number} The difference between value1 and value2, rounded to two decimals.
+ */
+export function diffFloatRoundedActual (value1, value2) {   
+    // TODO: Write your code here.
+
+    let difference =  value1 - value2;
+
+    return Math.round(difference*100)/100;
+}
+
+
+
+/**
+ * Returns the value of PI, rounded to four decimals.
+ * Hint: Math.PI
  *
  * @returns {number} The value of PI, rounded to four decimals.
  */
@@ -118,70 +149,91 @@ export function roundPI () {
 
 
 /**
- * Returns a concatinated string, with a space between the words.
+ * Returns a concatinated string of the incoming string, with a space between the words.
  *
- * @returns {string} The concatinated string from "Hello" and "everyone".
+ * @param {string} word1 - The first string to use.
+ * @param {string} word2 - The second number to use.
+ * @returns {string} The concatinated string.
  */
-export function concatinateString () {    
+export function concatinateString (word1, word2) {    
     // TODO: Write your code here.
-    let first = "Hello"
-    let second = "everyone"
 
-    return first + " " + second;
+    return word1 + " " + word2;
 }
 
 
 
 /**
- * Returns the character at index 4 using the built-in method charAt().
- *
- * @returns {string} The character at index 4 in "JavaScript".
+ * Returns the character at index 4 of the incoming string.
+ * Hint: charAt()
+ * 
+ * @param {string} word - The string to use.
+ * @returns {string} The character at index 4 in the incoming string.
  */
-export function charAtPosition () {    
+export function charAtPosition (word) {    
     // TODO: Write your code here.
 
-    return "JavaScript".charAt(4);
+    return word.charAt(4);
 }
 
 
 
 /**
- * Returns the string "programming" in uppercase.
- *
- * @returns {string} The string "programming" in uppercase.
+ * Returns the incoming string in uppercase.
+ * Hint: toUpperCase()
+ * 
+ * @param {string} word - The string to use.
+ * @returns {string} The string in uppercase.
  */
-export function upper () {    
+export function upper (word) {    
     // TODO: Write your code here.
 
-    return "programming".toUpperCase();
+    return word.toUpperCase();
 }
 
 
 
 /**
- * Returns the string "programming" with the first character in uppercase.
+ * Returns the incoming string with the first character in uppercase.
  * Hint: slice()
- * @returns {string} The string "programming", with the first character in uppercase.
+ * 
+ * @param {string} word - The string to use.
+ * @returns {string} A string with the first character in uppercase.
  */
-export function upperFirst () {    
+export function upperFirst (word) {    
     // TODO: Write your code here.
-    let word = "programming"
+
     return word.charAt(0).toUpperCase() + word.slice(1);
 }
 
 
 
 /**
- * Returns the last three characters in the word "Polarbear".
- * Hint: substr()
+ * Returns the last three characters in the incoming string.
+ * Hint: substring()
  *
- * @returns {string} last three characters in the word "Polarbear".
+ * @param {string} word - The string to use.
+ * @returns {string} The last three characters.
  */
-export function substring () {
-    
+export function substring (word) {
     // TODO: Write your code here.
-    let word = "Polarbear"
+
     return word.substring(word.length-3);
+}
+
+
+
+/**
+ * Returns a boolean weither the incoming string includes the letter "a".
+ * Hint: includes()
+ *
+ * @param {string} word - The string to use.
+ * @returns {boolean} If the incoming string includes the letter "a", return true, eler false.
+ */
+export function wordIncludes (word) {
+  // TODO: Write your code here.
+
+  return word.includes("a");
 }
 
 
