@@ -286,7 +286,11 @@ Det kan vara svårt att se raden som visar antalet "poäng" och de funktioner/po
 |  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  😁  ⦾  ⦾  ⦾  😍  ⦾  🙌  ⦾ 
 ```
 
-```console title="Samtliga poäng är tagna."
+```console title="10 poäng är avklarade."
+|  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦾  ⦾  ⦾  ⦾  😁  ⦾  ⦾  ⦾  😍  ⦾  🙌 
+```
+
+```console title="Samtliga 21 poäng är tagna."
 |  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿ 
 ```
 
