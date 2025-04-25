@@ -282,8 +282,12 @@ Följande är förbättringsförslag.
 
 Det kan vara svårt att se raden som visar antalet "poäng" och de funktioner/poäng som man "träffat".
 
-```console
+```console title="Inga poäng är tagna."
 |  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  😁  ⦾  ⦾  ⦾  😍  ⦾  🙌  ⦾ 
+```
+
+```console title="Samtliga poäng är tagna."
+|  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿ 
 ```
 
 Kanske kan man färgkoda när en funktion/poäng är avklarad, eller förhöja synligheten när det är avklarat.
