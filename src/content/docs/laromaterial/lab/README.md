@@ -2,6 +2,7 @@
 title: "README" 
 description: No description.
 revision:
+    2025-04-26: (B, mos) Visa hur en labb kan distribueras til en student. 
     2025-04-25: (A, mos) Första versionen. 
 ---
 
@@ -405,6 +406,18 @@ $ LAB="lab_01" bash ../download_lab.bash
 ❌ answer.js already exists, will now overwrite it.    
 ❌ solution.js already exists, will now overwrite it.  
 ```
+
+
+
+### Ladda ned labben enbart via bash och curl
+
+Så här är ett kommando för att ladda ned labben till en katalog. Det fungerar p åsamma sätt som ovan, men bash-skriptet laddas ned från github och exekveras lokalt.
+
+```console title="Ladda ned labben via ett remote skript som exekveras."
+LAB="lab_01" bash <(curl -Ls https://raw.githubusercontent.com/webtec-2024/website/refs/heads/main/src/content/docs/laromaterial/lab/target/download_lab.bash)
+```
+
+Detta är nog det enklaste sättet att distribuera en labb och samtidigt hålla nedladdningsskriptet aktuellt och uppdaterat.
 
 
 
