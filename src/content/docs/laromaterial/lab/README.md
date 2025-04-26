@@ -273,89 +273,6 @@ Se till att du kan hjälpa studenten med liknande kommentarer:
 
 
 
-## Att göra
-
-Följande är förbättringsförslag.
-
-
-
-### Förtydliga utskriften av summeringen
-
-Det kan vara svårt att se raden som visar antalet "poäng" och de funktioner/poäng som man "träffat".
-
-```console title="Inga poäng är tagna."
-|  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  😁  ⦾  ⦾  ⦾  😍  ⦾  🙌 
-```
-
-```console title="10 poäng är avklarade."
-|  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦾  ⦾  ⦾  ⦾  😁  ⦾  ⦾  ⦾  😍  ⦾  🙌 
-```
-
-```console title="Samtliga 21 poäng är tagna."
-|  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿ 
-```
-
-Kanske kan man färgkoda när en funktion/poäng är avklarad, eller förhöja synligheten när det är avklarat.
-
-
-
-### Begränsa utskriften
-
-Man kan begränsa utskriften för studenten så att det enbart blir en utskrift för varje funktion där alla assertions passeras. Det begränsar informationen som skrivs ut i terminalen och ger en bättre översikt.
-
-Om en assertion går fel så skriver man ut alla assertions för den funktionen.
-
-Det bör finnas med en debug-variant där samliga assertions skrivs ut.
-
-
-
-## Dokumentation
-
-En labb består av följande filer.
-
-
-
-### Lärarens vy
-
-Dessa filern är aktuella när läraren jobbar med utveckling av labbar.
-
-| Filnamn | Innehåll |
-|---------|----------|
-| `src/dbw.js` | Verktyget för att köra labben, här finns insamling av statistik, funktioner för att utföra assertions och för att skriva ut en avslutande summering av labben. |
-| `src/lab.html` | Mall för att köra en labb i webbläsaren och labben exekveras i devtools console. |
-| `lab_0x/README.md` | Beskrivning av labben som studenten kan läsa för att se vad labben handlar om och hur man kommer igång med labben. |
-| `lab_0x/lab.js` | Main-programmet för att köra labben med assertions, här importeras det som behövs och alla assertions körs. |
-| `lab_0x/answer.js` | Alla (tomma) funktioner som studenten skall implementera för att utföra labben. |
-| `lab_0x/solution.js` | Lösningar till labben, studenten kan ha tillgång till dessa för att se olika alternativ för implementation av en funktion. |
-
-
-
-### Studentens vy
-
-När studenten jobbar med labbar skall de placeras i en katalogstruktur för att underlätta koppling mot GitHub actions.
-
-```console title="Katalogstruktur för labbar i underkatalog i studentens repo."
-$ tree lab -L 1
-../lab
-├── lab_01
-├── lab_02
-├── lab_03
-```
-
-Dessa filer ser studenten i respektive lab-katalog när de skall jobba med labben.
-
-| Filnamn | Innehåll |
-|---------|----------|
-| `README.md` | Beskrivning av labben som studenten kan läsa för att se vad labben handlar om och hur man kommer igång med labben. |
-| `lab.html` | Öppna i webbläsaren för att exekvera labben i devtools console. |
-| `lab.js` | Main-programmet för att köra labben med assertions, här importeras det som behövs och alla assertions körs. |
-| `answer.js` | Alla (tomma) funktioner som studenten skall implementera för att utföra labben. |
-| `solution.js` | Lösningar till labben, studenten kan ha tillgång till dessa för att se olika alternativ för implementation av en funktion. |
-
-När labben distribueras till studenten så inkluderas koden för `dbw.js` in i filen `lab.js` för att minska antalet filer som distribueras.
-
-
-
 ## Distribution av labb till studentens repo
 
 Så här kan man distribuera labben till studenten, det finns flera alternativ.
@@ -428,3 +345,89 @@ Här väljer vi att preparera studentens repo med de färdiga labbfilerna så at
 :::notice
 Exakt hur detta skall ske kvarstår att bestämma.
 :::
+
+
+
+## Dokumentation
+
+En labb består av följande filer.
+
+
+
+### Lärarens vy
+
+Dessa filern är aktuella när läraren jobbar med utveckling av labbar.
+
+| Filnamn | Innehåll |
+|---------|----------|
+| `src/dbw.js` | Verktyget för att köra labben, här finns insamling av statistik, funktioner för att utföra assertions och för att skriva ut en avslutande summering av labben. |
+| `src/lab.html` | Mall för att köra en labb i webbläsaren och labben exekveras i devtools console. |
+| `lab_0x/README.md` | Beskrivning av labben som studenten kan läsa för att se vad labben handlar om och hur man kommer igång med labben. |
+| `lab_0x/lab.js` | Main-programmet för att köra labben med assertions, här importeras det som behövs och alla assertions körs. |
+| `lab_0x/answer.js` | Alla (tomma) funktioner som studenten skall implementera för att utföra labben. |
+| `lab_0x/solution.js` | Lösningar till labben, studenten kan ha tillgång till dessa för att se olika alternativ för implementation av en funktion. |
+
+
+
+### Studentens vy
+
+När studenten jobbar med labbar skall de placeras i en katalogstruktur för att underlätta koppling mot GitHub actions.
+
+```console title="Katalogstruktur för labbar i underkatalog i studentens repo."
+$ tree lab -L 1
+../lab
+├── lab_01
+├── lab_02
+├── lab_03
+```
+
+Dessa filer ser studenten i respektive lab-katalog när de skall jobba med labben.
+
+| Filnamn | Innehåll |
+|---------|----------|
+| `README.md` | Beskrivning av labben som studenten kan läsa för att se vad labben handlar om och hur man kommer igång med labben. |
+| `lab.html` | Öppna i webbläsaren för att exekvera labben i devtools console. |
+| `lab.js` | Main-programmet för att köra labben med assertions, här importeras det som behövs och alla assertions körs. |
+| `answer.js` | Alla (tomma) funktioner som studenten skall implementera för att utföra labben. |
+| `solution.js` | Lösningar till labben, studenten kan ha tillgång till dessa för att se olika alternativ för implementation av en funktion. |
+
+När labben distribueras till studenten så inkluderas koden för `dbw.js` in i filen `lab.js` för att minska antalet filer som distribueras.
+
+
+
+## Att göra
+
+Följande är förbättringsförslag.
+
+
+
+### Förtydliga utskriften av summeringen
+
+Det kan vara svårt att se raden som visar antalet "poäng" och de funktioner/poäng som man "träffat".
+
+```console title="Inga poäng är tagna."
+|  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  ⦾  😁  ⦾  ⦾  ⦾  😍  ⦾  🙌 
+```
+
+```console title="10 poäng är avklarade."
+|  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦾  ⦾  ⦾  ⦾  😁  ⦾  ⦾  ⦾  😍  ⦾  🙌 
+```
+
+```console title="Samtliga 21 poäng är tagna."
+|  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿  ⦿ 
+```
+
+Kanske kan man färgkoda när en funktion/poäng är avklarad, eller förhöja synligheten när det är avklarat.
+
+
+
+### Begränsa utskriften
+
+Man kan begränsa utskriften för studenten så att det enbart blir en utskrift för varje funktion där alla assertions passeras. Det begränsar informationen som skrivs ut i terminalen och ger en bättre översikt.
+
+Om en assertion går fel så skriver man ut alla assertions för den funktionen.
+
+Det bör finnas med en debug-variant där samliga assertions skrivs ut.
+
+
+
