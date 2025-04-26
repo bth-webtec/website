@@ -11,7 +11,7 @@
 #  LAB="lab_01" bash download_lab.bash
 #
 # Using remote:
-#  LAB="lab_01" curl
+#  LAB="lab_01" bash <(curl -Ls https://raw.githubusercontent.com/webtec-2024/website/refs/heads/main/src/content/docs/laromaterial/lab/target/download_lab.bash)
 #
 
 # Check if the LAB variable is set
