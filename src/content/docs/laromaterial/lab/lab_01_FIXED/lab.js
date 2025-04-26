@@ -7,7 +7,7 @@
  * Execute the labs from the solutionsfile like this.
  *   node lab -s
  */
-import { dbw } from './dbw.js'
+import { dbw } from '../src/dbw.js'
 import * as laba from './answer.js'
 import * as labs from './solution.js'
 
