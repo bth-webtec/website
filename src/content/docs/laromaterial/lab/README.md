@@ -357,12 +357,61 @@ När labben distribueras till studenten så inkluderas koden för `dbw.js` in i 
 
 ## Distribution av labb till studentens repo
 
-Exakt format för hur vi väljer att distribuera labben till studentens repo kvarstår att bestämma.
+Så här kan man distribuera labben till studenten, det finns flera alternativ.
 
-En variant är att vi minskar antalet filer som studenten behöver och inkluderar `dbw.js` in i `lab.js`.
 
-En variant är att importera allt som behövs överst i `lab.js` från en webbplats och på det sättet behöver studenten enbart en fil i sitt repo.
 
-Studenten kan använda `curl` för att ladda hem en lab. Om en lab består av flera filer kan nedladdning alternativt ske genom ett skript som laddas med curl från github och pipas in i bash.
+### Kör skriptet `download_lab.bash` lokalt
 
-Studenten kan välja att köra labben via node `node lab` eller via webbläsaren `lab.html`.
+I repot finns katalogen `lab/target` där alla labbar är byggda och förberedda för att distribueras.
+
+:::notice
+Att bygga labbarna skall ske med ett skript och via `npm run build` men för tillfället är det handkodad för att exemplifiera hur man kan ladda ned en labb.
+:::
+
+Här är ett exempel på hur det kan se ut när man testkör denna variant och man har tillgng till skriptet `download_lab.bash` som finns i `lab/target/download_lab.bash`.
+
+```console title="Exempel på hur labbfiler kan laddas ned till en katalog."
+
+$ mkdir work                                                                                
+$ cd work                                                                                   
+
+$ bash ../download_lab.bash                                                                 
+❌ Error: Environmentvariable LAB is not set. Exiting.                                      
+
+$ LAB="lab_0x" bash ../download_lab.bash                                                    
+❌ Error: Environmentvariable LAB contains invalid value. Exiting.                          
+
+$ LAB="lab_01" bash ../download_lab.bash                                                    
+✅ README.md                                                                                
+✅ lab.html                                                                                 
+✅ lab.js                                                                                   
+✅ answer.js                                                                                
+✅ solution.js                                                                              
+
+$ ls                                                                                        
+README.md  answer.js  lab.html  lab.js  solution.js                                         
+```
+
+Därefter kan man starta labben med `node lab` och `node lab -s` alternativt öppna `lab.html` i en webbläsare.
+
+Om man försöker ladda ned labben igen så skall filerna inte skrivas över.
+
+```console title="Filer som finns skall inte skrivas över av skriptet."
+$ LAB="lab_01" bash ../download_lab.bash               
+❌ README.md already exists, will now overwrite it.    
+❌ lab.html already exists, will now overwrite it.     
+❌ lab.js already exists, will now overwrite it.       
+❌ answer.js already exists, will now overwrite it.    
+❌ solution.js already exists, will now overwrite it.  
+```
+
+
+
+### Placera labben i repot, innan studenten klonar repot.
+
+Här väljer vi att preparera studentens repo med de färdiga labbfilerna så att studenten inte behöver göra något mer än att klona repot.
+
+:::notice
+Exakt hur detta skall ske kvarstår att bestämma.
+:::
