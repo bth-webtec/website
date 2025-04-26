@@ -49,8 +49,7 @@ for file in "${FILES[@]}"; do
     fi
 
     # Download the file
-    echo "$BASE/$LAB/$file"
-    curl -o "$file" "$BASE/$LAB/$file"
+    curl -sL -o "$file" "$BASE/$LAB/$file"
 
     # Check if the download was successful
     printf "%s %s\n" "$([ $? -eq 0 ] && echo '✅' || echo '❌')" "$file"
