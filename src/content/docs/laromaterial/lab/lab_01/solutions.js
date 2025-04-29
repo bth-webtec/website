@@ -6,8 +6,8 @@
  * @returns {string} A welcome message "Hello world".
  */
 export function hello () {
-    // TODO: Write your code here.
-    return "Hello world";
+  // TODO: Write your code here.
+  return "Hello world"
 }
 
 
@@ -18,8 +18,8 @@ export function hello () {
  * @returns {number} The numeric value 42.
  */
 export function magicNumber () {
-    // TODO: Write your code here.
-    return 42;
+  // TODO: Write your code here.
+  return 42
 }
 
 
@@ -34,7 +34,7 @@ export function magicNumber () {
 export function stringNumber (value) {
   // TODO: Write your code here.
 
-  return value.toString();
+  return value.toString()
 }
 
 
@@ -46,8 +46,8 @@ export function stringNumber (value) {
  * @returns {number} The length of the string.
  */
 export function stringLength (word) {
-    // TODO: Write your code here.
-    return word.length;
+  // TODO: Write your code here.
+  return word.length
 }
 
 
@@ -60,8 +60,8 @@ export function stringLength (word) {
  * @returns {number} The product.
  */
 export function product (value1, value2) {
-    // TODO: Write your code here.
-    return value1 * value2;
+  // TODO: Write your code here.
+  return value1 * value2
 }
 
 
@@ -76,7 +76,7 @@ export function product (value1, value2) {
 export function sumValues (value1, value2) {
   // TODO: Write your code here.
 
-  return value1 + value2;
+  return value1 + value2
 }
 
 
@@ -90,9 +90,9 @@ export function sumValues (value1, value2) {
  * @returns {number} The sum of value1 and value2, rounded to lower integer value.
  */
 export function sumFloatRoundedLower (value1, value2) {
-    // TODO: Write your code here.
+  // TODO: Write your code here.
 
-    return Math.floor(value1 + value2);
+  return Math.floor(value1 + value2)
 }
 
 
@@ -106,9 +106,9 @@ export function sumFloatRoundedLower (value1, value2) {
  * @returns {number} The sum of value1 and value2, rounded to the higher integer value.
  */
 export function sumFloatRoundedHigher (value1, value2) {
-    // TODO: Write your code here.
+  // TODO: Write your code here.
 
-    return Math.ceil(value1 + value2);
+  return Math.ceil(value1 + value2)
 }
 
 
@@ -122,11 +122,11 @@ export function sumFloatRoundedHigher (value1, value2) {
  * @returns {number} The difference between value1 and value2, rounded to two decimals.
  */
 export function diffFloatRoundedActual (value1, value2) {   
-    // TODO: Write your code here.
+  // TODO: Write your code here.
 
-    let difference =  value1 - value2;
+  let difference =  value1 - value2
 
-    return Math.round(difference*100)/100;
+  return Math.round(difference*100)/100
 }
 
 
@@ -138,9 +138,9 @@ export function diffFloatRoundedActual (value1, value2) {
  * @returns {number} The value of PI, rounded to four decimals.
  */
 export function roundPI () {    
-    // TODO: Write your code here.
+  // TODO: Write your code here.
 
-    return Math.round(Math.PI*10000)/10000;
+  return Math.round(Math.PI*10000)/10000
 }
 
 
@@ -153,9 +153,9 @@ export function roundPI () {
  * @returns {string} The concatinated string.
  */
 export function concatinateString (word1, word2) {    
-    // TODO: Write your code here.
+  // TODO: Write your code here.
 
-    return word1 + " " + word2;
+  return word1 + " " + word2
 }
 
 
@@ -168,9 +168,9 @@ export function concatinateString (word1, word2) {
  * @returns {string} The character at index 4 in the incoming string.
  */
 export function charAtPosition (word) {    
-    // TODO: Write your code here.
+  // TODO: Write your code here.
 
-    return word.charAt(4);
+  return word.charAt(4)
 }
 
 
@@ -183,9 +183,9 @@ export function charAtPosition (word) {
  * @returns {string} The string in uppercase.
  */
 export function upper (word) {    
-    // TODO: Write your code here.
+  // TODO: Write your code here.
 
-    return word.toUpperCase();
+  return word.toUpperCase()
 }
 
 
@@ -198,9 +198,9 @@ export function upper (word) {
  * @returns {string} A string with the first character in uppercase.
  */
 export function upperFirst (word) {    
-    // TODO: Write your code here.
+  // TODO: Write your code here.
 
-    return word.charAt(0).toUpperCase() + word.slice(1);
+  return word.charAt(0).toUpperCase() + word.slice(1)
 }
 
 
@@ -213,9 +213,9 @@ export function upperFirst (word) {
  * @returns {string} The last three characters.
  */
 export function substring (word) {
-    // TODO: Write your code here.
+  // TODO: Write your code here.
 
-    return word.substring(word.length-3);
+  return word.substring(word.length-3)
 }
 
 
@@ -230,7 +230,7 @@ export function substring (word) {
 export function wordIncludes (word) {
   // TODO: Write your code here.
 
-  return word.includes("a");
+  return word.includes("a")
 }
 
 
@@ -250,10 +250,10 @@ export function wordIncludes (word) {
  * @returns {string} A string representation of the test case success or failure.
  */
 export function test (func, expected, args) {
-    const result = func(...args)
-    const success = expected === result ? '✅' : '❌'
-    // check if array []
-    // print as string ''
-    return `${success} [${func.name}] ${expected} (${typeof expected}) => ${result} (${typeof result})`
+  const result = func(...args)
+  const success = expected === result ? '✅' : '❌'
+  // check if array []
+  // print as string ''
+  return `${success} [${func.name}] ${expected} (${typeof expected}) => ${result} (${typeof result})`
 }
   

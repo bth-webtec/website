@@ -44,7 +44,7 @@ function argsAsString (args) {
 }
 
 
-  /**
+/**
  * Execute the testcase and assert that it was corrent or not and return a
  * status string the can be written out.
  * @param {Function} func - The function to test.
