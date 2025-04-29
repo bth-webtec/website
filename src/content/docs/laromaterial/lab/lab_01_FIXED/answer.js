@@ -1,6 +1,5 @@
 /**
- * This file contains solutions to the lab, use it when you get stuck or when 
- * you want to compare your solution to with the teachers solution.
+ * This file contains the functions you shall implement to solve the lab.
  * 
  * Execute the lab in the browser through lab.html and review the output in the 
  * console, or execute the lab through node using `node lab` in the terminal.
