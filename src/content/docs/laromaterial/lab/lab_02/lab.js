@@ -23,6 +23,10 @@ dbw.assert(lab.isPositiveNegative, [0], "Neither")
 dbw.assert(lab.isOddEven, [3], "Odd")
 dbw.assert(lab.isOddEven, [42], "Even")
 
+dbw.assert(lab.blackJack, [2, 3, 5], "Draw")
+dbw.assert(lab.blackJack, [10, 5, 7], "Busted")
+dbw.assert(lab.blackJack, [10, 3, 8], "Black Jack")
+
 dbw.assert(lab.gradeChecker, [94], "A")
 dbw.assert(lab.gradeChecker, [89], "B")
 dbw.assert(lab.gradeChecker, [72], "C")

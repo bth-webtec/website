@@ -68,6 +68,30 @@ export function isOddEven (value) {
 
 
 /**
+ * Returns "Black Jack" if the total sum is 21. If the sum is larger, return "Busted" and if it is lower, return "Draw".
+ *
+ * @param {number} value1 The first value to use.
+ * @param {number} value2 The second value to use.
+ * @param {number} value3 The third value to use.
+ * @returns {string} The answering string.
+ */
+export function blackJack (value1, value2, value3) {
+  // TODO: Write your code here.
+  let total = value1 + value2 + value3
+  let result = "Black Jack"
+
+  if (total > 21) {
+    result = "Busted"
+  } else if (total < 21) {
+    result = "Draw"
+  }
+
+  return result
+}
+
+
+
+/**
  * Returns the specific grade for a test score.
  * Score equal or higher than 90: A
  * Score equal or higher than 80: B
