@@ -1,125 +1,69 @@
 /**
- * This module contains lab specific code to assert the functions of the lab
- * and to calculate the result.
+ * This file contains the assertions for testing each function in the lab.
+ * 
+ * Execute the labs like this.
+ *   node lab
+ * 
+ * Execute the labs from the solutionsfile like this.
+ *   node lab -s
  */
+import { dbw } from '../src/dbw.js'
+import * as laba from './answer.js'
+import * as labs from './solution.js'
 
-const level = {
-  pass: 10,
-  honour: 13,
-}
+const lab = process.argv[2] === '-s' ? labs : laba
 
-const feedback = {
-  0: `Try to earn 1 point to get started... 😏`,
-  1: `Nice work, lets go, do another! 😉`,
-  5: `Great, you are on fire and progress is made. 😋`,
-  9: `Just one more to PASS. Lets go. 😅`,
-  //10: `Excellent, you have PASSED. 😁`,
-  10: `Excellent, you have PASSED. Lets try one more? 😁`,
-  13: `That is the way, you PASSED WITH HONOUR! 😍`,
-  15: `What can I say. You impress me. 🙌`,
-}
+dbw.assert(lab.isLarger, [41], false)
+dbw.assert(lab.isLarger, [100], true)
 
-const stats = {}
+dbw.assert(lab.isPositiveNegative, [5], "Positive")
+dbw.assert(lab.isPositiveNegative, [-42], "Negative")
+dbw.assert(lab.isPositiveNegative, [0], "Neither")
 
-/**
- * Format a value to its string represenation.
- * @param {Object} args - A value to parse and format as a string.
- * @returns {string} A string representation of the value.
- */
-function argsAsString (args) {
-  let argStr = ''
-  for (let arg of args) {
-    if (typeof arg === 'string') {
-      argStr += `'${arg}', `
-    } else if (typeof arg === 'object' && Array.isArray(arg)) {
-      argStr += `[${arg}], `
-    } else {
-      argStr += `${arg}, `
-    }
-  }
+dbw.assert(lab.isOddEven, [3], "Odd")
+dbw.assert(lab.isOddEven, [42], "Even")
 
-  return argStr.slice(0, -2)
-}
+dbw.assert(lab.gradeChecker, [94], "A")
+dbw.assert(lab.gradeChecker, [89], "B")
+dbw.assert(lab.gradeChecker, [72], "C")
+dbw.assert(lab.gradeChecker, [45], "F")
+
+dbw.assert(lab.temperature, [5], "Cold")
+dbw.assert(lab.temperature, [14], "Warm")
+dbw.assert(lab.temperature, [42], "Hot")
+
+dbw.assert(lab.trafficlight, ["Red"], "Stop")
+dbw.assert(lab.trafficlight, ["YELLOW"], "Wait")
+dbw.assert(lab.trafficlight, ["green"], "Go")
+dbw.assert(lab.trafficlight, ["blue"], "Invalid color")
+
+dbw.assert(lab.intRepresentation, [42, "42"], true)
+dbw.assert(lab.intRepresentation, [125, "125pieces of cake"], true)
+dbw.assert(lab.intRepresentation, [42, "This contains 4 parts"], false)
+
+dbw.assert(lab.fizzBuzz, [36], "Fizz", 3)
+dbw.assert(lab.fizzBuzz, [35], "Buzz")
+dbw.assert(lab.fizzBuzz, [90], "FizzBuzz")
+dbw.assert(lab.fizzBuzz, [82], 82)
+
+dbw.assert(lab.trafficlightSwitch, ["Red"], "Stop")
+dbw.assert(lab.trafficlightSwitch, ["YELLOW"], "Wait")
+dbw.assert(lab.trafficlightSwitch, ["green"], "Go")
+dbw.assert(lab.trafficlightSwitch, ["blue"], "Invalid color")
+
+dbw.assert(lab.calculator, [37, 5, "+"], 42, 3)
+dbw.assert(lab.calculator, [45, 7, "-"], 38)
+dbw.assert(lab.calculator, [43, 123, "*"], 5289)
+dbw.assert(lab.calculator, [10, 5, "/"], 2)
+dbw.assert(lab.calculator, [67, 4, "%"], 3)
+dbw.assert(lab.calculator, [10, 5, "/", true], 0.5)
 
 
-/**
- * Execute the testcase and assert that it was corrent or not and return a
- * status string the can be written out.
- * @param {Function} func - The function to test.
- * @param {Object} expected - The expected result from the function call.
- * @param {Object} args - The arguments to send to the function.
- * @param {number} point - The number of points that this functions is worth in total.
- * @returns {string} A string representation of the test case success or failure.
- */
-export function assert (func, args, expected, point=1) {
-  const result = func(...args)
-  let success
-  
-  if (typeof expected === 'object' && Array.isArray(expected)) {
-    if (JSON.stringify(expected) === JSON.stringify(result)) {
-      success = '✅'
-    } else {
-      success = '❌'
-    }
-  } else {
-    success = expected === result ? '✅' : '❌'
-  }
 
-  // Calculate the stats
-  if (!(func.name in stats)) {
-    stats[func.name] = {
-      run: 0,
-      passed: 0,
-      failed: 0,
-      point,
-    }
-  }
-  stats[func.name].run++
-  if (success === '✅') {
-    stats[func.name].passed++
-  } else {
-    stats[func.name].failed++
-  }
 
-  // Prepare the argument string
-  let argStr = argsAsString(args)
-  let expectedStr = argsAsString([expected])
-  let resultStr = argsAsString([result])
 
-  return `${success} ${stats[func.name].point}p ${func.name}(${argStr}), expected: ${expectedStr} (${typeof expected}), actual: ${resultStr} (${typeof result})`
-}
 
-/**
- * Print out the results when the execution is done.
- * @returns {string} A string representation of the results.
- */
-export function done (func, expected, args) {
-  let points = 0
-  let passed = 0
-  let failed = 0
-  let total = 0
-  let result = 0
-  let str = ''
-  for (const func of Object.keys(stats)) {
-    points += stats[func].point
-    passed += stats[func].passed
-    failed += stats[func].failed
-    total += stats[func].passed + stats[func].failed
-    result += stats[func].point * Math.floor(stats[func].passed / (stats[func].passed + stats[func].failed), 1)
-  }
 
-  let msg = feedback[0]
-  for (const key of Object.keys(feedback)) {
-    if (result < key) {
-      break
-    }
-    msg = feedback[key]
-  }
 
-  str += `Passed: ${passed}, Failed: ${failed}, Total: ${total}`
-  str += `\nYou have ${result} points out of total ${points} points.`
-  str += `\nYou need ${level.pass} points to PASS`
-  str += level.honour !== undefined ? ` and ${level.honour} points to PASS WITH HONOUR.` : '.'
-  str += `\n${msg}`
-  return str
-}
+
+dbw.done()

@@ -1,150 +1,274 @@
 /**
- * This is a lab where the intention is that you implement the body to all
- * functions below.
+ * This file contains solutions to the lab, use it when you get stuck or when 
+ * you want to compare your solution to with the teachers solution.
+ * 
+ * Execute the lab in the browser through lab.html and review the output in the 
+ * console, or execute the lab through node using `node lab -s` in the terminal.
  */
 
-/**
- * Returns the string "Hello world".
- * @returns {string} A welcome message "Hello world".
- */
-export function hello () {
-  // TODO: Write your code here.
-  return 'Hello world'
-}
+
 
 /**
- * Create an array with all numbers from 1 up to and including argument n.
- * @param {number} n - Last value to add.
- * @returns {[number]} Array of numbers between 1 and up to and include n.
+ * Returns a boolean weither the incoming value is larger than 42.
+ *
+ * @param {number} value The value to use.
+ * @returns {boolean} true the incoming value is larger than 42, else false.
  */
-export function createNumberArrayUpToN (n) {
+export function isLarger (value) {
   // TODO: Write your code here.
-  const arr = []
-  for (let i = 1; i <= n; i++) {
-    arr.push(i)
+  let result = false
+
+  if (value > 42) {
+    result = true
   }
-  return arr
+
+  return result
 }
 
+
+
 /**
- * Create an array with all numbers from (and include) n and start from 0.
- * @param {number} n - Value to en the range.
- * @returns {[number]} Array of numbers between 0 and down to and include n.
+ * Returns "Positive" if the incoming value is positive, "Negative" if it is negative and "Neither" if it is zero.
+ *
+ * @param {number} value The value to use.
+ * @returns {string} The answering string.
  */
-export function createNumberArrayDownToN (n) {
+export function isPositiveNegative (value) {
   // TODO: Write your code here.
-  const arr = []
-  for (let i = 0; i >= n; i--) {
-    arr.push(i)
+  let result = "Neither"
+
+  if (value > 0) {
+    result = "Positive"
+  } else if (value < 0) {
+    result = "Negative"
   }
-  return arr
+
+  return result
 }
 
-/**
- * Count all occurences of odd numbers in the array.
- * @param {[number]} numbers - Array with numbers.
- * @returns {number} The amount of odd numbers in the array.
- */
-export function countAllOddNumbers (numbers) {
-  // TODO: Write your code here.
-  const counter = numbers.reduce((count, num) => (num % 2 == 1) ? count + 1 : count, 0)
-  return counter
-}
+
 
 /**
- * Return the type of a value as a string representation using the operator `typeof`.
- * @param {Object} item - The item that should be checked for its type.
- * @returns {number} Return the typeof value for the item.
+ * Returns "Odd" if the incoming value is odd and "Even" if it is even.
+ *
+ * @param {number} value The value to use.
+ * @returns {string} The answering string.
  */
-export function getTypeOf (item) {
+export function isOddEven (value) {
   // TODO: Write your code here.
-  return typeof item
+  let result = "Odd"
+
+  if (value % 2 === 0) {
+    result = "Even"
+  }
+
+  return result
 }
 
-/**
- * Count all occurences of odd numbers in the array and do check that you only count actual numbers.
- * @param {[number]} numbers - Array with numbers, strings and booleans.
- * @returns {number} The amount of odd numbers in the array.
- */
-export function countAllOddOnlyNumbers (numbers) {
-  // TODO: Write your code here.
-  const counter = numbers.reduce((count, num) => {
-    if (typeof num !== 'number') {
-      return count
-    }
-    return (num % 2 == 1) ? count + 1 : count
-  }, 0)
-  return counter
-}
+
 
 /**
- * Create a new array from the input array and add the number 42 to it, at the end.
- * @param {[]} arr - Array with values.
- * @returns {[]} A new array with 42 added to the end.
+ * Returns the specific grade for a test score.
+ * Score equal or higher than 90: A
+ * Score equal or higher than 80: B
+ * Score equal or higher than 70: C
+ * Score lower than 70: F
+ *
+ * @param {number} score The score to use.
+ * @returns {string} The answering grade.
  */
-export function createNewArrayAndAddItem (arr) {
+export function gradeChecker (score) {
   // TODO: Write your code here.
-  const arr1 = arr.slice()
-  arr1.push(42)
-  return arr1
+  let grade = "F"
+
+  if (score >= 90) {
+    grade = "A"
+  } else if (score >= 80) {
+    grade = "B"
+  } else if (score >= 70) {
+    grade = "C"
+  } 
+
+  return grade
 }
 
-/**
- * Create a new array from the input array and remove the last value in the array.
- * @param {[]} arr - Array with values.
- * @returns {[]} A new array with last value removed.
- */
-export function createNewArrayAndRemoveLastItem (arr) {
-  // TODO: Write your code here.
-  const arr1 = arr.slice()
-  arr1.pop()
-  return arr1
-}
+
 
 /**
- * Create a new array from the input array and remove the first value in the array.
- * @param {[]} arr - Array with values.
- * @returns {[]} A new array with first value removed.
+ * Returns a string based on the incoming temperature.
+ * Temperature below 10: "Cold"
+ * Temperature between or equal to 10 and 25: "Warm"
+ * Temperature above 25: "Hot"
+ *
+ * @param {number} temp The temperature to use.
+ * @returns {string} The answering string.
  */
-export function createNewArrayAndRemoveFirstItem (arr) {
+export function temperature (temp) {
   // TODO: Write your code here.
-  const arr1 = arr.slice()
-  arr1.shift()
-  return arr1
+  let result = "Hot"
+
+  if (temp < 10) {
+    result = "Cold"
+  } else if (temp >= 10 && temp <= 25) {
+    result = "Warm"
+  }
+
+  return result
 }
 
-/**
- * Create a new array and sort it using the built in sorting function.
- * @param {[]} arr - Array with values.
- * @returns {[]} Sorted array.
- */
-export function sortArray (arr) {
-  // TODO: Write your code here.
-  const arr1 = arr.slice()
-  arr1.sort()
-  return arr1
-}
+
 
 /**
- * Create a new array and sort it by comparing the items as numbers.
- * @param {[]} arr - Array with values.
- * @returns {[]} Sorted array, compared by numbers.
+ * Returns the action based on the incoming traffic light color.
+ * If the color is "Red", return "Stop"
+ * If the color is "Yellow", return "Wait"
+ * If the color is "Green", return "Go"
+ * Otherwise return "Invalid color"
+ * 
+ * The check should not be case-sensitive.
+ *
+ * @param {number} color The color to use.
+ * @returns {string} The answering string.
  */
-export function sortArrayNumber (arr) {
+export function trafficlight (color) {
   // TODO: Write your code here.
-  const arr1 = arr.slice()
-  arr1.sort((a, b) => a - b)
-  return arr1
+  let result = "Invalid color"
+  color = color.toLowerCase()
+
+  if (color === "red") {
+    result = "Stop"
+  } else if (color === "yellow") {
+    result = "Wait"
+  } else if (color === "green") {
+    result = "Go"
+  }
+
+  return result
 }
 
+
+
 /**
- * Create a new array and remove all values that are not numbers from it and then sort it.
- * @param {[]} arr - Array with values.
- * @returns {[]} Sorted array, only numbers.
+ * Returns a boolean weither the incoming number is equal to the integer representation of the incoming string.
+ *
+ * @param {number} value The number to use.
+ * @param {string} text The string to use.
+ * @returns {boolean} The answering boolean.
  */
-export function filterArrayNumber (arr) {
+export function intRepresentation (value, text) {
   // TODO: Write your code here.
-  const arr1 = arr.filter(item => typeof item === 'number')
-  arr1.sort((a, b) => a - b)
-  return arr1
+  let secondValue = parseInt(text)
+
+  return value === secondValue
+}
+
+
+
+/**
+ * Returns "Fizz", "Buzz", "FizzBuzz" or the passed value.
+ * This is a code exercise called "FizzBuzz".
+ * If the incoming number is divisible by 3, return "Fizz". 
+ * If the incoming number is divisible by 5, return "Buzz". 
+ * If the incoming number is divisible by 3 and 5, return "FizzBuzz".
+ * Otherwise you return the actual number. 
+ *
+ * Read more: https://en.wikipedia.org/wiki/Fizz_buzz
+ * 
+ * @param {number} value The value to use.
+ * @returns {string|number} The answering result.
+ */
+export function fizzBuzz (value) {
+  // TODO: Write your code here.
+  let result = null
+
+  if (value % 15 === 0) {
+    result = "FizzBuzz"
+  } else if (value % 3 === 0) {
+    result = "Fizz"
+  } else if (value % 5 === 0) {
+    result = "Buzz"
+  } else {
+    result = value
+  }
+
+  return result
+}
+
+
+
+/**
+ * Returns the action based on the incoming traffic light color, using the switch statement.
+ * If the color is "Red", return "Stop"
+ * If the color is "Yellow", return "Wait"
+ * If the color is "Green", return "Go"
+ * Otherwise return "Invalid color"
+ * 
+ * The check should not be case-sensitive.
+ *
+ * @param {number} color The color to use.
+ * @returns {string} The answering string.
+ */
+export function trafficlightSwitch (color) {
+  // TODO: Write your code here.
+  let result = null
+  color = color.toLowerCase()
+
+  switch(color) {
+    case "red":
+      result = "Stop"
+      break
+    case "yellow":
+      result = "Wait"
+      break
+    case "green":
+      result = "Go"
+      break
+    default:
+      result = "Invalid color"
+      break
+  }
+  return result
+}
+
+
+
+/**
+ * Returns the result from a calculation on the incoming values, using the switch statement.
+ * Default 
+ *
+ * @param {number} value1 The first value to use.
+ * @param {number} value2 The second value to use.
+ * @param {string} op The operator to use (+, -, *, /, %).
+ * @param {boolean} reverse Boolean if values should be reversed so value2 is the first value to use.
+ * @returns {number} The result.
+ */
+export function calculator (value1, value2, op, reverse=false) {
+  // TODO: Write your code here.
+  let result = -1
+  let val1 = value1
+  let val2 = value2
+
+  if (reverse) {
+    val1 = value2
+    val2 = value1
+  }
+
+  switch(op) {
+    case "+":
+      result = val1 + val2
+      break
+    case "-":
+      result = val1 - val2
+      break
+    case "*":
+      result = val1 * val2
+      break
+    case "/":
+      result = val1 / val2
+      break
+    case "%":
+      result = val1 % val2
+      break
+  }
+  return result
 }

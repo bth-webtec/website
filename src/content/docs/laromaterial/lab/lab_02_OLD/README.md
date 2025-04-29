@@ -1,16 +1,15 @@
 ---
 title: Lab 02
 revision:
-    "2025-04-29": "(B, klw) Second version."
     "2024-10-09": "(A, mos) First version."
 ---
 
 ![header](img/header.png)
 
-Lab: JavaScript med kontrollstrukturer
+Lab: JavaScript med arrayer
 ===========================
 
-I denna laboration får du träna på konceptet arrayer i JavaScript och du får använda inbyggda funktioner för att jobba med if/else/if else och switch.
+I denna laboration får du träna på konceptet arrayer i JavaScript och du får använda inbyggda funktioner för att jobba med arrayer.
 
 <!-- [[_TOC_]] -->
 
@@ -26,7 +25,7 @@ Förutsättning
 
 Du kan grunderna i hur JavaScript samverkar med en webbsida och du kan grundkonstruktioner för villkor och iterationer i språket.
 
-Du kan grunderna i hur kontrollstrukturer fungerar.
+Du kan grunderna i hur arrayer fungerar.
 
 Du är medveten om hur du kan söka fram ny kunskap via manualen MDN.
 
