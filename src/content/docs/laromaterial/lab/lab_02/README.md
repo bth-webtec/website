@@ -174,14 +174,6 @@ Nu har du den tillgänglig och kan anropa en metod som ligger i modulen.
 module.hello()
 ```
 
-Det kan se ut så här när du gör det i devtools console.
-
-![import](img/import.png)
-
-Nu kan du implementera funktionerna, samtidigt som du kan testköra dem.
-
-
-
 Lösning
 ---------------------------
 
