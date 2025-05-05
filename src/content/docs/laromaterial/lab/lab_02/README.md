@@ -5,7 +5,6 @@ revision:
     "2024-10-09": "(A, mos) First version."
 ---
 
-![header](img/header.png)
 
 Lab: JavaScript med kontrollstrukturer
 ===========================
