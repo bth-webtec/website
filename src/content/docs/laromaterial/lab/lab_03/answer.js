@@ -9,12 +9,104 @@
 
 
 /**
- * Returns a boolean weither the incoming value is larger than 42.
+ * Returns the sum of all numbers from 0 to stop.
  *
- * @param {number} value The value to use.
- * @returns {boolean} true the incoming value is larger than 42, else false.
+ * @param {number} stop The value to use as end.
+ * @returns {number} The resulting sum.
  */
-export function isLarger (value) {
+export function sumLoop (stop) {
+  // TODO: Write your code here.
+  return -1
+}
+
+
+
+/**
+ * Returns the sum of all numbers from start to stop.
+ *
+ * @param {number} start The value to use as start.
+ * @param {number} stop The value to use as end.
+ * @returns {number} The resulting sum.
+ */
+export function sumLoop2 (start, stop) {
+  // TODO: Write your code here.
+  return -1
+}
+
+
+
+/**
+ * Increment the variable "start" with "increment", "iter" times. Return the result.
+ *
+ * @param {number} start The value to use as start.
+ * @param {number} increment The value used to increment start.
+ * @param {number} iter The number of iterations.
+ * @returns {number} The resulting sum.
+ */
+export function incIteration (start, increment, iter) {
+  // TODO: Write your code here.
+  return -1
+}
+
+
+
+/**
+ * Decrement the variable "start" with "decrement", "iter" times. Return the result.
+ *
+ * @param {number} start The value to use as start.
+ * @param {number} decrement The value used to decrement start.
+ * @param {number} iter The number of iterations.
+ * @returns {number} The resulting sum.
+ */
+export function decIteration (start, decrement, iter) {
+  // TODO: Write your code here.
+  return -1
+}
+
+
+
+/**
+ * Use a for-loop to add all the odd values in the range (including) "start" to "stop" to a commaseparated string.
+ * The resulting string should not have a comma or space at the end.
+ * Return the result.
+ *
+ * @param {number} start The value to use as start.
+ * @param {number} stop The value to use as end.
+ * @returns {string} The resulting string.
+ */
+export function oddString (start, stop) {
+  // TODO: Write your code here.
+  return -1
+}
+
+
+
+/**
+ * Use a while-loop to increment "start" with "increment" until it has reached or passed "stop".
+ * Return the amount of steps needed.
+ *
+ * @param {number} start The value to use as start.
+ * @param {number} increment The value used to increment start.
+ * @param {number} stop The value to use as end.
+ * @returns {number} The amount of steps needed.
+ */
+export function incWhile (start, increment, stop) {
+  // TODO: Write your code here.
+  return -1
+}
+
+
+
+/**
+ * Use a while-loop to decrement "start" with "decrement". It should stop before start has reached or passed "stop".
+ * Return the amount of steps needed.
+ *
+ * @param {number} start The value to use as start.
+ * @param {number} decrement The value used to decrement start.
+ * @param {number} stop The value to use as end.
+ * @returns {number} The amount of steps needed.
+ */
+export function decWhile (start, decrement, stop) {
   // TODO: Write your code here.
   return -1
 }
