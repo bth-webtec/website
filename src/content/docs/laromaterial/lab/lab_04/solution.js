@@ -64,3 +64,39 @@ export function average (arr) {
   }
   return res / arr.length
 }
+
+
+
+/**
+ * Return the two arrays as one concatinated (merged) array.
+ * 
+ * @param {Array} arr1 The first array to use.
+ * @param {Array} arr2 The second array to use.
+ * 
+ * @returns {Array} The resulting array.
+ */
+export function mergeArrays (arr1, arr2) {
+  // TODO: Write your code here.
+  return [...arr1, ...arr2]
+}
+
+
+
+
+/**
+ * Return an array without duplicates.
+ * 
+ * @param {Array} arr The array to use.
+ * @returns {Array} The resulting array without duplicates.
+ */
+export function removeDuplicates (arr) {
+  // TODO: Write your code here.
+  let result = []
+
+  for (let i = 0; i < arr.length; i++) {
+    if (!result.includes(arr[i])) {
+      result.push(arr[i])
+    }
+  }
+  return result
+}

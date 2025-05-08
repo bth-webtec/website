@@ -25,6 +25,11 @@ dbw.assert(lab.largest, [[-2, -44, -31, -12]], -2)
 dbw.assert(lab.average, [[2, 4, 6, 8, 10]], 6)
 dbw.assert(lab.average, [[-2, -44, -31, -12]], -22.25)
 
+dbw.assert(lab.mergeArrays, [[10, 20, 30, 40], [50, 60, 70]], [10, 20, 30, 40, 50, 60, 70])
+
+dbw.assert(lab.removeDuplicates, [[2, "2", 42, "lipstick", 2, "pencil", "pencil"]], [2, "2", 42, "lipstick", "pencil"])
+
+
 
 
 
