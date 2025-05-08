@@ -13,7 +13,7 @@ import * as labs from './solution.js'
 
 const lab = process.argv[2] === '-s' ? labs : laba
 
-// dbw.assert(lab.yourFunctionToTest, <args>, <answer>, [points])
+// dbw.assert(lab.yourFunctionToTest, [<args>], <answer>, [points])
 
 
 
