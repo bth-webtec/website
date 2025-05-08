@@ -11,10 +11,10 @@
 /**
  * Returns the length of an array.
  *
- * @param {array} arr The array to use.
+ * @param {Array} arr The array to use.
  * @returns {number} The length of the array.
  */
-export function loopArray (arr) {
+export function arrayLength (arr) {
   // TODO: Write your code here.
   return -1
 }
@@ -22,12 +22,40 @@ export function loopArray (arr) {
 
 
 /**
- * Returns the n´th element in the array.
+ * Returns the nth element in the array.
  *
- * @param {array} arr The array to use.
- * @returns {number} The length of the array.
+ * @param {number} n The index of the element to retrieve.
+ * @param {Array} arr The array to use.
+ * @returns {*} The nth element in the array.
  */
-export function loopArray (arr) {
+export function nthElement (arr, n) {
+  // TODO: Write your code here.
+  return -1
+}
+
+
+
+/**
+ * Return the largest number in the array.
+ * Hint: Math.max()
+ * 
+ * @param {Array} arr The array to use.
+ * @returns {number} The largest number in the array.
+ */
+export function largest (arr) {
+  // TODO: Write your code here.
+  return -1
+}
+
+
+
+/**
+ * Return the average number of the array.
+ * 
+ * @param {Array} arr The array to use.
+ * @returns {number} The average.
+ */
+export function average (arr) {
   // TODO: Write your code here.
   return -1
 }
