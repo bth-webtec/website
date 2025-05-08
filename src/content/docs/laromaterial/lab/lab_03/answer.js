@@ -1,9 +1,9 @@
 /**
- * This file contains solutions to the lab, use it when you get stuck or when 
- * you want to compare your solution to with the teachers solution.
+ * This file contains the functions you shall implement to solve the lab.
+ * Implement them one by one and check if they pass all tests.
  * 
  * Execute the lab in the browser through lab.html and review the output in the 
- * console, or execute the lab through node using `node lab -s` in the terminal.
+ * console, or execute the lab through node using `node lab` in the terminal.
  */
 
 
@@ -16,13 +16,7 @@
  */
 export function isLarger (value) {
   // TODO: Write your code here.
-  let result = false
-
-  if (value > 42) {
-    result = true
-  }
-
-  return result
+  return -1
 }
 
 
@@ -35,15 +29,7 @@ export function isLarger (value) {
  */
 export function isPositiveNegative (value) {
   // TODO: Write your code here.
-  let result = "Neither"
-
-  if (value > 0) {
-    result = "Positive"
-  } else if (value < 0) {
-    result = "Negative"
-  }
-
-  return result
+  return -1
 }
 
 
@@ -56,13 +42,7 @@ export function isPositiveNegative (value) {
  */
 export function isOddEven (value) {
   // TODO: Write your code here.
-  let result = "Odd"
-
-  if (value % 2 === 0) {
-    result = "Even"
-  }
-
-  return result
+  return -1
 }
 
 
@@ -77,16 +57,7 @@ export function isOddEven (value) {
  */
 export function blackJack (value1, value2, value3) {
   // TODO: Write your code here.
-  let total = value1 + value2 + value3
-  let result = "Black Jack"
-
-  if (total > 21) {
-    result = "Busted"
-  } else if (total < 21) {
-    result = "Draw"
-  }
-
-  return result
+  return -1
 }
 
 
@@ -103,17 +74,7 @@ export function blackJack (value1, value2, value3) {
  */
 export function gradeChecker (score) {
   // TODO: Write your code here.
-  let grade = "F"
-
-  if (score >= 90) {
-    grade = "A"
-  } else if (score >= 80) {
-    grade = "B"
-  } else if (score >= 70) {
-    grade = "C"
-  } 
-
-  return grade
+  return -1
 }
 
 
@@ -129,15 +90,7 @@ export function gradeChecker (score) {
  */
 export function temperature (temp) {
   // TODO: Write your code here.
-  let result = "Hot"
-
-  if (temp < 10) {
-    result = "Cold"
-  } else if (temp >= 10 && temp <= 25) {
-    result = "Warm"
-  }
-
-  return result
+  return -1
 }
 
 
@@ -156,18 +109,7 @@ export function temperature (temp) {
  */
 export function trafficlight (color) {
   // TODO: Write your code here.
-  let result = "Invalid color"
-  color = color.toLowerCase()
-
-  if (color === "red") {
-    result = "Stop"
-  } else if (color === "yellow") {
-    result = "Wait"
-  } else if (color === "green") {
-    result = "Go"
-  }
-
-  return result
+  return -1
 }
 
 
@@ -181,9 +123,8 @@ export function trafficlight (color) {
  */
 export function intRepresentation (value, text) {
   // TODO: Write your code here.
-  let secondValue = parseInt(text)
 
-  return value === secondValue
+  return null
 }
 
 
@@ -203,19 +144,8 @@ export function intRepresentation (value, text) {
  */
 export function fizzBuzz (value) {
   // TODO: Write your code here.
-  let result = null
 
-  if (value % 15 === 0) {
-    result = "FizzBuzz"
-  } else if (value % 3 === 0) {
-    result = "Fizz"
-  } else if (value % 5 === 0) {
-    result = "Buzz"
-  } else {
-    result = value
-  }
-
-  return result
+  return null
 }
 
 
@@ -234,24 +164,7 @@ export function fizzBuzz (value) {
  */
 export function trafficlightSwitch (color) {
   // TODO: Write your code here.
-  let result = null
-  color = color.toLowerCase()
-
-  switch(color) {
-    case "red":
-      result = "Stop"
-      break
-    case "yellow":
-      result = "Wait"
-      break
-    case "green":
-      result = "Go"
-      break
-    default:
-      result = "Invalid color"
-      break
-  }
-  return result
+  return -1
 }
 
 
@@ -268,31 +181,6 @@ export function trafficlightSwitch (color) {
  */
 export function calculator (value1, value2, op, reverse=false) {
   // TODO: Write your code here.
-  let result = -1
-  let val1 = value1
-  let val2 = value2
 
-  if (reverse) {
-    val1 = value2
-    val2 = value1
-  }
-
-  switch(op) {
-    case "+":
-      result = val1 + val2
-      break
-    case "-":
-      result = val1 - val2
-      break
-    case "*":
-      result = val1 * val2
-      break
-    case "/":
-      result = val1 / val2
-      break
-    case "%":
-      result = val1 % val2
-      break
-  }
-  return result
+  return -1
 }

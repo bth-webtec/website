@@ -77,9 +77,6 @@ Tittar runt i de fyla filerna som finns i labben och försök förstå hur de h�
 
 Öppna din dev tools och fliken console. Här kan du exekvera hela labben och du får status utskriven.
 
-Det kan se ut så här.
-
-![Labben i devtools](img/lab.png)
 
 I filen `module.js` finns alla övningsuppgifter som du skall utföra i form av funktioner som skall implementeras. Varje gång du implementerar en funktion så kan du ladda om webbsidan för att se om det blir grönt eller rött.
 

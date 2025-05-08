@@ -1,15 +1,15 @@
 ---
-title: Lab 02
+title: Lab 03
 revision:
-    "2025-04-29": "(B, klw) Second version."
-    "2024-10-09": "(A, mos) First version."
+    "2024-10-22": "(A, mos) First version."
 ---
 
+![header](img/header.png)
 
-Lab: JavaScript med kontrollstrukturer
+Lab 03: JavaScript med objekt
 ===========================
 
-I denna laboration får du träna på konceptet arrayer i JavaScript och du får använda inbyggda funktioner för att jobba med if/else/if else och switch.
+I denna laboration får du träna på konceptet objekt och objektliteral i JavaScript och du får använda inbyggda funktioner för att jobba med objekt.
 
 <!-- [[_TOC_]] -->
 
@@ -25,7 +25,7 @@ Förutsättning
 
 Du kan grunderna i hur JavaScript samverkar med en webbsida och du kan grundkonstruktioner för villkor och iterationer i språket.
 
-Du kan grunderna i hur kontrollstrukturer fungerar.
+Du kan grunderna i hur arrayer och objekt fungerar.
 
 Du är medveten om hur du kan söka fram ny kunskap via manualen MDN.
 
@@ -36,29 +36,29 @@ Förberedelser
 
 Förbered dig så här för övningen. Börja att öppna din terminal och gå till den katalog där du vill börja jobba.
 
-Skapa nu en katalog för `lab_02`.
+Skapa nu en katalog för `lab_03`.
 
 ```bash
-mkdir lab_02
-cd lab_02
+mkdir lab_03
+cd lab_03
 ```
 
 Nu skall vi hämta filer från nätet som behövs för att komma igång med labben. Exekvera följande kommandon i terminalen.
 
 ```
-wget -OutFile lab.html https://gitlab.com/mikael-roos/webbutveckling2/-/raw/main/lab/lab_02/lab.html
-wget -OutFile main.js https://gitlab.com/mikael-roos/webbutveckling2/-/raw/main/lab/lab_02/main.js
-wget -OutFile lab.js https://gitlab.com/mikael-roos/webbutveckling2/-/raw/main/lab/lab_02/lab.js
-wget -OutFile module.js https://gitlab.com/mikael-roos/webbutveckling2/-/raw/main/lab/lab_02/module.js
+wget -OutFile lab.html https://gitlab.com/mikael-roos/webbutveckling2/-/raw/main/lab/lab_03/lab.html
+wget -OutFile main.js https://gitlab.com/mikael-roos/webbutveckling2/-/raw/main/lab/lab_03/main.js
+wget -OutFile lab.js https://gitlab.com/mikael-roos/webbutveckling2/-/raw/main/lab/lab_03/lab.js
+wget -OutFile module.js https://gitlab.com/mikael-roos/webbutveckling2/-/raw/main/lab/lab_03/module.js
 ```
 
 När du är klar kan det se ut så här.
 
 ```
-PS C:\Users\mos\webbutveckling2\lab_02_> ls
+PS C:\Users\mos\webbutveckling2\lab_03_> ls
 
 
-    Directory: C:\Users\mos\webbutveckling2\lab_02
+    Directory: C:\Users\mos\webbutveckling2\lab_03
 
 
 Mode                 LastWriteTime         Length Name
@@ -174,6 +174,14 @@ Nu har du den tillgänglig och kan anropa en metod som ligger i modulen.
 module.hello()
 ```
 
+Det kan se ut så här när du gör det i devtools console.
+
+![import](img/import.png)
+
+Nu kan du implementera funktionerna, samtidigt som du kan testköra dem.
+
+
+
 Lösning
 ---------------------------
 
@@ -193,7 +201,7 @@ curl --silent --output solution.js https://raw.githubusercontent.com/dbwebb-se/w
 
 ```bash
 # Stå i katalogen där du har labben
-wget -OutFile solution.js https://gitlab.com/mikael-roos/webbutveckling2/-/raw/main/lab/lab_02/solution.js
+wget -OutFile solution.js https://gitlab.com/mikael-roos/webbutveckling2/-/raw/main/lab/lab_03/solution.js
 ```
 
 </details>
