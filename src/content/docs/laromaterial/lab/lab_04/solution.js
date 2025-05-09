@@ -100,3 +100,49 @@ export function removeDuplicates (arr) {
   }
   return result
 }
+
+
+
+/**
+ * Return a string containing the first and the last items in the array "arr". Separate the items with a hyphen (-).
+ * 
+ * @param {Array} arr The array to use.
+ * @returns {string} The resulting string.
+ */
+export function firstLast (arr) {
+  // TODO: Write your code here.
+  return `${arr[0]}-${arr[arr.length-1]}`
+}
+
+
+
+/**
+ * Add the two variables to the end of the array and return the array.
+ * 
+ * @param {Array} arr The array to use.
+ * @param {*} item1 The first variable to add.
+ * @param {*} item2 The second variable to add.
+ * 
+ * @returns {Array} The resulting array.
+ */
+export function addToArray (arr, item1, item2) {
+  // TODO: Write your code here.
+  arr.push(item1, item2)
+  return arr
+}
+
+
+
+/**
+ * Return the index of the passed item. If the item do not exist, return -1.
+ * Hint: Array.indexOf()
+ * 
+ * @param {Array} arr The array to use.
+ * @param {*} item The item so use.
+ * 
+ * @returns {number} The index.
+ */
+export function findindex (arr, item) {
+  // TODO: Write your code here.
+  return arr.indexOf(item)
+}

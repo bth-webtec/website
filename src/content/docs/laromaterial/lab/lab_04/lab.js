@@ -29,9 +29,15 @@ dbw.assert(lab.mergeArrays, [[10, 20, 30, 40], [50, 60, 70]], [10, 20, 30, 40, 5
 
 dbw.assert(lab.removeDuplicates, [[2, "2", 42, "lipstick", 2, "pencil", "pencil"]], [2, "2", 42, "lipstick", "pencil"])
 
+dbw.assert(lab.firstLast, [['melon', 'banana', 'apple', 'orange', 'lemon']], "melon-lemon")
+
+dbw.assert(lab.addToArray, [[47, 98, -13, 0, -412, 499], 42, "penguin"], [47, 98, -13, 0, -412, 499, 42, "penguin"])
+
+dbw.assert(lab.findindex, [['melon', 'banana', 'apple', 'orange', 'lemon'], 'apple'], 2)
+dbw.assert(lab.findindex, [['melon', 'banana', 'apple', 'orange', 'lemon'], 'cactus'], -1)
 
 
-
+// 47, 98, -13, 0, -412, 499, 3, 1200
 
 
 
