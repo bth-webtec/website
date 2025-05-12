@@ -21,3 +21,5 @@ Här är guider för hur du kommer igång med terminalen och installation av lab
 
 
 
+ `apt install tree`
+ `brew install tree`

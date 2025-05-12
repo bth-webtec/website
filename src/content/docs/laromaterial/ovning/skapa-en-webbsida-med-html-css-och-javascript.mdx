@@ -1,6 +1,6 @@
 ---
 title: "Skapa en webbsida med HTML, CSS och JavaScript" 
-description: No description.
+description: "Övning för att komma igång med grunderna i webbteknologier HTML, CSS och JavaScript för att bygga en webbsida."
 author: mos
 revision:
     "2025-xx-xx": "(PF, mos) Översätt till webtec version 3 och byt php mot js."
@@ -14,43 +14,45 @@ revision:
 ---
 
 import Figure from '@components/Figure.astro';
-import CustomFigure from '@components/CustomFigure.astro';
 import YouTube from '@components/YouTube.astro';
 
-import { Image } from 'astro:assets'
-import localBirdImage from '@assets/leaf_256x256.png';
-
-<CustomFigure 
-    src="https://dbwebb.se/image/webtec/html-css-php/style_php_me.png"
-    alt="Resultatet från denna övningsartikel, en webbplats, en me-sida."
-/>
+Denna artikel hjälper dig att komma igång med grunderna i webbteknologier såsom HTML, CSS och JavaScript för att bygga en webbsida. Att bygga en webbsida är grunden för många av de webbapplikationer och webbtjänster som vi använder varje gång vi öppnar vår webbläsare. Vi vill förstå grunderna i hur man konstruerar en webbsida, innan vi kan gå vidare till mer avancerade webbplatser med ramverk, applikationer och tjänster.
 
 <Figure 
     src="https://dbwebb.se/image/webtec/html-css-php/style_php_me.png"
     caption="Resultatet från denna övningsartikel, en webbplats, en me-sida."
 />
 
-<Image 
-    src={localBirdImage}
-    alt="Resultatet från denna övningsartikel, en webbplats, en me-sida."
-/>
 
-Vill man bli webbprogrammerare så behöver man lära sig flera tekniker och hur de samverkar. Låt oss därför, steg för steg, skapa en liten webbplats med HTML, CSS och PHP.
 
-Webbplatsen får innehålla ett par sidor med header och footer, några bilder, länkar och en meny för att navigera mellan sidorna. Det blir en bra start. Dessutom lär vi oss att validera sidorna så att de stämmer med de standarder vi använder.
+Förberedelser
+---------------------------------
 
+Du har installerat [kursens labbmiljö](./laromaterial/labbmiljo).
+
+:::note
+Länka till föreläsningarna?
+
+* HTML
+* CSS
+:::
 
 
 
 Förutsättningar
 ---------------------------------
 
-Du har installerat en labbmiljö likt den som beskrivs i dokumentet om [labbmiljö för kursen webtec](kurser/webtec-v2/installera-labbmiljo). Det innefattar bland annat en webbserver med stöd för PHP.
+Du kan hitta koden som används i denna artikel, i kursens lärare-repo, under [`kmom01/web`](https://github.com/webtec-2024/teacher/tree/main/kmom01/web), använd den som referens om du fastnar.
 
-Du kan hitta koden som används i denna artikel, i ditt kursrepo under `example/me/kmom01`, använd den som referens om du fastnar.
+I övrigt är artikeln skriven så att du själv kan bygga upp webbsidan medan du jobbar igenom artikeln steg för steg.
+
+:::note
+Hur kan en guide förhålla sig till det som tas upp här?
+:::
 
 
 
+{/*
 Översikt av artikeln
 ---------------------------------
 
@@ -65,16 +67,18 @@ Vi går igenom grunderna i HTML och utgår från standarden och kikar på strukt
     id="FC_hVXmu7QM"
     caption="Videoserie som ger dig en översikt och genomgång av artikeln."
 />
+*/}
 
 
 
 Webbplatsens innehåll
 ---------------------------------
 
-Låt oss skapa en webbplats med ett par webbsidor. Vi tar enklaste möjliga struktur men vi försöker ändå täcka in hur teknikerna HTML, CSS och PHP samverkar för skapa webbsidorna. Vi försöker också skapa en god katalogstruktur till webbplatsen.
+Låt oss skapa en webbplats med ett par webbsidor. Vi använder oss av en enkel struktur men vi vill täcka in hur teknikerna HTML, CSS och JavaScript samverkar för skapa webbsidorna. Vi försöker också skapa en god katalogstruktur som hjälper oss att bygga större webbplatser.
 
-Vi skapar tre sidor och sidorna får innehålla en presentation om mig (dig), en sida för redovisningar (bra att ha i kursen) och en om-sida som berättar om själva webbplatsen och kursen.
+Vi skapar tre sidor och sidorna får innehålla en presentation om dig själv (eller en pseudonym som du själv väljer), en sida för redovisningar (bra att ha i kursen) och en om-sida som berättar om själva webbplatsen och kursen.
 
+{/*
 Det kan se ut så här när det är klart.
 
 <Figure 
@@ -83,112 +87,102 @@ Det kan se ut så här när det är klart.
 />
 
 Det är kanske inte en jättesnygg webbplats, men denna artikel handlar mest om hur man bygger upp koden bakom webbsidan med hjälp av HTML, CSS och PHP.
+*/}
 
 
 
 Katalogstruktur
 ---------------------------------
 
-Vi sparar allt vårt arbete i kursrepot i katalogen `me/kmom01`. Låt mig visa hur du kan göra för att skapa grundstrukturen för webbplatsen.
+Vi sparar allt vårt arbete i kursrepot i katalogen `public/report`. Du skapar en katalogstruktur som du kan jobba i på följande vis.
 
 Öppna din terminal och gå till ditt kursrepo.
 
-```console
-# Ställ dig i rooten av kursrepot
+```console title="Gå till rätt arbetskatalog"
+# Ställ dig i roten av kursrepot
 
-# Gå till arbetskatalogen
-cd me/kmom01
+# Gå till roten för webbkatalogen
+cd public
 
-# Visa de filer som finns i katalogen (det bör vara tomt inledningsvis)
+# Visa de filer som finns i katalogen, det bör vara tomt inledningsvis
 ls -al
 ```
 
-Nu skapar jag ett par kataloger för att ge en grundstruktur till webbplatsen. Tanken är att katalogen `public/` innehåller allt som behöver vara publikt och tillgängligt på webbplatsen och övriga kataloger är sådant som inte behöver vara tillgängligt via webbservern. Det är en bra start.
+Tanken är att katalogen `public/` är roten till webb-katalogen, här finns alla filer som normalt behövs för att bygga vår webbplats.
 
-```console
-# Skapa kataloger för den publika delen
-mkdir public
-mkdir public/img
-mkdir public/css
+Låt oss skapa ett par kataloger för att ge en grundstruktur till webbplatsen. 
 
-# Skapa övriga kataloger
-mkdir config
-mkdir view
+```console title="Skapa kataloger för bilder, stylesheets och js-filer."
+mkdir img
+mkdir css
+mkdir js
 ```
 
-Nu tänker jag skapa ett par tomma filer, det är dessa filer som vi senare skall fylla med innehåll.
+Nu är vi redo att skapa de filer som behövs för vår webbplats, det är html-filer för webbsidorna, en stylesheet och fil för js-kod.
 
-```console
-# Skapa tomma filer som är blivande webbsidor, sidkontroller
-touch public/me.php
-touch public/about.php
-touch public/report.php
+FIlerna skapas med kommandot `touch` som skapar en tom fil.
 
-# Skapa en tom stylesheet
-touch public/css/style.css
+```console title="Skapa filer till webbplatsen."
+# Skapa filer till webbsidor
+touch me.html
+touch about.html
+touch report.html
 
-# Skapa en tom konfigurationsfil som sidkontrollers kan inkludera
-touch config/config.php
+# Skapa en stylesheet
+touch css/style.css
 
-# Skapa tomma vyer (byggstenar till webbsidan)
-touch view/header.php
-touch view/byline.php
-touch view/footer.php
+# Skapa en js-fil
+touch js/hello.js
 ```
 
-Bra, då är vi nästan klara. Jag tänkte ladda hem ett par bilder först. För din egen del så kan du använda dessa bilder först, senare kan du själv ersätta dem med andra bilder.
+Innan vi är helt klara så laddar vi hem ett par bilder som kan användas när vi bygger webbsidan. Använd dessa bilder till att börja med och ersätt dem senare med dina egna varianter av bilder.
 
-```console title="Hämta hem bilder från nätet via en webblänk och spara lokalt"
-wget -O public/img/favicon.png https://dbwebb.se/img/bth-leaf.png
-wget -O public/img/me.png https://dbwebb.se/img/prata-med-ankan.png
-wget -O public/img/me_small.jpg https://dbwebb.se/img/mikael-roos/mos-tjaro-square.jpg
-wget -O public/img/background.jpg https://dbwebb.se/img/mos-desktop-kaprifolen.jpg
+```console title="Hämta hem bilder från nätet och spara lokalt"
+curl -so img/leaf.png https://dbwebb.se/img/theme/leaf_64x64.png
+curl -so img/me.jpg https://dbwebb.se/img/mikael-roos/me-6.jpg
+curl -so img/talk-to-the-duck.png https://dbwebb.se/img/prata-med-ankan.png
+curl -so img/desktop.png https://dbwebb.se/img/mos-desktop-kaprifolen.jpg
+curl -so favicon.ico https://dbwebb.se/favicon.ico
 ```
 
-Kommandot `mkdir` skapar nya kataloger, kommandot `touch` skapar nya tomma filer och kommandot `wget` laddar hem filer från nätet.
+När vi är klara så ser strukturen ut så här. Du kan själv kolla din egen katalogstruktur via kommandot `ls -lR` eller kommandot `tree`.
 
-När vi är klara så ser strukturen ut så här. Du kan själv kolla din egen struktur via kommandot `ls -lR` eller om du installerar kommandot `tree` med din pakethanterare, tex `apt install tree` eller `brew install tree`.
-
-```console title="Katalogstruktur när du är klar"
-$ tree .
-.                           
-├── config                  
-│   └── config.php          
-├── public                  
-│   ├── about.php           
-│   ├── css                 
-│   │   └── style.css       
-│   ├── img                 
-│   │   ├── background.jpg  
-│   │   ├── favicon.png     
-│   │   ├── me.png          
-│   │   └── me_small.jpg    
-│   ├── me.php              
-│   └── report.php          
-└── view                    
-    ├── byline.php          
-    ├── footer.php          
-    └── header.php          
-
-5 directories, 12 files     
+```console title="Katalogstruktur inför övningen."
+.
+└── public
+    ├── about.html
+    ├── css
+    │   └── style.css
+    ├── img
+    │   ├── desktop.png
+    │   ├── leaf.png
+    │   └── talk-to-the-duck.png
+    ├── js
+    │   └── hello.js
+    ├── me.html
+    └── report.html
 ```
 
-Vi har nu en grundstruktur i vår webbplats. Du kan prova att öppna filerna via din webbläsare och din lokala webbserver. De flesta filerna är ännu tomma, men du bör kunna se bilderna om du klickar på dem.
+Vi har nu en grundstruktur i vår webbplats.
 
 Starta din texteditor och öppna katalogen så den syns. Jag använder Visual Studio Code som jag kan starta direkt från terminalen och punkten säger att editorn skall visa innehållet i den katalog där jag befinner mig.
 
-```bash
+```console title="Öppna texteditorn för att börja jobba."
+# Gå till roten av kursrepot, en nivå upp i katalogstrukturen
+cd ..
+
+# Starta texteditorn
 code .
 ```
 
-Så här ser det ut för mig.
+Så här ser det ut för mig när jag tittar på resultatet i texteditorn.
 
 <Figure 
     src="https://dbwebb.se/image/webtec/html-css-php/step1-code.png"
     caption="Strukturen för min webbplats som den ser ut i texteditorn vscode."
 />
 
-Vi fortsätter raskt att skapa en första webbsida.
+Vi fortsätter med att skapa en första webbsida.
 
 
 
@@ -202,18 +196,31 @@ Då börjar vi med att göra vår första webbsida. Här kan du se standardstruk
 <html lang="sv">
 <head>
     <meta charset="utf-8">
-    <title>En sida om mig | Me-sidan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>En sida om mig | Kursen webtec</title>
+    <meta name="description" content="Min webbsida i kursen webtec">
 </head>
 <body>
     <header>
+        <img src="img/leaf.png" alt="Logotyp">
         <p>Här kan jag placera en fin header till webbsidan.</p>
     </header>
 
-    <main>
-        <h1>Om Mig Själv</h1>
-        <p>Här kommer snart min egen fina me-sida.</p>
-        <img src="img/me.png" width="300" class="me" alt="Bild på mig">
-    </main>
+    <nav>
+        <ul>
+            <li><a href="#">Me</a></li>
+            <li><a href="#">Redovisa</a></li>
+            <li><a href="#">Om</a></li>
+        </ul>
+    </nav>
+
+    <div class="wrap">
+        <main>
+            <h1>Om Mig Själv</h1>
+            <p>Här kommer snart min egen fina me-sida.</p>
+            <img src="img/me.png" width="300" class="me" alt="Bild på mig">
+        </main>
+    </div>
 
     <footer>
         <hr>
