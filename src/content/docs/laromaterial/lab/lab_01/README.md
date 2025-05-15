@@ -1,6 +1,7 @@
 ---
 title: Lab 01
 revision:
+    "2025-04-01": "(B, klw) Second version."
     "2024-10-01": "(A, mos) First version."
 ---
 Programmera grunderna i JavaScript

@@ -1,5 +1,5 @@
 ---
-title: Lab 02
+title: Lab 04
 revision:
     "2025-04-29": "(B, klw) Second version."
     "2024-10-09": "(A, mos) First version."

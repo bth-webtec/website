@@ -1,15 +1,15 @@
 ---
-title: Lab 03
+title: Lab 05
 revision:
-    "2025-04-29": "(B, klw) Second version."
+    "2025-05-15": "(B, klw) Second version."
     "2024-10-09": "(A, mos) First version."
 ---
 
 
-Lab: JavaScript med loopar
+Lab: JavaScript med functioner och moduler
 ===========================
 
-I denna laboration får du träna på konceptet loop i JavaScript och du får använda for-loop och while-loop.
+I denna laboration får du träna på koncepten funktion och modul i JavaScript och du får använda import/export.
 
 <!-- [[_TOC_]] -->
 
