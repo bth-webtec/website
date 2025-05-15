@@ -18,8 +18,16 @@ dbw.assert(lab.createArray, [], [1, 2, 3, 42, "hello"])
 dbw.assert(lab.arrayLength, [[1, 3, "penguin", "shark"]], 4)
 dbw.assert(lab.arrayLength, [[1, 3]], 2)
 
+dbw.assert(lab.addToArray, [[47, 98, -13, 0, -412, 499], 42, "penguin"], [47, 98, -13, 0, -412, 499, 42, "penguin"])
+
 dbw.assert(lab.nthElement, [[1, 3, 6, 3], 3], 3)
 dbw.assert(lab.nthElement, [[1, 3, "penguin", "shark"], 2], "penguin")
+
+dbw.assert(lab.sliceArray, [[1, 3, "penguin", "shark"]], [1, 3, "penguin", "shark", 3, "penguin"])
+dbw.assert(lab.sliceArray, [[1, 32, 2, 42, 56, 777]], [1, 32, 2, 42, 56, 777, 32, 2])
+
+dbw.assert(lab.spliceArray, [["cow", "hen", "chicken", "cat", "pig"]], ["cat", "pig", "cow", "hen", "chicken"])
+dbw.assert(lab.spliceArray, [[10, 9, 8, 7, 6]], [7, 6, 10, 9, 8])
 
 dbw.assert(lab.largest, [[1, 3, 10, 42, 23, 33]], 42)
 dbw.assert(lab.largest, [[-2, -44, -31, -12]], -2)
@@ -32,8 +40,6 @@ dbw.assert(lab.mergeArrays, [[10, 20, 30, 40], [50, 60, 70]], [10, 20, 30, 40, 5
 dbw.assert(lab.removeDuplicates, [[2, "2", 42, "lipstick", 2, "pencil", "pencil"]], [2, "2", 42, "lipstick", "pencil"])
 
 dbw.assert(lab.firstLast, [['melon', 'banana', 'apple', 'orange', 'lemon']], "melon-lemon")
-
-dbw.assert(lab.addToArray, [[47, 98, -13, 0, -412, 499], 42, "penguin"], [47, 98, -13, 0, -412, 499, 42, "penguin"])
 
 dbw.assert(lab.findindex, [['melon', 'banana', 'apple', 'orange', 'lemon'], 'apple'], 2)
 dbw.assert(lab.findindex, [['melon', 'banana', 'apple', 'orange', 'lemon'], 'cactus'], -1)

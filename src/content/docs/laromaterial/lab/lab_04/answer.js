@@ -34,6 +34,22 @@ export function arrayLength (arr) {
 
 
 /**
+ * Add the two variables to the end of the array and return the array.
+ * 
+ * @param {Array} arr The array to use.
+ * @param {*} item1 The first variable to add.
+ * @param {*} item2 The second variable to add.
+ * 
+ * @returns {Array} The resulting array.
+ */
+export function addToArray (arr, item1, item2) {
+  // TODO: Write your code here.
+  return -1
+}
+
+
+
+/**
  * Returns the nth element in the array.
  *
  * @param {number} n The index of the element to retrieve.
@@ -41,6 +57,36 @@ export function arrayLength (arr) {
  * @returns {*} The nth element in the array.
  */
 export function nthElement (arr, n) {
+  // TODO: Write your code here.
+  return -1
+}
+
+
+
+/**
+ * Use Array.slice() to extract the 2nd and 3rd element from the array.
+ * Add the elements to the end of the array and return it. 
+ * Hint: Array.slice()
+ *
+ * @param {Array} arr The array to use.
+ * @returns {Array} The array with the 2nd and 3rd element in the end.
+ */
+export function sliceArray (arr) {
+  // TODO: Write your code here.
+  return -1
+}
+
+
+
+/**
+ * Use Array.splice() to extract the 1st to 3rd element from the array.
+ * Add the elements to the end of the array and return it. 
+ * Hint: Array.splice()
+ *
+ * @param {Array} arr The array to use.
+ * @returns {Array} The array with the 1st to 3rd element in the end.
+ */
+export function spliceArray (arr) {
   // TODO: Write your code here.
   return -1
 }
@@ -110,22 +156,6 @@ export function removeDuplicates (arr) {
  * @returns {string} The resulting string.
  */
 export function firstLast (arr) {
-  // TODO: Write your code here.
-  return -1
-}
-
-
-
-/**
- * Add the two variables to the end of the array and return the array.
- * 
- * @param {Array} arr The array to use.
- * @param {*} item1 The first variable to add.
- * @param {*} item2 The second variable to add.
- * 
- * @returns {Array} The resulting array.
- */
-export function addToArray (arr, item1, item2) {
   // TODO: Write your code here.
   return -1
 }
