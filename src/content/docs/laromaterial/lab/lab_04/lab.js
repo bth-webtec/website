@@ -13,6 +13,8 @@ import * as labs from './solution.js'
 
 const lab = process.argv[2] === '-s' ? labs : laba
 
+dbw.assert(lab.createArray, [], [1, 2, 3, 42, "hello"])
+
 dbw.assert(lab.arrayLength, [[1, 3, "penguin", "shark"]], 4)
 dbw.assert(lab.arrayLength, [[1, 3]], 2)
 

@@ -9,6 +9,18 @@
 
 
 /**
+ * Create an array that holds the items 1, 2, 3, 42, "hello".
+ *
+ * @returns {Array} the resulting array.
+ */
+export function createArray () {
+  // TODO: Write your code here.
+  return -1
+}
+
+
+
+/**
  * Returns the length of an array.
  *
  * @param {Array} arr The array to use.

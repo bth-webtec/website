@@ -9,6 +9,19 @@
 
 
 /**
+ * Create an array that holds the items 1, 2, 3, 42, "hello".
+ * 
+ * @returns {Array} the resulting array.
+ */
+export function createArray () {
+  // TODO: Write your code here.
+  const arr = [1, 2, 3, 42, "hello"]
+  return arr
+}
+
+
+
+/**
  * Returns the length of an array.
  *
  * @param {array} arr The array to use.
