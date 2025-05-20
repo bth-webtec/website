@@ -97,7 +97,12 @@ _(8-12 studietimmar)_
 
 Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 
+:::note
+Här dyker vi in mer i css och dess konstruktioner.
+:::
+
 1. Jobba igenom övningen "Styla din webbsida med HTML, CSS och JavaScript".
+
 
 1. (läromaterial för att komma igång inför lab 2 i js)
 

@@ -2,7 +2,7 @@
 title: "Om läromaterial" 
 description: Vad finns det för läromaterial i kursen.
 sidebar:
-    order: 001
+    order: 0000
 ---
 
 Följande visar hur kursens läromaterial är uppdelat och publicerat samt vilka verktyg som används vid undervisningen.

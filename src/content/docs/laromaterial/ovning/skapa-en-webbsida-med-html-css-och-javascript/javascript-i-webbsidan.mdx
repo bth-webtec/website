@@ -4,33 +4,68 @@ sidebar:
     order: 0100
 ---
 
-import Figure from '@components/Figure.astro';
+import Figure from '@components/CustomFigure.astro';
 import YouTube from '@components/YouTube.astro';
 
 
-JavaScript i webbsidan 
---------------------------------------
+Nu tittar vi på hur man inkluderar JavaScript-kod i webbsidan.
 
 
 
-Avslutningsvis 
---------------------------------------
+## Säg "Hello world!"
 
-Nu har du kommit igång och du har grunden till en webbplats som bygger på HTML, CSS och PHP. Som du kanske märker så kan det vara klurigt att se hur dessa tekniker samverkar med varandra. Men kortfattat har vi alltså följande.
+Vi har redan förberett webbsidan för att den skall inkludera javascript, det är följande html-kod som gör det.
 
-* HTML för att strukturera innehållet i sidan.
-* CSS för att ge de olika elementen i sidan utseende och style.
-* PHP körs på serversidan och renderar HTML och innehåll i sidan.
+```html title="Inkludera JavaScript i webbsidan."
+  <script type="module" src="js/hello.js"></script>
+</body>
+</html>
+```
 
-När det gäller felsökning så är det bra att ha följande i minnet.
+Inuti filen `js/hello.js` kan vi nu lägga till följande kod.
 
-* Webbläsaren tar en url och försöker hämta den, normalt via en webbserver.
-* Webbservern tar resurser, eventuellt exekveras PHP-koden, och svaret skickas tillbaka till webbläsaren.
-* Webbläsaren får källkoden till sidan (högerklicka och visa källkod).
-* Webbläsaren hämtar hem alla övriga resurser som sidan refererar till, i vårt fall är det bilder och stylesheet (se devtools networks-fliken).
-* Webbläsaren parsar sidan (se den parsade HTML och CSS strukturen i devtools elements-fliken).
+```js title="Ett js-script som säger 'hej'."
+/**
+ * A short script saying hello.
+ */
+console.log("Hello world!")
+```
 
-Försök vara strukturerad när du felsöker och ha alltid ovan flöde i minnet. Det är bra om du själv kan avgränsa och se vad i flödet som felet eventuellt inträffar.
+Du kan nu öppna devtools flik Console (och ladda om sidan) för att se att texten skrivs ut.
 
-Lycka till i din framtida karriär som (webb) programmerare.
+import js1 from '@assets/sewmhcoj/js1.png';
 
+<Figure 
+    src={js1}
+    caption="Meddelandet skrivs ut i webbläsarens devtools console."
+/>
+
+I devtools console kan man debugga och skriva ut information från sitt javascript. Det kan hjälpa dig att felsöka och utveckla din kod.
+
+
+
+## Uppdatera webbsidans innehåll med js
+
+En sak du kan göra med javascript är att uppdatera sidans innehåll på ett dynamiskt sätt. Låt oss ta ett enkelt exempel.
+
+I filen `js/hello.js` lägger vi till följande kod.
+
+```js title="Lägg till aktuellt år i footern."
+/**
+ * Add the current year in the websites footer.
+ */
+const footer = document.querySelector('.footer-bottom')
+const currentYear = new Date().getFullYear();
+footer.textContent += ' ' + currentYear
+```
+
+Det som koden gör är att hämta en referens till html-elementet som har en klass `footer-bottom` och lägger till nuvarande år till dess innehåll.
+
+import js2 from '@assets/sewmhcoj/js2.png';
+
+<Figure 
+    src={js2}
+    caption="Aktuellt år läggs till i webbsidans footer."
+/>
+
+Du ser hur webbsidans innehåll uppdateras dynamiskt med hjälp av javascript.

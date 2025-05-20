@@ -17,10 +17,16 @@ Samtidigt som vi bygger webbplatsen bekantar vi oss med en resurser som är bra 
 
 ## Läs & Studera
 
-_(2-4 studietimmar)_
+_(4 studietimmar)_
 
 Här kan du på egen hand studera och förbereda dig inför övningar och uppgifter.
 
+
+
+:::note
+Fundera på att göra kmom01 mycket mindre och bygg inte på att det finns en introvecka.
+Kanske inte ens en uppgift, flytta allt ett steg framåt?
+:::
 
 
 
@@ -38,6 +44,12 @@ Titta på följande inspelade föreläsningar. Föreläsningarna kan innehålla 
 ### Litteratur
 
 Studera litteratur och resurser enligt följande.
+
+:::note
+Borde vi istället utgå från AI för att erbjuda läsresurser?
+
+Läsresurserna nedan kan placeras som "resurser" istället.
+:::
 
 1. Kika snabbt igenom de resurser som finns om [HTML HyperText Markup Language på webbplatsen MDN](https://developer.mozilla.org/en-US/docs/Web/HTML).
 
@@ -61,7 +73,7 @@ Titta på följande videor/filmer. Filmerna är tänkta att ge dig en allmän or
 
 * A brief history of the World Wide Web (3 min)
 
-Videorna ovan finner du även i spellistan "Kursen webtec: Om webbteknologier HTML, CSS och JavaScript sat att bygga webbplatser och webbtjänster".
+Videorna ovan finner du även i spellistan "Kursen webtec: Om webbteknologier HTML, CSS och JavaScript för att bygga webbplatser och webbtjänster".
 
 
 

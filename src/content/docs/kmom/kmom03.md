@@ -87,6 +87,10 @@ _(8-12 studietimmar)_
 
 Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 
+:::note
+Här löser vi mobil responsivitet.
+:::
+
 1. Jobba igenom övningen "Bygg en responsiv webbplats med HTML, CSS och JavaScript".
 
 1. (läromaterial för att komma igång inför lab 3 i js)
