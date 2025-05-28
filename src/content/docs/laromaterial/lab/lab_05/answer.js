@@ -9,12 +9,15 @@
 
 
 /**
- * Returns a boolean weither the incoming value is larger than 42.
+ * Create an own module called 'helpers.js' in the folder 'modules'.
+ * From that file, export a function that takes two parameters and returns the sum of them. 
+ * If at least one of the parameters is not of type number, return the string "Error".
  *
- * @param {number} value The value to use.
- * @returns {boolean} true the incoming value is larger than 42, else false.
+ * @param {*} item1 The first item to use.
+ * @param {*} item2 The second item to use.
+ * @returns {number|string} the result from your function.
  */
-export function isLarger (value) {
+export function sumValues (item1, item2) {
   // TODO: Write your code here.
   return -1
 }
