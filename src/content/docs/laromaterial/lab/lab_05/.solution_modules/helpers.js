@@ -16,7 +16,7 @@ function sumTwoValues(item1, item2) {
 
 
 /**
- * @param {*} word The string to use.
+ * @param {string} word The string to use.
  * @returns {string} The result from your function.
  */
 function changeLetters(word) {
