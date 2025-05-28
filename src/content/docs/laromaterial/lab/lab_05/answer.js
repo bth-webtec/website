@@ -104,3 +104,23 @@ export function lengthOfArrays (arr) {
   // TODO: Replace this function with an export of your own.
   return null
 }
+
+
+
+/**
+ * Add a function called 'ifLarger' to 'helpers.js' and export it.
+ * The function should return a boolean weither the arguments adds upp to larger than 100 or not.
+ * Use your function "sumTwoValues" from before.
+ *
+ * You can copy the JSDoc below to your implementation.
+ * 
+ * Answer with an export of your function in the format: export { ifLarger }
+ *
+ * @param {number} val1 The first value to use.
+ * @param {number} val2 The second value to use.
+ * @returns {boolean} The result from your function.
+ */
+export function ifLarger (arr) {
+  // TODO: Replace this function with an export of your own.
+  return null
+}

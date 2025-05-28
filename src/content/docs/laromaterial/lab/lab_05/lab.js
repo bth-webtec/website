@@ -28,6 +28,10 @@ dbw.assert(lab.isPalindrome, ["Kajak"], true)
 dbw.assert(lab.lengthOfArrays, [["Kajak"]], [5])
 dbw.assert(lab.lengthOfArrays, [["Duck", "Penguin", "Swan", "Chicken"]], [4, 7, 4, 7])
 
+dbw.assert(lab.ifLarger, [30, 97], true)
+dbw.assert(lab.ifLarger, [42, 42], false)
+
+
 
 
 

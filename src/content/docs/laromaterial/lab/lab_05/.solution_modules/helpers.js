@@ -62,4 +62,15 @@ function lengthOfArrays(arr) {
   return arr.map(word => word.length)
 }
 
-export { sumTwoValues, changeLetters, repeatWord, isPalindrome, lengthOfArrays }
+
+
+/**
+ * @param {number} val1 The first value to use.
+ * @param {number} val2 The second value to use.
+ * @returns {boolean} The result from your function.
+ */
+function ifLarger(val1, val2) {
+  return sumTwoValues(val1, val2) > 100
+}
+
+export { sumTwoValues, changeLetters, repeatWord, isPalindrome, lengthOfArrays, ifLarger }
