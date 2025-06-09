@@ -1,10 +1,35 @@
 ---
-title: "Kmom03: Responsiv webbplats" 
-description: No description.
+title: "Kmom03: Styla webbplats" 
+description: HTML och CSS har många olika konstruktioner, låt oss prova på några av dem.
 ---
 
 :::danger
-Denna del är under arbete pch inte klar.
+Denna del är under arbete och inte klar.
+:::
+
+Bygg en personlig webbplats genom att jobba mer med CSS och olika typer av innehåll med HTML element. (Använd js för att hantera en form av stilväljare där man via querysträngen skickar in ett värde som läggs till som en klass på body-elementet.)
+
+Gör flera små övningar som visar hur man stylar olika HTML-element samt använder mer magiska CSS-konstruktioner för dynamik.
+
+Vilka HTML-delar kan vara av intresse?
+
+* form, formelements
+* table
+* dl, dd, dt
+* summary, details
+* externa fonter
+* bakgrundsbilder, färg
+* ljud, bild
+* position absolute/fixed
+* Kolumner lika höjd (träna flexbox)
+* Ändra små delar av texten, typ stor bokstav inledning av paragraf, första meningen bold...
+
+(lägg till en (lång) webbsida där allt samlas)
+
+(cookies, hur använda dem med js?)
+
+:::danger
+Gammalt material längre ned
 :::
 
 Mer HTML, CSS och JavaScript med fokus på en responsiv webbplats.

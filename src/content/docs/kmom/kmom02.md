@@ -1,11 +1,33 @@
 ---
-title: "Kmom02: Styla en webbplats" 
-description: No description.
+title: "Kmom02: Responsiv webbplats" 
+description: Lär dig grunderna i hur man bygger en responsiv webbplats.
 ---
 
 :::danger
-Denna del är under arbete pch inte klar.
+Denna del är under arbete och inte klar.
 :::
+
+Mer HTML, CSS och JavaScript med fokus på en responsiv webbplats.
+
+Fokus på en övning likt kmom01, som fokuserar på att bygga en responsiv webbplats med media queries. 
+
+Alla kolumner stackas och kanske slänger man om ordningen i main/aside.
+
+Det behövs en hamburgermeny (med ett färdigt js).
+
+Bilder behöver justeras höger/vänster/mitten (float). (clearfix, clearfloat)
+
+Storlek på typsnitt förändras för att öka läsbarhet på små skärmar.
+
+(Något med query string, via formulär, som förändra sidans utseende, eller spara till kmom03?)
+
+* (js) querysträng med säkerhet (dagens namn från api, dagens datum, någon intro till DOM, idag är det fredag? Delar av denna kan även upprepas som en övning/uppgift i kmom03)
+
+
+:::danger
+Gammalt material längre ned
+:::
+
 
 Vi fortsätter att jobba på den webbplats vi byggde i förra kursmomentet och nu handlar det om att styla upp webbplatsens olika delar och lära oss mer om CSS.
 
