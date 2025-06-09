@@ -28,6 +28,8 @@ Vilka HTML-delar kan vara av intresse?
 
 (cookies, hur använda dem med js?)
 
+(försök visa hur man använder modul & funktion)
+
 :::danger
 Gammalt material längre ned
 :::

@@ -13,6 +13,8 @@ Eftersom kursen ges kombinerat på campus och distans så är kursens planering 
 
 Kursen har en [rekommenderad studieplan](webtec/studieplan) som visar en översikt, vecka för vecka, vilket kursmoment som är aktuellt att jobba med. Där finns även rättningsfönster som visar när saker rättas. Följer du denna planeringen så är du i fas med kursens normaltakt.
 
+https://docs.google.com/spreadsheets/d/1ohdubYpmJQ095Z4BTgADIh98LkgcZion3AbpuS1pXvA/edit?gid=1260617726#gid=1260617726
+
 På Canvas finns datum för inlämningsuppgifter. Ett rättningsfönster pågår normalt sett 15 arbetsdagar efter inlämningsdatum på uppgiften. Inlämningsdatumen på Canvas är ett par dagar senare än vad som visas i den rekommenderade studieplanen, det är för att ge dig lite slack/utrymme för att själv planera dina studier.
 
 Kursen har en [lektionsplan](webtec/lektionsplan) som visar när det är lärarledda tillfällen för undervisning/handledning på campus/distans.
