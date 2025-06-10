@@ -26,6 +26,8 @@ Vilka HTML-delar kan vara av intresse?
 
 (lägg till en (lång) webbsida där allt samlas)
 
+Som uppgift kan man bygga en egen webbsida likt https://hvildmarken.se/
+
 (cookies, hur använda dem med js?)
 
 (försök visa hur man använder modul & funktion)
