@@ -1,13 +1,13 @@
 ---
-title: "Kmom04: XXX" 
-description: No description.
+title: "Kmom04: Kom igång med DOM" 
+description: Lär dig manipulera DOM trädet och sidans element.
 ---
 
 :::danger
-Denna del är under arbete pch inte klar.
+Denna del är under arbete och inte klar.
 :::
 
-Nu övergår fokus till js.
+I den här uppgiften tränar vi mer på manipuleringen av DOM. Vi ska bygga en sida där vi tränar på att manipulera element och hantera eventlyssnare.
 
 _(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt – planera och prioritera var du vill lägga tiden.)_
 
@@ -87,7 +87,7 @@ _(8-12 studietimmar)_
 
 Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 
-1. Jobba igenom övningen "XXX".
+1. Jobba igenom artiklarna i "[Kom igång med DOM](./laromaterial/ovning/kom-igang-med-dom/dom-intro)" som hjälper dig med vilka konstruktioner vi har att använda.
 
 1. (läromaterial för att komma igång inför lab 4 i js)
 
