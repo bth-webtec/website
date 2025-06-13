@@ -1,0 +1,25 @@
+---
+title: "Eventlyssnare" 
+sidebar:
+    order: 0050
+---
+
+En av JavaScripts styrkor är förmågan att lyssna på *event*. Det innebär att vi kan fånga upp när användaren klickar på något, när ett element förändras eller när en tangent trycks ner på tangentbordet. Vi kommer inte gå ner på djupet, utan vi håller oss vid ytan och skaffar oss en känsla för vad vi kan åstadkomma.
+
+
+
+### KeyboardEvent
+
+Vi börjar med att kika på ett event från tangentbordet. Ett event kan triggas när man trycker ner en tangent, när man håller nere den eller när man släpper upp tangenten. Det som skiljer dem åt är hur de initieras.
+
+
+
+#### keydown
+
+```js title="keydown"
+document.addEventListener("keydown", function(event) {
+  console.log(event)
+})
+```
+
+Vi lägger eventlyssnaren direkt på `document`. Det skickas in två argument, eventnamnet `"keydown"` och en anonym funktion som körs automatiskt när eventet triggas. Argumentet `event` skickas med och innehåller hela eventet som triggas. För att enklare se vad som menas så kikar vi på hur det ser ut i consolen när vi skriver ut det:

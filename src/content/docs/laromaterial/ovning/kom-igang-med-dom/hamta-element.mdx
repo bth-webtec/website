@@ -5,7 +5,6 @@ sidebar:
 ---
 
 
-### De vanligaste sätten att nå element
 
 Man kan nå de element som webbläsaren har byggt upp utifrån koden via det så kallade ["HTML DOM API:et"](https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API). Det är i objektet `document` vi kan hitta de metoder vi behöver.
 Vi får tillgång till en uppsättning metoder som förenklar processen och nedan följer några av de vanligaste sätten.
@@ -36,7 +35,7 @@ Läs mer om [getElementById](https://developer.mozilla.org/en-US/docs/Web/API/Do
 
 ### queryselector
 
-Ett annat sätt att hämta enstaka element är via `document.queryselector(selector)` där `selector` kan vara vilken css-selector som helst. Vi kommer alltid få tillbaka det första elementet som matchar eller `null` om inget hittas. Vi utgår från följande HTML kod:
+Ett annat sätt att hämta enstaka element är via `document.queryselector(selector)` där `selector` kan vara vilken css-selector som helst. Vi kommer alltid få tillbaka det första elementet som matchar eller `null` om inget hittas. Vi utgår från följande html kod:
 
 ```html title="html"
 <div id="content" class="myClass">
@@ -59,7 +58,7 @@ Läs mer om [querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Doc
 
 ### className
 
-Om vi hämtar element via klassnamn får vi alla element som har det efterfrågade klassnamnet. Funktionen returnerar en *live HTMLCollection*. Det betyder att den representerar elementen i realtid och om vi ändrar på elementen kommer vi även ändra de hämtade objekten. Ofta spelar det ingen roll, men det är bra att känna till när vi itererar igenom elementen. En HTMLCollection har egenskapen `length` så vi kan loopa igenom den och nå alla element. Vi utgår ifrån följande HTML:
+Om vi hämtar element via klassnamn får vi alla element som har det efterfrågade klassnamnet. Funktionen returnerar en *live HTMLCollection*. Det betyder att den representerar elementen i realtid och om vi ändrar på elementen kommer vi även ändra de hämtade objekten. Ofta spelar det ingen roll, men det är bra att känna till när vi itererar igenom elementen. En HTMLCollection har egenskapen `length` så vi kan loopa igenom den och nå alla element. Vi utgår ifrån följande html:
 
 ```html title="html"
 <div class="myClass">
@@ -101,3 +100,5 @@ let allDivs = document.getElementsByTagName('div')
 console.log(allDivs[0].innerHTML) // Lite innehåll i första div:en
 console.log(allDivs[1].innerHTML) // Lite innehåll i andra div:en
 ```
+
+Läs mer om [getElementsByTagName](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName).

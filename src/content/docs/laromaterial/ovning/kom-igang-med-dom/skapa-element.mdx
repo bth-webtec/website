@@ -1,0 +1,36 @@
+---
+title: "Skapa element" 
+sidebar:
+    order: 0030
+---
+
+
+
+Vi kan även skapa html-element i JavaScript. Det görs med den inbyggda metoden `document.createElement`. Låt säga att vi vill skapa 5 lådor, där vi har stylat klassnamnet `box` i css.
+
+Först html koden:
+
+```html title="html"
+<div class="content">
+    Lite innehåll i div:en
+</div>
+```
+
+Sedan skapar element på följande sätt:
+
+```js title="createElement(), appendChild()"
+const myContent = document.getElementsByClassName('content')[0]
+
+for (let i = 0; i < 5; i++) {
+  const box = document.createElement("div")
+
+  box.className = "box"
+
+  myContent.appendChild(box)
+}
+```
+
+Vi använder den inbyggda funktionen `element.appendChild` för att lägga till box-elementen inuti content-elementet. Det går att skapa väldigt många html-element på liknande sätt och manipulera dem i JavaScript.
+
+Läs mer om [createElement](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement).  
+Läs mer om [appendChild](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild).
