@@ -9,7 +9,7 @@ import { FileTree } from '@astrojs/starlight/components';
 import { Card } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
-I den här uppgiften tränar vi på [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) och läser in data från stora filer. Datan ska presenteras i en tabell.
+I den här uppgiften ska vi använda data utifrån. Datan hämtas via http-protokollet med hjälp av fetch och vi ska använda datan för att populera en tabell.
 
 
 ### Förutsättning
@@ -19,6 +19,25 @@ Det förutsätts att du gått igenom artiklarna för kursmomentet samt är det e
 :::note
 TBD: Länk till ev videoserie
 :::
+
+
+
+### Intro
+
+Du ska bygga en applikation som belyser bland annat länders utsläpp av koldioxid. Du ska jämföra data för länderna Sverige, Norge och Danmark. 
+
+Datan som ska användas kommer från "[Our World In Data (owid)](https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions)".
+
+I koden ska vi använda Fetch API och hämta filerna från github på följande länk: 
+```code
+https://raw.githubusercontent.com/webtec-2024/teacher/refs/heads/main/kmom05/data/<filename>.json
+```
+
+Tänk på att &lt;filename&gt; byts ut mot landet du vill hämta (sweden, norway, denmark).
+
+Datan innehåller en hel del nycklar och värden och du kan se en lista på dem i [owid's gitrepo](https://github.com/owid/co2-data/blob/master/owid-co2-codebook.csv).
+
+Bra. Då har du nog allt du behöver för att gå igenom kraven.
 
 
 
@@ -46,9 +65,17 @@ Du jobbar i mappen `public/`.
 
 </FileTree>
 
-#### 1. ???
+#### 1. Hämta datan
 
+1. Användaren ska via ett `select` element och en eventlyssnare kunna hämta data från alla filer.
+2. Filerna ska hämtas med fetch API.
+3. Använd async/await för att invänta datan.
+4. Man ska bara kunna välja år mellan `1900` och `2019`.
 
+#### 2. Presentera datan
+
+1. Datan ska presenteras i en tabell med minst sex kolumner.
+2. Välj ut minst ett värde som ska jämföras och "vinnarens" cell ska markeras, tex grön bakgrundsfärg.
 
 ### Validering
 
