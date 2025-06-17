@@ -99,7 +99,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 
 1. Utför laborationen "Lab 4: XXX".
 
-1. Gör uppgiften "XXX".
+1. Gör uppgiften "[Manipulera DOM](./laromaterial/uppgift/kmom04-dom)".
 
 
 
