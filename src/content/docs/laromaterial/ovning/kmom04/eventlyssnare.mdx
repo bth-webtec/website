@@ -5,11 +5,11 @@ sidebar:
 ---
 
 import Figure from '@components/CustomFigure.astro';
-import arrowUp from '@assets/kmom04/arrowUp.png';
+import keydown from '@assets/kmom04/keydown.png';
 
 En av JavaScripts styrkor är förmågan att lyssna på *event*. Det innebär att vi kan fånga upp när användaren klickar på något, när ett element förändras eller när en tangent trycks ner på tangentbordet. Vi kommer inte gå ner på djupet, utan vi håller oss vid ytan och skaffar oss en känsla för vad vi kan åstadkomma.
 
-
+Om du vill koda med kan du hämta [sandboxen](https://github.com/webtec-2024/teacher/tree/main/example/sandbox).
 
 ### KeyboardEvent
 
@@ -19,7 +19,7 @@ Vi börjar med att kika på ett event från tangentbordet. Ett event kan triggas
 
 #### keydown
 
-```js title="keydown"
+```js title="js"
 document.addEventListener("keydown", function(event) {
   console.log(event)
 })
@@ -28,11 +28,11 @@ document.addEventListener("keydown", function(event) {
 Vi lägger eventlyssnaren direkt på `document`. Det skickas in två argument, eventnamnet `"keydown"` och en anonym funktion som körs automatiskt när eventet triggas. Argumentet `event` skickas med och innehåller hela eventet som triggas. För att enklare se vad som menas så kikar vi på hur det ser ut i consolen när vi skriver ut det:
 
 <Figure 
-    src={arrowUp}
+    src={keydown}
     caption="Eventet 'KeyboardEvent' skrivs ut i consolen."
 />
 
-Vi kan se att det är typen `KeyBoardEvent` och en uppsättning egenskaper vi kan använda. Klickar man på den lilla pilen till vänster dyker det upp en hel del fler. Jag tryckte på "uppåt-pilen" på tangentbordet och kan då se egenskapen `key` med värdet `ArrowUp`. Tidigare har webbläsarna använt sig av [ASCII-värden](http://www.asciitable.com/) för att hantera de olika tangenterna. Numera kan vi, i alla fall i Chrome och Firefox, använda oss utav den faktiska bokstaven eller tangenten.
+Vi kan se att det är typen `KeyBoardEvent` och en uppsättning egenskaper vi kan använda. Klickar man på den lilla pilen till vänster dyker det upp en hel del fler. Jag tryckte till exempel på "uppåt-pilen" på tangentbordet och kan då se egenskapen `key` med värdet `ArrowUp`. Tidigare har webbläsarna använt sig av [ASCII-värden](http://www.asciitable.com/) för att hantera de olika tangenterna. Numera kan vi, i alla fall i de vanligaste webbläsarna, använda oss utav den faktiska bokstaven eller tangenten.
 
 Vi har alltså fångat eventet att en tangent trycks ner. All information hittar vi i `event`. Vi kikar på hur vi kan använda informationen:
 
@@ -56,6 +56,12 @@ document.addEventListener("keydown", function(event) {
     }
 })
 ```
+
+Ovan används kontruktionen "switch statement" som i detta fallet kontrollerat variablen `key` och agerar efter värdet på den. Om man trycker på d, b, w eller e skrivs det ut "Good job..." i elementet. Den sista delen `default` är var man hamnar om man inte matchar något case.
+
+Läs mer om [switch statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch).
+
+
 
 #### Övriga keyboard-events
 
@@ -113,3 +119,20 @@ for (let i = 0; i < boxes.length; i++) {
 ```
 
 Först och främst hämtar vi lådorna via klassnamnet. Vi loopar igenom lådorna och lägger på klick-eventet och använder konstruktionen `event.target.style.backgroundColor` för att byta bakgrundsfärg till blå. Med `event.target` når vi just det elementet vi klickat på och kan således använda samma eventlyssnare till alla lådor.
+
+#### element.onclick()
+
+Man kan även koppla en eventlyssnare direkt på ett element med `element.onclick()` på följande sätt:
+
+```js title="js"
+for (let i = 0; i < boxes.length; i++) {
+  boxes[i].onclick = function(event) {
+    event.target.style.backgroundColor = "blue"
+  }
+}
+```
+
+En nackdel med detta sätt är att vi enbart kan ha ett klickevent på det elementet.
+
+
+Läs mer om [click events](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event).

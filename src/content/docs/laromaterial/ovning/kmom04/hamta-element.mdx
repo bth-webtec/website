@@ -9,22 +9,22 @@ sidebar:
 Man kan nå de element som webbläsaren har byggt upp utifrån koden via det så kallade ["HTML DOM API:et"](https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API). Det är i objektet `document` vi kan hitta de metoder vi behöver.
 Vi får tillgång till en uppsättning metoder som förenklar processen och nedan följer några av de vanligaste sätten.
 
+Om du vill koda med kan du hämta [sandboxen](https://github.com/webtec-2024/teacher/tree/main/example/sandbox).
 
 
 ### id
 
 Vi vet att man kan sätta ett `id` på html-elementen, till exempel `<div id="content">`. Ett id får bara tillhöra ett element och ska vara unikt för sidan. Det gör att vi enbart hämtar just det elementet.
 
-```html title="html"
-<div id="content">
-    Lite innehåll i div:en
+```html title="sandbox, html"
+<div id="content" class="content">
 </div>
 ```
 
-Ifrån js-filen kan vi då nå det elementet via dess id:
+Från js-filen kan vi då nå det elementet via dess id:
 
-```js title="getElementById()"
-let myContent = document.getElementById('content')
+```js title="js, getElementById()"
+const myContent = document.getElementById('content')
 
 myContent.innerHTML = '<h3>This is a template!</h3>'
 ```
@@ -37,17 +37,16 @@ Läs mer om [getElementById](https://developer.mozilla.org/en-US/docs/Web/API/Do
 
 Ett annat sätt att hämta enstaka element är via `document.queryselector(selector)` där `selector` kan vara vilken css-selector som helst. Vi kommer alltid få tillbaka det första elementet som matchar eller `null` om inget hittas. Vi utgår från följande html kod:
 
-```html title="html"
-<div id="content" class="myClass">
-    Lite innehåll i div:en
+```html title="sandbox, html"
+<div id="content" class="content">
 </div>
 ```
 
 Med tanke på att querySelector inte vet hur vi vill hämta ett element behöver vi definiera det i anropet. 
 
-```js title="querySelector()"
-let myContentById = document.querySelector('#content')
-let myContentByClassName = document.querySelector('.myClass')
+```js title="js, querySelector()"
+const myContentById = document.querySelector('#content')
+const myContentByClassName = document.querySelector('.myClass')
 ```
 
 Värt att notera är att även om vi får ha oändligt många element med samma klassnamn är det **det första som hittas** som kommer returneras.
@@ -58,26 +57,26 @@ Läs mer om [querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Doc
 
 ### className
 
-Om vi hämtar element via klassnamn får vi alla element som har det efterfrågade klassnamnet. Funktionen returnerar en *live HTMLCollection*. Det betyder att den representerar elementen i realtid och om vi ändrar på elementen kommer vi även ändra de hämtade objekten. Ofta spelar det ingen roll, men det är bra att känna till när vi itererar igenom elementen. En HTMLCollection har egenskapen `length` så vi kan loopa igenom den och nå alla element. Vi utgår ifrån följande html:
+Om vi hämtar element via klassnamn får vi alla element som har det efterfrågade klassnamnet. Funktionen returnerar en *live HTMLCollection*. Det betyder att den representerar elementen i realtid och om vi ändrar på elementen kommer vi även ändra de hämtade objekten. Ofta spelar det ingen roll, men det är bra att känna till när vi itererar igenom elementen. En HTMLCollection har egenskapen `length` så vi kan loopa igenom den och nå alla element. Vi utgår ifrån följande html där vi har två element med samma klassnamn:
 
-```html title="html"
-<div class="myClass">
-    Lite innehåll i första div:en
+```html title="sandbox, html"
+<div id="content" class="content">
+  Lite innehåll i första div:en
 </div>
-<div class="myClass">
-    Lite innehåll i andra div:en
+<div class="content">
+  Lite innehåll i andra div:en
 </div>
 ```
 
-Vi hämtar dem via dess klassnamn och når dem via dess index på följande sätt:
+Vi hämtar dem via klassnamnet och når dem via dess index på följande sätt:
 
-```js title="getElementsByClassName()"
-let allDivs = document.getElementsByClassName('myClass')
+```js title="js, getElementsByClassName()"
+const allDivs = document.getElementsByClassName('myClass')
 console.log(allDivs[0].innerHTML) // Lite innehåll i första div:en
 console.log(allDivs[1].innerHTML) // Lite innehåll i andra div:en
 ```
 
-Då vi **alltid** får tillbaka en HTMLCollection, även om det bara finns ett element behöver vi använda index för att nå det.
+Då vi **alltid** får tillbaka en HTMLCollection, även om det bara finns ett element, behöver vi använda index för att nå det. Det är vanligt att man använder till exempel en for-loop för att iterera igenom vår HTMLCollection.
 
 Läs mer om [getElementsByClassName](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName).
 
@@ -95,8 +94,8 @@ Läs mer om [querySelectorAll](https://developer.mozilla.org/en-US/docs/Web/API/
 
 En annan variant som också returnerar en *live HTMLCollection* är `document.getElementsByTagName`. Det fungerar likt getElementsByClassName fast vi når elementen via dess taggnamn istället:
 
-```js title="getElementsByTagName()"
-let allDivs = document.getElementsByTagName('div')
+```js title="js, getElementsByTagName()"
+const allDivs = document.getElementsByTagName('div')
 console.log(allDivs[0].innerHTML) // Lite innehåll i första div:en
 console.log(allDivs[1].innerHTML) // Lite innehåll i andra div:en
 ```
