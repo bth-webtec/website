@@ -1,5 +1,5 @@
 ---
-title: "Kmom06: XXX" 
+title: "Kmom06: Duckhunt ⚠️" 
 description: No description.
 ---
 

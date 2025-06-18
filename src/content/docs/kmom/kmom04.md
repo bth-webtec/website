@@ -1,5 +1,5 @@
 ---
-title: "Kmom04: Kom igång med DOM" 
+title: "Kmom04: Kom igång med DOM ⚠️" 
 description: Lär dig manipulera DOM trädet och sidans element.
 ---
 
