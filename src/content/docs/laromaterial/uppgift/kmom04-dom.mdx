@@ -18,19 +18,15 @@ Det förutsätts att du gått igenom artiklarna för kursmomentet samt är det e
 
 TBD: Länk till ev videoserie
 
-
-
-
 ### Krav
 
-
-#### 0. Generell struktur
+#### Generell struktur
 
 Du jobbar i mappen `public/`. 
 
 1. Skapa filen `public/dom.html` och lägg till menyvalet i navbaren likt tidigare.
 
-2. Skapa filen `public/js/dom.js` och läs in den i `dom.html`. Det är "startfilen" för din JavaScript.
+2. Skapa filen `public/js/dom.js` och läs in den i `dom.html`. Det är "startfilen" för din JavaScript. Här ska du ha minst en funktion för varje krav. Det står i uppgiften vad varje funktion ska heta.
 
 3. Skapa filen `public/css/dom.css` som sköter stylen för uppgiften.
 
@@ -45,11 +41,12 @@ Du jobbar i mappen `public/`.
 
 </FileTree>
 
+
 #### 1. Placera ut en låda
 
 Skapa en låda på din sida. Lådan ska vara centrerad med en storlek på 200 x 200 pixlar. Du kan styla lådan på valfritt sätt.
 
-Avsluta med att skapa en funktion i JavaScript som hjälper dig att skriva ut följande via `console.log()`.
+Avsluta med att skapa en funktion `centerBox()` i JavaScript som hjälper dig att skriva ut följande via `console.log()`.
 
 1. Bredd och höjd på webbläsarens fönster.
 1. Bredd och höjd på box-elementet.
@@ -66,7 +63,7 @@ Avsluta med att skapa en funktion i JavaScript som hjälper dig att skriva ut f�
 
 ##### 2.1 När webbläsarens fönster ändrar storlek
 
-Fånga eventet för när webbläsarens fönster ändrar storlek. När det händer skall du alltid placera din låda i mitten av fönstret.
+Fånga eventet för när webbläsarens fönster ändrar storlek. När det händer skall du alltid placera din låda i mitten av fönstret. Använd `centerBox` som callback.
 
 <Card title="Tips" icon="star">
 * `window.onresize`
@@ -81,7 +78,7 @@ Skapa en CSS-klass som definierar en `outline` för ett objekt, kalla CSS-klasse
 
 Gör en eventhanterare för `click` som omväxlande ritar ut eller tar bort en outline från ett klickat objekt.
 
-Koppla eventhanteraren till din låda.
+Koppla eventhanteraren till din låda via callbacken `toggleSelected`.
 
 Om man nu klickar på lådan skall dess outline omväxlande visas och försvinna.
 
@@ -115,9 +112,11 @@ När du dubbelklickar på ett element skall det "försvinna" enligt följande.
 * `setTimeout`
 </Card>
 
-
+Funktionen du har som callback ska heta `doubleClick`.
 
 #### 3. Keyboardevents
+
+Samla alla events som hör till tangentbordet i en funktion som heter `keyboardPress`. Den använder du som callback.
 
 ##### 3.1 Tangenten `e`
 
@@ -129,6 +128,7 @@ När man klickar på tangenten `e` så skall alla element som har klassen `selec
 * `Document.getElementsByClassName()`
 * `NodeList`, Använd en for-loop för att loopa runt elementen i `Nodelist`.
 </Card>
+
  
 {/* 
 ##### 3.2 Tangenterna `q`, `w`
@@ -214,6 +214,8 @@ Skapa händelser för piltangenterna så att man kan flytta valda element till h
 Skapa en timer som byter utseende (färg, form) och position på ett element 5 gånger under 1 sekund.
 
 Skapa en händelse för tangenten `d` som skall gälla samtliga element som är valda.
+
+Funktionen ska heta `animateTimer`.
 
 ### Validering
 

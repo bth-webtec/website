@@ -62,6 +62,31 @@ Ovan används kontruktionen "switch statement" som i detta fallet kontrollerat v
 Läs mer om [switch statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch).
 
 
+#### Funktion som callback
+
+Vi behöver inte skapa en anonym funktion direkt i eventlyssnaren utan vi kan använda en egen namngiven funktion.
+
+```js title="javascript"
+function handleKey(event) {
+  let key = event.key // Catch the key property
+
+    switch (key) {
+        case "d":
+        case "b":
+        case "w":
+        case "e":
+            myContent.innerHTML += `<br>Good job, you pressed ${key}`
+            break
+        default:
+            myContent.innerHTML += `<br>You pressed: ${key}`
+    }
+}
+
+document.addEventListener("keydown", handleKey) 
+```
+
+Här skickar vi med funktionen direkt. Notera att vi **inte** exekverar funktionen utan det gör callbacken åt oss. Vi skickar även automatiskt med `event`.
+
 
 #### Övriga keyboard-events
 

@@ -13,7 +13,45 @@ Ett verkligt trivsamt API är *fetch*. Vi kan med hjälp av det hämta filer och
 
 När vi använder fetch behöver vi ett enda argument, viket är den url:en som datan finns tillgänglig på. Vi får tillbaka ett så kallat *Promise* - ett löfte om att vi kommer få tillbaka något, men inte när. När datan är laddad och vi kan jobba med den blir förfrågan (*Request*) löst (*Resolve*). Det är delar vi tar i senare kurser, men för stunden behöver vi ta reda på hur vi jobbar med den typen av funktionalitet.
 
-```js title="fetch function"
+
+### async / await
+
+Vi kan göra det med hjälp av *async/await*. De nyckelorden hjälper oss att strukturera koden mer som kanske är vana att programmera. Vi kikar på ett exempel där vi ska hämta en fil:
+
+```js
+let data = await fetch(`https://url-to-a-file.json`) // Hämta datan
+let json = await data.json() // Skapa ett JSON objekt av datan
+
+// Här har du tillgång till datan
+```
+
+{/* Vi kan nu skriva koden på ett enligt många, behändigare sätt som är enklare att följa och strukturera, utan att fastna i någon form av callback hell: .then().then().then(). Kravet är bara att funktionen returnerar ett Promise, vilket många av de inbyggda funktionerna gör i dagsläget. */}
+
+För att nyttja async kan vi skapa en egen funktion med nyckelordet `async`. För att använda await behöver vi wrappa anropet i en "async function". 
+{/* I skrivande stund kan man med så kallade ES moduler använda await även i den översta nivån. */}
+
+```js title="async"
+async function readData() {
+  // Nu kan vi använda await i funktionen
+  let data = await fetch(`https://url-to-a-file.json`)
+  let json = await data.json()
+
+  return json
+}
+```
+
+För att sedan använda vår skapade funktion kallar vi på den med await:
+
+```js title="await"
+let parsedData = await readData()
+// Här har vi tillgång till datan
+```
+
+Läs mer om [async på MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function).
+
+Läs mer om [await på MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await).
+
+{/* ```js title="fetch function"
 fetch(`https://url-to-a-file`)
     .then(response => response.json())
     .then(function (json) {
@@ -25,6 +63,6 @@ console.log('I get printed before the data...')
 
 Om vi jämför med till exempel `setTimeout` så vet vi att all kod kommer exekveras vid inläsning och då behöver ju datan finnas. Vi kan vänta på ett Promise och jobba med datan med hjälp av funktionen `.then()`. Koden däri kommer exekveras vid rätt tillfälle, när datan är klar. Det kommer vara viktigt för uppgiften i detta kursmoment att ha koll på.
 
-Om vi tittar på koden ovan så i första delen: `.then(response => response.json())` så returneras datan konverterad till JSON. Vi fångar upp den när det är klart och vi hamnar i nästa del som här enbart skriver ut datan i consolen.
+Om vi tittar på koden ovan så i första delen: `.then(response => response.json())` så returneras datan konverterad till JSON. Vi fångar upp den när det är klart och vi hamnar i nästa del som här enbart skriver ut datan i consolen. */}
 
 Läs mer om [fetch på MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
