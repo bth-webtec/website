@@ -5,6 +5,7 @@ sidebar:
 ---
 
 import Figure from '@components/CustomFigure.astro';
+import draw from '@assets/kmom06/draw.png'; 
 
 Objekt är en samling av namngivna värden som vanligen kallas "properties" (egenskaper). För att referera till ett objekts egenskap används punkt. Det kallas *dot notation*. I andra programmeringsspråk kan du se konstruktionen som en dictionary (Python) eller associativ array (php).
 
@@ -46,4 +47,48 @@ let myObject = {
 
 Vi kan nu nå storleken med `myObject.size.h` respektive `myObject.size.w`.
 
+Vi kan till och med ha funktioner som egenskaper i objekten. De kallas då för *metoder*:
 
+```js
+let myObject = {
+  size: {
+    h: 0,
+    w: 0
+  },
+  background: "green",
+  draw: function() {
+    console.log("I am a method!")
+  }
+}
+```
+
+Det kan vara bra att nå objektets egenskaper inifrån objektet. Då behöver man med nyckelordet *this* markera att det är just objektets egenskaper man vill åt. Låt säga att vi i metoden `draw()` vill rita ut objektet på sidan. Vi kan då uppdatera det så här:
+
+
+```js title="js"
+let myObject = {
+  size: {
+    h: 200,
+    w: 200
+  },
+  background: "green",
+  draw: function() {
+    let element = document.getElementById("content")
+    let obj = document.createElement("div")
+    obj.style.height = this.size.h + "px"
+    obj.style.width = this.size.w + "px"
+    obj.style.backgroundColor = this.background
+
+    element.appendChild(obj)
+  }
+}
+
+myObject.draw()
+```
+
+Resultatet från vår sandbox blir då:
+
+<Figure 
+    src={draw}
+    caption="Lådan ritas ut inifrån objektet."
+/>

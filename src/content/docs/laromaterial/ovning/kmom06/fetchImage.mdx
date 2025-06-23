@@ -1,0 +1,29 @@
+---
+title: "Fetch image ⚠️" 
+sidebar:
+    order: 0020
+---
+
+import Figure from '@components/CustomFigure.astro';
+// import draw from '@assets/kmom06/draw.png'; 
+
+När vi hämtar en bild från en extern webbplats behöver vi arbeta lite med objektet för att det ska fungera. Vi får tillbaka en *blob* (Binary Large Object) som inte innehåller bilden utan bland annat en URL till bilden. Vi kan såklart använda bildens URL redan från start men då har vi inte möjlighet att antingen manipulera den eller utnyttja laddningstiden. Har vi tex en bild som är väldigt stor kan vi medan den laddar sätta en temporär bild eller text som meddelar att den håller på att ladda. Med "blobben" kan vi också enkelt bygga funktionalitet som laddar ned bilden, laddar upp den på en server etc. Vi ska dock bara använda den.
+
+Vi kikar på ett fullt exempel där vi laddar in en bild via fetch och sätter den som bakgrundsbild:
+
+```js title="js"
+document.body.innerHTML = "<h1>Please wait...</h1>" // Ett meddelande som visas under tiden
+let temp = await fetch(`https://raw.githubusercontent.com/webtec-2024/teacher/refs/heads/main/kmom06/backgrounds/1.jpg`) // Hämta bilddatan
+let blob = await temp.blob() // Skapa en blob
+backgroundImage = URL.createObjectURL(blob) // Hämta en användbar URL från blob
+
+document.body.style.backgroundImage = `url(${backgroundImage})` // Sätt bilden som bakgrund
+document.body.style.backgroundSize = "cover" // Bilden ska täcka hela sidan
+document.body.style.backgroundRepeat = "no-repeat" // Bilden ska inte repetera sig
+document.body.style.backgroundPosition = "center" // Bilden ska vara centrerad
+document.body.style.height = "100vh" // Bilden ska täcka 100% av skärmens höjd
+document.body.style.width = "100vw" // Bilden ska täcka 100% av skärmens bredd
+document.body.innerHTML = "" // Ta bort den temporära datan när bilden är klar
+```
+
+Bilden som hämtas är inte så stor så man hinner knappt se meddelandet. Man kan använda samma princip när man hämtar stora datamängder.
