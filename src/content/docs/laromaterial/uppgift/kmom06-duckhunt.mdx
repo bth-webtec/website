@@ -9,7 +9,7 @@ import { FileTree } from '@astrojs/starlight/components';
 import { Card } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
-I den här uppgiften tränar vi på ???
+I den här uppgiften ska vi skapa en variant av det gamla spelet [Duckhunt](https://en.wikipedia.org/wiki/Duck_Hunt). Många av er har säkert spelat det. Det går ut att pricka ankor som rör sig över skärmen. Vi kommer jobba med positionering, events, randomisering, fetch med mera för att få ihop det. Det finns gott om utrymme för att göra lite extra i uppgiften. Om du inte vill använda ankan kan du skapa en egen bild eller form istället.
 
 
 ### Förutsättning
@@ -25,7 +25,7 @@ TBD: Länk till ev videoserie
 ### Krav
 
 
-#### 0. Generell struktur
+#### Generell struktur
 
 Du jobbar i mappen `public/`. 
 
@@ -46,21 +46,40 @@ Du jobbar i mappen `public/`.
 
 </FileTree>
 
-#### 1. ???
+#### 1. Setup
 
-:::note
-* Slumpa fram position innanför fönstret (hela bilden)
-* setInterval kanske innan man startar? typ "svårighetsgrad".
-* setTimeout - hur länge ska spelet hålla på?
-* klicka på objekt för poäng
-* hur kommer fetch in??
-:::
+1. Innan spelet startar ska man kunna välja vilken bakgrundsbild man vill ha samt ha möjlighet att slumpa fram en. Använd fetch för att hämta bilden.
 
-:::note
-Extrauppgift:
-* fler "ankor"?
-* röra sig som på riktigt?
-:::
+2. Använd fetch för att hämta ankan.
+
+3. Man ska kunna välja hur länge spelet håller på: 10, 30 eller 60 sekunder.
+
+4. Utfrån valen man gör ska det skapas ett globalt objekt som håller informationen spelet behöver för att starta och fungera. Sätt alla värden via funktionen `setupGame()`.
+ 
+* [Ankan](https://github.com/webtec-2024/teacher/blob/main/kmom06/duck/duck.png) (Den bilden kommer från [rawpixel.com](https://www.rawpixel.com/))
+* [Bakgrundsbilderna](https://github.com/webtec-2024/teacher/blob/main/kmom06/backgrounds)
+
+
+
+#### 2. Spelet
+
+1. Starta spelet via en knapp och funktionen `startGame()`.
+
+2. Ankans position ska slumpas fram med 1 sekunds interval. Hela ankan ska vara innanför skärmens fönster.
+
+3. Om man klickar på ankan får man 1 poäng. 
+
+4. När tiden är slut presenteras poängen via funktionen `endGame()` och spelet är över. Man ska få möjlighet att starta ett nytt spel.  
+
+
+#### Extra uppgifter (optionellt)
+
+1. Se till så man kan välja svårighetsgrad som påverkar till exempel:
+  * ankans hastighet
+  * ankans storlek
+  * poängen
+
+2. Kan man få ankan att röra sig i olika riktningar och inte slumpas fram?
 
 
 
