@@ -53,13 +53,17 @@ Videorna ovan finner du även i spellistan "Kursen webtec: Om webbteknologier HT
 Här finns ett antal instuderingsfrågor som hjälper dig att finna information på egen hand för att träna på de koncept som är relevanta för detta kmom.
 
 <details>
-<summary>Instuderingsfrågor om HTML</summary>
+<summary>Instuderingsfrågor om JavaScript</summary>
 
-1. Vad står HTML för?
+1. Var är en array i JavaScript?
+
+2. Vad är DOM i JavaScript?
+
+3. På vilka sätt kan jag nå ett html element från JavaScript?
 
 </details>
 
-<details>
+<!-- <details>
 <summary>Instuderingsfrågor om CSS</summary>
 
 1. Vad står CSS för?
@@ -71,7 +75,7 @@ Här finns ett antal instuderingsfrågor som hjälper dig att finna information 
 
 1. Ge en kort historik över programmeringsspråket JavaScript.
 
-</details>
+</details> -->
 
 
 
@@ -87,9 +91,11 @@ _(8-12 studietimmar)_
 
 Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 
-1. Jobba igenom artiklarna i "[Kom igång med DOM](./laromaterial/ovning/kom-igang-med-dom/dom-intro)" som hjälper dig med vilka konstruktioner vi har att använda.
+1. Koda igenom artiklen [Introduktion till arrayer](./laromaterial/ovning/kmom04/arrays).  
 
-1. (läromaterial för att komma igång inför lab 4 i js)
+1. Jobba igenom artiklarna i "[Kom igång med DOM](./laromaterial/ovning/kmom04/dom-intro)" som hjälper dig med vilka konstruktioner vi har att använda.
+
+<!-- 1. (läromaterial för att komma igång inför lab 4 i js) -->
 
 
 
