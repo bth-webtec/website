@@ -1,5 +1,5 @@
 ---
-title: "Kmom01: Kom igång med HTML, CSS och JavaScript" 
+title: "Kmom01: Kom igång med HTML, CSS och JavaScript ⚠️" 
 description: Första kmomet.
 ---
 

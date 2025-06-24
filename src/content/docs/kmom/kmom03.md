@@ -1,6 +1,6 @@
 ---
-title: "Kmom03: Styla webbplats" 
-description: HTML och CSS har många olika konstruktioner, låt oss prova på några av dem.
+title: "Kmom03: Struktur och stil ⚠️" 
+description: HTML och CSS har många olika konstruktioner, låt oss prova på några av dem för att lära oss mer om hur vi kan strukturera innehållet och styla det i en webbplats.
 ---
 
 :::danger

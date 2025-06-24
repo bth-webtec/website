@@ -1,5 +1,5 @@
 ---
-title: "Kmom02: Responsiv webbplats" 
+title: "Kmom02: Responsiv webbplats ⚠️" 
 description: Lär dig grunderna i hur man bygger en responsiv webbplats.
 ---
 
@@ -22,6 +22,10 @@ Storlek på typsnitt förändras för att öka läsbarhet på små skärmar.
 (Något med query string, via formulär, som förändra sidans utseende, eller spara till kmom03?)
 
 * (js) querysträng med säkerhet (dagens namn från api, dagens datum, någon intro till DOM, idag är det fredag? Delar av denna kan även upprepas som en övning/uppgift i kmom03)
+
+(Lägg som bokmärke mobil, visa skillnad) Lägg till på hemskärmen. Behöver förklara poängen med webapp på detta viset?
+
+
 
 
 :::danger
