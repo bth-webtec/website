@@ -93,9 +93,11 @@ Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 
 1. Koda igenom artiklen [Introduktion till arrayer](./laromaterial/ovning/kmom04/arrays). 
 
-1. Koda igenom artiklen [Introduktion till funktioner](./laromaterial/ovning/kmom04/arrays).  
+1. Koda igenom artiklen [Introduktion till funktioner](./laromaterial/ovning/kmom04/funktioner).  
 
 1. Jobba igenom artiklarna i "[Kom igång med DOM](./laromaterial/ovning/kmom04/dom-intro)" som hjälper dig med vilka konstruktioner vi har att använda.
+
+1. Om du vill kan du i artikeln [Från Python till JavaScript](./laromaterial/ovning/kom-igang-med-javascript/python-to-js) se hur Python och JavaScript både liknar varandra och skijler sig åt i de vanligaste konstruktionerna.
 
 <!-- 1. (läromaterial för att komma igång inför lab 4 i js) -->
 

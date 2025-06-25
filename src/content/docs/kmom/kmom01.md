@@ -118,8 +118,9 @@ Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 
 1. Jobba igenom övningen "[Skapa en webbsida med HTML, CSS och JavaScript](./laromaterial/ovning/skapa-en-webbsida-med-html-css-och-javascript)" som hjälper dig bygga en webbplats med HTML, CSS och JavaScript.
 
-1. (läromaterial för att komma igång inför labben i js)
+1. Gå igenom artikeln om [inbyggda typer](./laromaterial/ovning/kom-igang-med-javascript/builtin-types) i JavaScript.
 
+<!-- 1. Gå igenom artikeln om [de vanligaste konstruktionerna del 1](./laromaterial/ovning/kom-igang-med-javascript/common-structures-1) i JavaScript. -->
 
 
 ### Uppgifter

@@ -122,7 +122,7 @@ Här löser vi mobil responsivitet.
 
 1. Jobba igenom övningen "Bygg en responsiv webbplats med HTML, CSS och JavaScript".
 
-1. (läromaterial för att komma igång inför lab 3 i js)
+1. Gå igenom artikeln om [de vanligaste konstruktionerna del 2](./laromaterial/ovning/kom-igang-med-javascript/common-structures-2) i JavaScript.
 
 
 

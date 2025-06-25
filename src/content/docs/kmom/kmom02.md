@@ -130,7 +130,8 @@ Här dyker vi in mer i css och dess konstruktioner.
 1. Jobba igenom övningen "Styla din webbsida med HTML, CSS och JavaScript".
 
 
-1. (läromaterial för att komma igång inför lab 2 i js)
+1. Gå igenom artikeln om [de vanligaste konstruktionerna del 1](./laromaterial/ovning/kom-igang-med-javascript/common-structures-1) i JavaScript.
+
 
 
 
