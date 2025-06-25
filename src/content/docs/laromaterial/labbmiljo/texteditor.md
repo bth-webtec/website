@@ -1,5 +1,5 @@
 ---
-title: Texteditor vscode
+title: Texteditor vscode ⚠️
 description: Utvecklingsverktyg Visual Studio Code för att skriva koden i.
 sidebar:
     order: 145

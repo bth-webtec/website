@@ -1,5 +1,5 @@
 ---
-title: "Terminal" 
+title: "Terminal ⚠️"
 description: No description.
 sidebar:
     order: 150
@@ -23,3 +23,5 @@ Här är guider för hur du kommer igång med terminalen och installation av lab
 
  `apt install tree`
  `brew install tree`
+
+ en egen guide med grundläggande unixkommandon.

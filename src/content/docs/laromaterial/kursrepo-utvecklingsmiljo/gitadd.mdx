@@ -1,0 +1,141 @@
+---
+title: "Lägg till fil i git repot ⚠️" 
+description: Vi visar hur man lägger till filen .editorconfig som en del av git repot och hur man pushar repots ändringar till GitHub.
+author: mos
+revision:
+    "2025-06-25": "(A, mos) Första utkastet."
+sidebar:
+    order: 0020
+---
+
+import Figure from '@components/CustomFigure.astro';
+import YouTube from '@components/YouTube.astro';
+
+
+
+Ditt kursrepo är ett git repo och de filer du skapar behöver du också lägga till i git repot via de kommandon som git erbjuder.
+
+
+
+## git status
+
+Börja med att kontrollera status för ditt repo med kommandot `git status`.
+
+```console title="Kontrollera status för git repot (kursrepot)."
+git status
+```
+
+Det kan se ut så här.
+
+import git1 from '@assets/kursrepo-utvecklingsmiljo/git1.png';
+
+<Figure 
+    src={git1}
+    caption="Kontrollera status på ditt repo med git status."
+/>
+
+Texten säger att filen `.editorconfig` ännu inte är en del av ditt repo.
+
+
+
+## git add 
+
+Låt oss lägga till filen som saknas med kommandot `git add`.
+
+```console title="Lägg till filen .editorconfig till repot."
+git add .editorconfig
+```
+
+Som ett alternativ kan du lägga till samtliga filer som ännu inte är en del av repot, enligt rapporten från `git status`.
+
+```console title="Lägg till samtliga filer som saknas enligt git status."
+git add .
+```
+
+När du lagt till filen kan du köra `git status` igen.
+
+Det kan se ut så här.
+
+import git2 from '@assets/kursrepo-utvecklingsmiljo/git2.png';
+
+<Figure 
+    src={git2}
+    caption="Kontrollera status på ditt repo med git status."
+/>
+
+Nu är filen en del av repot, men ändringarna är ännu inte committade.
+
+
+
+## git commit
+
+För att spara ändringarna till git repot så kör vi kommandot `git commit` och samtidigt anger vi ett committ-meddelande om vad ändringen innebär. Dessa meddleande blir en del av repots committ-historik som berättar en historia om hur repot har utvecklats och förändrats.
+
+```console title="Spara (samtliga) ändringarna i repot med git commit."
+git commit -m "Add the file .editorconfig with default settings for the course"
+```
+
+Kör `git status` när du committat, för att se hur läget ser ut.
+
+Det kan se ut så här.
+
+import git3 from '@assets/kursrepo-utvecklingsmiljo/git3.png';
+
+<Figure 
+    src={git3}
+    caption="Nu är ändringarna committade till git repot."
+/>
+
+Du kan nu utläsa från `git status` att din lokala branch är ett steg före din remote origin/main som innebär att din lokala kopia har en mer ändring än den version av repot som ligger på GitHub.
+
+När du committar bör det vara commits som du kan beskriva i ett enkelt och tydligt meddelande. Om det blir svårt att skriva ett kort meddelande om din commit så innehåller den troligen för mycket saker. Men så här i början är det viktigare att göra många commits än att skriva perfekta meddelanden till commit-historiken, det kommer med träningen.
+
+
+
+## git push
+
+För att ladda upp ändringarna till GitHub, din remote, så använder du kommandot `git push`. Då kommer samtliga lokala ändringar at tladdas upp till din remote (GitHUb) så att både din remote och din lokala version är "i synk" och har samma innehåll och samma commit-historik.
+
+Kör nu kommandot `git push`.
+
+```console title="Ladda upp dina lokala ändringar till din remote på GitHub."
+git push
+```
+
+Det kan se ut så här.
+
+import git4 from '@assets/kursrepo-utvecklingsmiljo/git4.png';
+
+<Figure 
+    src={git4}
+    caption="Dina lokala ändringar synkas upp till din remote på GitHub."
+/>
+
+Du kan se hur utskriften från `git status` berättar att din lokala branch är i synk med din remote.
+
+
+
+## git pull
+
+Om läget hade varit det motsatta, att den version som ligger på GitHub är mer aktuell än din lokala kopia, då löser du det med kommandot `git pull` som laddar ned ändringarna från din remote på GitHub.
+
+Du kan köra kommandot nu, inget kommer att hända eftersom din remote (GitHub) och din lokala version av git repot är "i synk".
+
+```console title="Uppdatera ditt lokala repo med ändringar som är gjorde på din remote (GitHub)."
+git pull
+```
+
+Det kan se ut så här.
+
+import git5 from '@assets/kursrepo-utvecklingsmiljo/git5.png';
+
+<Figure 
+    src={git5}
+    caption="Det finns inget at thämta från din remote då du redan är i sync."
+/>
+
+Om du är osäker på att du är i synk så kan du alltid göra `git status` tillsammans med `git pull` och `git push` tills du är i sync. Ta det som en vana att alltid pusha ditt jobb till din remote, innan du lämnar din dator, så slipper du glömma det.
+
+
+
+## git log

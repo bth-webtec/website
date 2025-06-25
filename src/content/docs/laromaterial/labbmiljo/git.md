@@ -1,5 +1,5 @@
 ---
-title: Git 
+title: Git ⚠️
 description: Installera versionshanteringsverktyget Git.
 sidebar:
     order: 160
