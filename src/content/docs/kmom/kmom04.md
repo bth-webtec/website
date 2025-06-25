@@ -26,15 +26,15 @@ Här kan du på egen hand studera och förbereda dig inför övningar och uppgif
 
 Titta på följande inspelade föreläsningar. Föreläsningarna kan innehålla tips om läsanvisningar.
 
-1. XXX
+1. (Lägga genomgången här?)
 
 
 
-### Litteratur
+<!-- ### Litteratur
 
 Studera litteratur och resurser enligt följande.
 
-1. XXX
+1. XXX -->
 
 
 
@@ -91,7 +91,9 @@ _(8-12 studietimmar)_
 
 Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 
-1. Koda igenom artiklen [Introduktion till arrayer](./laromaterial/ovning/kmom04/arrays).  
+1. Koda igenom artiklen [Introduktion till arrayer](./laromaterial/ovning/kmom04/arrays). 
+
+1. Koda igenom artiklen [Introduktion till funktioner](./laromaterial/ovning/kmom04/arrays).  
 
 1. Jobba igenom artiklarna i "[Kom igång med DOM](./laromaterial/ovning/kmom04/dom-intro)" som hjälper dig med vilka konstruktioner vi har att använda.
 
