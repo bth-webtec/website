@@ -45,6 +45,8 @@ import eslint1 from '@assets/kursrepo-utvecklingsmiljo/eslint1.png';
     caption="Nu är eslint installerad och konfigurerad."
 />
 
+Om något blir fel så kör du kommandot igen tills det blir rätt.
+
 
 
 ## git status
@@ -66,6 +68,26 @@ Titta gärna i de filer som uppdaterats och försök förstå vad det är som h�
 1. `eslint.config.mjs` med konfigurationen för eslint.
 1. Filen `package-lock.json` innehåller exakta versioner av de kodmoduler som installerats.
 1. Katalogen `node_modules/` innehåller de kodmoduler som installerats och där placeras verktyget eslint och alla dess beroenden.
+
+Här är lösningen till hur jag lägger till filerna i mitt repo.
+
+<details>
+<summary>Kommandon för att lägga till i git repot.</summary>
+
+```bash title="Lägg till fil i git repot."
+# Add all files that are not part of the repo
+git add .
+
+# Commit the changes
+git commit -a -m "Installed eslint with default configuration"
+
+# Push the changes to the remote
+git push
+```
+
+Glöm inte att göra `git status` och kanske även `git lg` för att se status på ditt repo.
+
+</details>
 
 
 
