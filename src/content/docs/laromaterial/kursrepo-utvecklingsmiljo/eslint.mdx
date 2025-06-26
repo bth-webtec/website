@@ -3,6 +3,7 @@ title: "Installera lintern ESlint"
 description: Vi installerar linter-verktyget ESLint för att hjälpa oss att formattera koden och hitta små buggar genom statisk kodanalys.
 author: mos
 revision:
+    "2025-06-26": "(B, mos) Linta även css och json samt använd en kursspecifik konfiguration."
     "2025-06-25": "(A, mos) Första utkastet."
 sidebar:
     order: 0050
@@ -27,12 +28,12 @@ npm init @eslint/config@latest
 
 Du kommer att få svara på ett antal frågor som gör att eslint kan skapa en konfiguration åt dig. Här är svaren på frågorna.
 
-* ✔ What do you want to lint? · **javascript**
+* ✔ What do you want to lint? · **javascript, json, css**
 * ✔ How would you like to use ESLint? · **problems**
 * ✔ What type of modules does your project use? · **esm**
 * ✔ Which framework does your project use? · **none**
 * ✔ Does your project use TypeScript? · **no**
-* ✔ Where does your code run? · **browser & node**
+* ✔ Where does your code run? · **browser, node**
 * ✔ Would you like to install dependencies? · **Yes**
 * ✔ Which package manager do you want to use? · **npm**
 
@@ -91,6 +92,18 @@ Glöm inte att göra `git status` och kanske även `git lg` för att se status p
 
 
 
+## Uppdatera eslint config fil
+
+I kursen har vi valt att göra vissa anpassningar till konfigurationsfilen för eslint. Du kan hämta hem en kopia av den uppdaterade konfigurationsfilen med följande kommando.
+
+```console title="Hämta kursens version av konfigurationsfilen eslint.config.js."
+curl -L -o eslint.config.js https://raw.githubusercontent.com/bth-webtec/webtec-abcd25/refs/heads/main/eslint.config.js
+```
+
+Gör commit och push för den uppdaterade konfigurationsfilen.
+
+
+
 ## Kör eslint
 
 När du är klar kan du köra eslint på följande vis.
@@ -99,4 +112,4 @@ När du är klar kan du köra eslint på följande vis.
 npx eslint
 ```
 
-Nu händer inget eftersom vi inte har några javascript-filer som kan analyseras, så allt är bra för tillfället.
+Förhoppningsvis får du inget felmeddelande så här långt.
