@@ -7,7 +7,7 @@ sidebar:
 import Figure from '@components/CustomFigure.astro';
 // import draw from '@assets/kmom06/draw.png'; 
 
-När vi hämtar en bild från en extern webbplats behöver vi arbeta lite med objektet för att det ska fungera. Vi får tillbaka en *blob* (Binary Large Object) som inte innehåller bilden utan bland annat en URL till bilden. Vi kan såklart använda bildens URL redan från start men då har vi inte möjlighet att antingen manipulera den eller utnyttja laddningstiden. Har vi tex en bild som är väldigt stor kan vi medan den laddar sätta en temporär bild eller text som meddelar att den håller på att ladda. Med "blobben" kan vi också enkelt bygga funktionalitet som laddar ned bilden, laddar upp den på en server etc. Vi ska dock bara använda den.
+När vi hämtar en bild från en extern webbplats behöver vi arbeta lite med objektet för att det ska fungera. Vi får tillbaka en *blob* (Binary Large Object) som inte innehåller bilden utan bland annat en URL till bilden. Vi kan såklart använda bildens URL redan från start men då har vi inte möjlighet att antingen manipulera den eller utnyttja laddningstiden. Har vi till exempel en bild som är väldigt stor kan vi medan den laddar sätta en temporär bild eller text som meddelar att den håller på att ladda. Med "blobben" kan vi också enkelt bygga funktionalitet som laddar ned bilden, laddar upp den på en server etc. Vi ska dock bara använda den.
 
 Vi kikar på ett fullt exempel där vi laddar in en bild via fetch och sätter den som bakgrundsbild:
 
@@ -26,4 +26,4 @@ document.body.style.width = "100vw" // Bilden ska täcka 100% av skärmens bredd
 document.body.innerHTML = "" // Ta bort den temporära datan när bilden är klar
 ```
 
-Bilden som hämtas är inte så stor så man hinner knappt se meddelandet. Man kan använda samma princip när man hämtar stora datamängder.
+Bilden som hämtas är inte så stor så man hinner knappt se meddelandet. Man kan använda samma princip när man hämtar stora datamängder. Här görs all style via javascript men man kan såklart lägga allt i en css-klass och bara ge elementet den klassen när den laddat klart.

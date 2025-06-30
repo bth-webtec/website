@@ -1,5 +1,5 @@
 ---
-title: "Manipulera DOM (kmom04) ⚠️" 
+title: "Manipulera DOM (kmom04)" 
 description: Uppgiften lär dig hantera och manipulera DOM trädet.
 sidebar:
     order: 0040
@@ -16,7 +16,9 @@ I den här uppgiften tränar vi mer på manipuleringen av domträdet. Vi ska byg
 
 Det förutsätts att du gått igenom artiklarna för kursmomentet samt är det en fördel om du gjort tidigare kursmoment. Du hittar de relevanta artiklarna under [övning/kmom04](./laromaterial/ovning/kmom04/dom-intro).
 
+:::note
 TBD: Länk till ev videoserie
+:::
 
 ### Krav
 
@@ -54,10 +56,18 @@ Avsluta med att skapa en funktion `centerBox()` i JavaScript som centrerar låda
 1. Bredd och höjd på box-elementet.
 1. Positionen på box-elementet enligt `left, top`.
 
-<Card title="Tips" icon="star">
+<details>
+<summary>Tips</summary>
+
+* Hämta detaljer om ett objekt: `window.getComputedStyle()`, `parseInt()`.
+* Dela upp din kod i små funktioner. Var flitigt med att använda `console.log()` när du hamnar i bekymmer. 
+
+</details>
+
+{/* <Card title="Tips" icon="star">
 * Hämta detaljer om ett objekt: `window.getComputedStyle()`, `parseInt()`.
 * Dela upp din kod i små funktioner. Var flitigt med att använda `console.log()` när du hamnar i bekymmer.
-</Card>
+</Card> */}
 
 
 
@@ -67,10 +77,17 @@ Avsluta med att skapa en funktion `centerBox()` i JavaScript som centrerar låda
 
 Fånga eventet för när webbläsarens fönster ändrar storlek. När det händer skall du alltid placera din låda i mitten av fönstret. Använd `centerBox` som callback.
 
-<Card title="Tips" icon="star">
+<details>
+<summary>Tips</summary>
+
 * `window.onresize`
 * `window.addEventListener()`
-</Card>
+
+</details>
+{/* <Card title="Tips" icon="star">
+* `window.onresize`
+* `window.addEventListener()`
+</Card> */}
 
 
 
@@ -84,10 +101,18 @@ Koppla eventhanteraren till din låda via callbacken `toggleSelected`.
 
 Om man nu klickar på lådan skall dess outline omväxlande visas och försvinna.
 
-<Card title="Tips" icon="star">
+<details>
+<summary>Tips</summary>
+
 * `Element.classlist`
 * `event.target.addEventListener`
-</Card>
+
+</details>
+
+{/* <Card title="Tips" icon="star">
+* `Element.classlist`
+* `event.target.addEventListener`
+</Card> */}
 
 
 
@@ -109,10 +134,18 @@ När du dubbelklickar på ett element skall det "försvinna" enligt följande.
 3. Använd en timer för att radera elementet efter 2 sekunder.
 </Steps>
 
-<Card title="Tips" icon="star">
+<details>
+<summary>Tips</summary>
+
 * `transition`
 * `setTimeout`
-</Card>
+
+</details>
+
+{/* <Card title="Tips" icon="star">
+* `transition`
+* `setTimeout`
+</Card> */}
 
 Funktionen du har som callback ska heta `doubleClick`.
 
@@ -126,10 +159,18 @@ Skapa en CSS-klass som gör ett cirkulärt element. Du kan uppnå denna effekten
 
 När man klickar på tangenten `e` så skall alla element som har klassen `selected` växla mellan formen fyrkantig och cirkulär.
 
-<Card title="Tips" icon="star">
+<details>
+<summary>Tips</summary>
+
 * `Document.getElementsByClassName()`
 * `NodeList`, Använd en for-loop för att loopa runt elementen i `Nodelist`.
-</Card>
+
+</details>
+
+{/* <Card title="Tips" icon="star">
+* `Document.getElementsByClassName()`
+* `NodeList`, Använd en for-loop för att loopa runt elementen i `Nodelist`.
+</Card> */}
 
  
 {/* 
@@ -198,10 +239,18 @@ För att slumpa fram ett tal mellan `min` och `max`, till exempel 1 och 10 anvä
 ```js title="js random"
 Math.floor(Math.random() * 10 + 1)
 ```
-<Card title="Tips" icon="star">
+
+<details>
+<summary>Tips</summary>
+
 * window.innerHeight, window.innerWidth
 * Glöm inte att lägga till eventuella eventlyssnare till kopian. 
-</Card>
+
+</details>
+{/* <Card title="Tips" icon="star">
+* window.innerHeight, window.innerWidth
+* Glöm inte att lägga till eventuella eventlyssnare till kopian. 
+</Card> */}
 
 ##### 3.9 Piltangenterna
 
@@ -229,8 +278,4 @@ TBD
 ### Avslutningsvis
 
 Lycka till och hör av dig om du kör fast eller har några funderingar.
-
-
-
-
 

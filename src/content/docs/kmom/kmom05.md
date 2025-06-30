@@ -1,13 +1,13 @@
 ---
 title: "Kmom05: Fetch ⚠️" 
-description: No description.
+description: Lär dig hämta data med Fetch och async/await samt populera tabeller.
 ---
 
 :::danger
 Denna del är under arbete pch inte klar.
 :::
 
-Mer js.
+I den här uppgiften ska vi hämta data från en extern URL. Datan ska vi sedan filtrera och visa upp i en HTML tabell. 
 
 _(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt – planera och prioritera var du vill lägga tiden.)_
 

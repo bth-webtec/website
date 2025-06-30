@@ -7,7 +7,7 @@ description: No description.
 Denna del är under arbete pch inte klar.
 :::
 
-Nu avslutar vi och förbereder inför sista kmomet.
+Nu avslutar vi och förbereder inför sista kmomet. Vi ska skapa en variant av det gamla spelet Duckhunt. Vi jobbar vidare med Fetch API och blandar in eventlyssnare och olika timingevents. Här har du stor möjlighet att testa dina vingar och bygga ut applikationen.
 
 _(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt – planera och prioritera var du vill lägga tiden.)_
 
