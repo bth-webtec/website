@@ -22,19 +22,19 @@ Här kan du på egen hand studera och förbereda dig inför övningar och uppgif
 
 
 
-### Föreläsning
+### Föreläsning / Genomgång
 
-Titta på följande inspelade föreläsningar. Föreläsningarna kan innehålla tips om läsanvisningar.
+Följande video är en genomgång av kursmomentet med lite tips och trix för hur du kan ta dig igenom det.
 
-1. XXX
+1. TBD (Kommer efter genomgången hållts.)
 
 
 
-### Litteratur
+<!-- ### Litteratur
 
 Studera litteratur och resurser enligt följande.
 
-1. XXX
+1. XXX -->
 
 
 
@@ -42,7 +42,7 @@ Studera litteratur och resurser enligt följande.
 
 Titta på följande videor/filmer. Filmerna är tänkta att ge dig en allmän orientering i det område som behandlas i kursmomentet.
 
-* XXX
+* XXX (spellistan "kom igång med js"?)
 
 Videorna ovan finner du även i spellistan "Kursen webtec: Om webbteknologier HTML, CSS och JavaScript sat att bygga webbplatser och webbtjänster".
 

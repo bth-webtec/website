@@ -85,8 +85,6 @@ Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 
 1. Om du vill kan du i artikeln [Från Python till JavaScript](./laromaterial/ovning/kom-igang-med-javascript/python-to-js) se hur Python och JavaScript både liknar varandra och skijler sig åt i de vanligaste konstruktionerna.
 
-<!-- 1. (läromaterial för att komma igång inför lab 4 i js) -->
-
 
 
 ### Uppgifter
