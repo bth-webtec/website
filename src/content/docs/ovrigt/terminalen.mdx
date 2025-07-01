@@ -1,0 +1,301 @@
+---
+title: "Kom igång med terminalen ⚠️" 
+sidebar:
+    order: 0010
+---
+
+import { FileTree } from '@astrojs/starlight/components';
+import Figure from '@components/CustomFigure.astro';
+import nano1 from '@assets/unix-guide/nano1.png';
+
+Om man sen tidigare inte är bekant med hur terminaler fungerar så kan det vara svårt att snabbt komma igång med det. Här följer därför en guide för grundläggande användning av terminalen. Till hjälp har jag förskapat lite filer och kataloger. Startläget ser ut som följer:
+
+```console title="Startläge"
+klw@DESKTOP:~/git/work/unix-guide$ tree .
+.
+├── action
+│   ├── Daredevil.txt
+│   └── Reacher.txt
+├── comedy
+│   ├── Arrested_Development.txt
+│   └── Community.txt
+└── drama
+    ├── Breaking_Bad.txt
+    └── Peaky_Blinders.txt
+
+3 directories, 6 files
+```
+
+Vi kan se tre kataloger: "action", "comedy" och "drama". Det finns sedan två filer i respektive katalog som representerar tv-serier.
+
+I ett unixsystem behöver vi inte ange filändelser utan den informationen finns i filen. Det kan vara bra utifrån ett användarvänligt perspektiv att ändå lägga till filändelsen.
+
+## Förkunskaper
+
+Du har installerat en egen terminal enligt guiden: TBD
+
+
+
+## Vad är kommandon?
+
+Ett *kommando* är en instruktion till operativsystemet att utföra en viss uppgift. Det kan vara att starta ett program eller köra ett script, eller bara enkla uppgifter som att ändra rättigheter på filer och traversera filträdet. Kommandon kan man bara köra rakt av eller så kan man lägga till *flaggor (options)* och *argument*.
+
+Här är ett exempel på ett enkelt kommando:
+
+```console title="Lista filer och kataloger (kommando)"
+ls
+```
+
+Här är ett exempel på samma kommando med flaggor, dvs inställningar till kommandot:
+
+```console title="Lista filer och kataloger med flaggor (options)"
+ls -al
+```
+
+Här är exempel på ett kommando med ett argument, vilket ofta innefattar vad kommandot ska utföras på:
+
+```console title="Lista filer och kataloger i en specifik katalog (argument)"
+ls katalognamn
+```
+
+
+## Tips att öva in från start
+
+1. Om du redan har skrivit och utfört ett kommando hamnar det i *history*. Normalt sparas de 500 senaste kommandona där. Vi kan med `PIL UPP` gå igenom dem och välja att exekvera det igen.
+
+2. Om man börjar skriva ett kommando eller ett argument kan man automatiskt fylla i resten med `TAB`. Det kallas för *autocompletion* och gör att vi kan spara mycket tid i terminalen. Om det man har skrivit matchar flera saker behöver man trycka fler gånger på TAB för att se vilka alternativ man har. När man enbart har ett alternativ som matchar fylls hela på. 
+
+3. Vill man rensa skärmen kan ma använda kortkommandot `CTRL+L` alternativt köra kommandot `clear`.
+
+4. Med kortkommandot `CTRL+E` hoppar man till slutet av raden.
+
+5. Med kortkommandot `CTRL+A` hoppar man till början av raden.
+
+Nu kan vi börja testa kommandon och hantera de filer och kataloger som är skapade.
+
+
+
+## Navigera i filsystemet
+
+Det är inte alltid lätt man ser var man befinner sig i filsystemet, det beror på prompten. För att få fram hela sökvägen kan vi använda `pwd` (Print Working Directory).
+
+```console title="pwd"
+klw@DESKTOP:~/git/work/unix-guide$ pwd
+/home/klw/git/work/unix-guide
+```
+
+Vill man se vilka filer och mappar som finns i en katalog använder vi `ls`:
+
+```console title="ls"
+klw@DESKTOP:~/git/work/unix-guide$ ls
+action  comedy  drama
+```
+
+Vi kan se de tre katalogerna. För att se vad som finns inuti en katalog använder vi den som argument:
+
+```console title="ls med argument"
+klw@DESKTOP:~/git/work/unix-guide$ ls comedy
+Arrested_Development.txt  Community.txt
+```
+
+Vill man ha en mer detaljerad lista lägger vi till flaggan *l*:
+
+```console title="ls med flagga"
+klw@DESKTOP:~/git/work/unix-guide$ ls -l comedy
+total 0
+-rw-r--r-- 1 klw klw 0 Jul  1 13:40 Arrested_Development.txt
+-rw-r--r-- 1 klw klw 0 Jul  1 13:40 Community.txt
+```
+
+Nu ser vi mer information, till exempel vilka rättigheter filerna har (mer om det senare), när de skapades och vem som äger dem samt storlek på filerna.
+
+För att även se dolda filer kan vi använda flaggan *a*:
+
+```console title="ls med dolda filer"
+klw@DESKTOP:~/git/work/unix-guide$ ls -al comedy
+total 8
+drwxr-xr-x 2 klw klw 4096 Jul  1 13:40 .
+drwxr-xr-x 5 klw klw 4096 Jul  1 13:37 ..
+-rw-r--r-- 1 klw klw    0 Jul  1 13:40 Arrested_Development.txt
+-rw-r--r-- 1 klw klw    0 Jul  1 13:40 Community.txt
+```
+
+Nu dök det upp två "filer" till. `.` och `..`. Den första (.) representerar en länk till den katalog vi är i (comedy) och den andra (..) representerar en länk till ovan katalog. Vi kikar på ett kommando till där det kommer till användning. Iställer för att använda `comedy` som ett argument kan vi ta oss dit för att sedan jobba därifrån. Vi använder kommandot *cd* (Change Directory): 
+
+```console title="cd"
+klw@DESKTOP:~/git/work/unix-guide$ cd comedy/
+klw@DESKTOP:~/git/work/unix-guide/comedy$
+```
+
+Notera hur prompten ändras och vi är numer inuti katalogen `comedy`:
+
+```console title="ls -al"
+klw@DESKTOP:~/git/work/unix-guide/comedy$ ls -al
+total 8
+drwxr-xr-x 2 klw klw 4096 Jul  1 13:40 .
+drwxr-xr-x 5 klw klw 4096 Jul  1 13:37 ..
+-rw-r--r-- 1 klw klw    0 Jul  1 13:40 Arrested_Development.txt
+-rw-r--r-- 1 klw klw    0 Jul  1 13:40 Community.txt
+```
+
+Vi stegar alltså in i kataloger med `cd <katalognamn>`. Vi kunde se innan att det fanns en länk `..`. Den använder vi när vi vill backa ett steg:
+
+```console title="cd .."
+klw@DESKTOP:~/git/work/unix-guide/comedy$ cd ..
+klw@DESKTOP:~/git/work/unix-guide$
+```
+
+
+
+## Hantera filer och kataloger
+
+Låt säga att vi vill lägga till en ny tv-serie: "Squid_Game.txt" i katalogen "action". Vi använder då `touch` för att skapa en fil.
+
+```console title="touch"
+klw@DESKTOP:~/git/work/unix-guide$ cd action
+klw@DESKTOP:~/git/work/unix-guide/action$ touch Squid_Game.txt
+klw@DESKTOP:~/git/work/unix-guide/action$ ls
+Daredevil.txt  Reacher.txt  Squid_Game.txt
+```
+
+Vi behöver en ny kategori och behöver då skapa en ny katalog. Vi använder då `mkdir` för det.
+
+```console title="mkdir"
+klw@DESKTOP:~/git/work/unix-guide$ mkdir cartoon
+klw@DESKTOP:~/git/work/unix-guide$ ls
+action  cartoon  comedy  drama
+```
+
+Det finns en bra flagga till `mkdir` som gör att vi inte får felmeddelande om katalogen redan finns, `-p`:
+
+```console title="mkdir -p"
+klw@DESKTOP:~/git/work/unix-guide$ mkdir cartoon
+mkdir: cannot create directory ‘cartoon’: File exists
+klw@DESKTOP:~/git/work/unix-guide$ mkdir -p cartoon
+klw@DESKTOP:~/git/work/unix-guide$
+```
+
+För att lägga till "The_Simpsons.txt" i den nya katalogen återanvänder en fil och byter sedan namn på den. Vi får då se några nya kommandon. Först kopierar vi en fil och lägger den i mappen "cartoon":
+
+```console title="cp <source> <target>"
+klw@DESKTOP:~/git/work/unix-guide$ cp drama/Breaking_Bad.txt cartoon/
+klw@DESKTOP:~/git/work/unix-guide$ ls cartoon/
+Breaking_Bad.txt
+```
+
+Vi kopierar filen (källan) `drama/Breaking_Bad.txt` till katalogen (målet) `cartoon`. Nu ska vi byta namn på filen så det stämmer. Det gör vi med samma kommando som vi flyttar filer:
+
+```console title="mv <source> <target>"
+klw@DESKTOP:~/git/work/unix-guide$ mv cartoon/Breaking_Bad.txt cartoon/The_Simpsons.txt
+klw@DESKTOP:~/git/work/unix-guide$ ls cartoon/
+The_Simpsons.txt
+```
+
+Skulle vi behöva ta bort en fil använder vi kommandot `rm` (remove):
+
+```console title="rm"
+klw@DESKTOP:~/git/work/unix-guide$ rm action/Reacher.txt
+klw@DESKTOP:~/git/work/unix-guide$ ls action/
+Daredevil.txt  Squid_Game.txt
+```
+
+Om det är en katalog vi ska ta bort behöver vi lägga till flaggan `-r` (recursive) för att det ska gå:
+
+```console title="rm -r"
+klw@DESKTOP:~/git/work/unix-guide$ rm -r cartoon
+klw@DESKTOP:~/git/work/unix-guide$ ls
+action  comedy  drama
+```
+
+
+
+## Läsa innehåll i filer
+
+Nu har vi lite koll på hur vi navigerar i filsystemet och skapar, flyttar, kopierar och tar bort filer och kataloger. Vi går vidare med att titta på hur vi kan se innehållet i filerna. För att det ska fungera behöver det finnas något att se så vi lägger till lite information i en av filerna. Här använder jag den inbyggda editorn *nano* för att skriva till en fil. Jag kör kommandot `nano drama/Breaking_Bad.txt` och lägger till lite text:
+
+```console title="nano"
+nano drama/Breaking_Bad.txt
+```
+
+<Figure 
+    src={nano1}
+    caption="Texteditorn nano"
+/>
+
+När jag sparar trycker jag CTRL+X och sedan väljer jag *y* följt av Enter för att spara med samma filnamn jag öppnade med.
+
+Nu har vi lite information i en fil. Vill vi nu se vad den innehåller använder vi `cat`:
+
+```console title="cat"
+klw@DESKTOP:~/git/work/unix-guide$ cat drama/Breaking_Bad.txt
+"Breaking Bad" is a crime drama series about Walter White,
+a high school chemistry teacher who, after being diagnosed with terminal lung cancer,
+partners with a former student, Jesse Pinkman,
+to cook and sell methamphetamine to secure his family's financial future.
+```
+
+Om vi bara vill se en eller flera rader i filen kan vi arbeta med *head* för att läsa från början i filen och *tail* för att läsa från slutet:
+
+```console title="head"
+klw@DESKTOP:~/git/work/unix-guide$ head -2 drama/Breaking_Bad.txt
+"Breaking Bad" is a crime drama series about Walter White,
+a high school chemistry teacher who, after being diagnosed with terminal lung cancer,
+```
+
+Flaggan -2 betyder att det ska läsas två rader från start. 
+
+```console title="tail"
+klw@DESKTOP:~/git/work/unix-guide$ tail -2 drama/Breaking_Bad.txt
+partners with a former student, Jesse Pinkman,
+to cook and sell methamphetamine to secure his family's financial future.
+```
+
+Som du ser gäller samma sak för tail.
+
+
+
+## Hur kommer jag till min hemmakatalog?
+
+Ofta vill man ta sig till sin egna rot, sin hemmakatalog. Det finns några sätt man lätt kan hoppa dit direkt:
+
+```console title="cd"
+cd
+```
+
+```console title="cd $HOME"
+cd $HOME
+```
+
+```console title="cd ~"
+cd ~
+```
+
+Alla tre sätt ovan tar dig till din användares hemmakatalog.
+
+
+
+## Övriga användbara kommandon
+
+```console title="Skriv ut något till STDOUT"
+echo "hello world"
+```
+
+```console title="Skicka vidare utskriften till en fil"
+echo "hello world" > hello.txt
+```
+
+Det är inte lätt att komma ihåg vilka flaggor som kan användas eller vad de alla betyder, eller i vilken ordning man ska skriva vissa parametrar. Därför finns det så gott som alltid en manual för kommandona som nås av att använda kommandot `man`. Vill du t.ex veta mer om vad du kan göra med ls? 
+
+Så här får du upp manualen:
+
+```console title="Vad kan man göra med ls?"
+man ls
+```
+
+Vill du se vilka kommandon du har skrivit tidigare?
+
+```console title="history"
+history
+```
+
+
