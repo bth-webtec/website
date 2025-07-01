@@ -6,10 +6,10 @@ revision:
 ---
 
 
-Lab: JavaScript med kontrollstrukturer
+Lab: JavaScript med kontrollstrukturer (statements)
 ===========================
 
-I denna laboration får du träna på konceptet arrayer i JavaScript och du får använda inbyggda funktioner för att jobba med if/else/if else och switch.
+I denna laboration får du träna på kontrollstrukturerna if/else/if else och switch.
 
 <!-- [[_TOC_]] -->
 

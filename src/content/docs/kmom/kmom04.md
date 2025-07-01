@@ -22,11 +22,11 @@ Här kan du på egen hand studera och förbereda dig inför övningar och uppgif
 
 
 
-### Föreläsning
+### Föreläsning / Genomgång
 
-Titta på följande inspelade föreläsningar. Föreläsningarna kan innehålla tips om läsanvisningar.
+Följande video är en genomgång av kursmomentet med lite tips och trix för hur du kan ta dig igenom det.
 
-1. (Lägga genomgången här?)
+1. TBD (Kommer efter genomgången hållts.)
 
 
 
@@ -42,7 +42,7 @@ Studera litteratur och resurser enligt följande.
 
 Titta på följande videor/filmer. Filmerna är tänkta att ge dig en allmän orientering i det område som behandlas i kursmomentet.
 
-* XXX (spellistan "kom igång emd js"?)
+* XXX (spellistan "kom igång med js"?)
 
 Videorna ovan finner du även i spellistan "Kursen webtec: Om webbteknologier HTML, CSS och JavaScript sat att bygga webbplatser och webbtjänster".
 
@@ -62,20 +62,6 @@ Här finns ett antal instuderingsfrågor som hjälper dig att finna information 
 3. På vilka sätt kan jag nå ett html element från JavaScript?
 
 </details>
-
-<!-- <details>
-<summary>Instuderingsfrågor om CSS</summary>
-
-1. Vad står CSS för?
-
-</details>
-
-<details>
-<summary>Instuderingsfrågor om JavaScript</summary>
-
-1. Ge en kort historik över programmeringsspråket JavaScript.
-
-</details> -->
 
 
 
@@ -107,7 +93,7 @@ Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas.
 
-1. Utför laborationen "Lab 4: XXX".
+1. Utför laborationen "Lab 4: Arrayer".
 
 1. Gör uppgiften "[Manipulera DOM](./laromaterial/uppgift/kmom04-dom)".
 
