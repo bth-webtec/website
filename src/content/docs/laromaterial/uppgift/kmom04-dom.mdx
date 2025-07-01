@@ -9,7 +9,7 @@ import { FileTree } from '@astrojs/starlight/components';
 import { Card } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
-I den här uppgiften tränar vi mer på manipuleringen av domträdet. Vi ska bygga en sida där vi skapar och manipulerar element. Vi ska även skapa eventlysnare som hjälper oss med den dynamiska delen.
+I den här uppgiften tränar vi mer på manipuleringen av domträdet. Vi ska bygga en sida där vi skapar och manipulerar element. Vi ska även skapa eventlyssnare som hjälper oss med den dynamiska delen.
 
 
 ### Förutsättning
@@ -48,7 +48,7 @@ När du är klar bör du ha följande filer, tillsammans med dina tidigare:
 
 #### 1. Placera ut en låda
 
-Skapa en låda på din sida. Lådan ska vara centrerad med en storlek på 200 x 200 pixlar. Du kan styla lådan på valfritt sätt.
+Skapa en låda på din sida. Lådan ska ha en storlek på 200 x 200 pixlar. Du kan styla lådan på valfritt sätt.
 
 Avsluta med att skapa en funktion `centerBox()` i JavaScript som centrerar lådan. Ett tips här är att skriva ut följande via `console.log()`:
 
@@ -224,15 +224,17 @@ Tryck på `u` för att göra alla valda element till icke valda.
 
 Tryck på `y` för att radera de element som är valda.
 
-<Card title="Tips" icon="star">
+<details>
+<summary>Tips</summary>
+
 * `document.querySelectorAll`
 * `remove()`
-</Card>
 
+</details>
 
 ##### 3.6 Tangenten `p`
 
-När man trycker på `p` så skall ett slumpmässigt element skapas. Ta en kopia av din box, men slumpa fram dess position, färg och form.
+När man trycker på `p` så skall ett slumpmässigt element skapas. Ge elementet samma klassnamn som din startbox, men slumpa fram dess position, färg och form.
 
 För att slumpa fram ett tal mellan `min` och `max`, till exempel 1 och 10 använder man följande konstruktion:
 
@@ -254,7 +256,7 @@ Math.floor(Math.random() * 10 + 1)
 
 ##### 3.9 Piltangenterna
 
-Skapa händelser för piltangenterna så att man kan flytta valda element till höger, vänster, upp och ned. Välj själv hur många pixlar du vill flytta för varje tangentnedtryckning.
+Skapa händelser för piltangenterna så att man kan flytta valda element till höger, vänster, upp och ned. Välj själv hur många pixlar du vill flytta för varje tangentnedtryckning. Elementen ska inte kunna hamna utanför fönstret.
 
 
 

@@ -87,9 +87,8 @@ _(8-12 studietimmar)_
 
 Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 
-1. Jobba igenom övningen "XXX".
+1. Jobba igenom artikeln om [Fetch API](./laromaterial/ovning/kmom05/fetch).
 
-1. (läromaterial för att komma igång inför lab 5 i js)
 
 
 
@@ -97,9 +96,9 @@ Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas.
 
-1. Utför laborationen "Lab 5: XXX".
+<!-- 1. Utför laborationen "Lab 5: XXX". -->
 
-1. Gör uppgiften "XXX".
+1. Gör uppgiften "[fetch](./laromaterial/uppgift/kmom05-fetch)".
 
 
 

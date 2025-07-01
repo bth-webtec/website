@@ -42,7 +42,7 @@ Studera litteratur och resurser enligt följande.
 
 Titta på följande videor/filmer. Filmerna är tänkta att ge dig en allmän orientering i det område som behandlas i kursmomentet.
 
-* XXX
+* XXX (spellistan "kom igång emd js"?)
 
 Videorna ovan finner du även i spellistan "Kursen webtec: Om webbteknologier HTML, CSS och JavaScript sat att bygga webbplatser och webbtjänster".
 
@@ -95,7 +95,7 @@ Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 
 1. Koda igenom artiklen [Introduktion till funktioner](./laromaterial/ovning/kmom04/funktioner).  
 
-1. Jobba igenom artiklarna i "[Kom igång med DOM](./laromaterial/ovning/kmom04/dom-intro)" som hjälper dig med vilka konstruktioner vi har att använda.
+1. Jobba igenom artiklarna i "[Kom igång med DOM](./laromaterial/ovning/kmom04/dom-intro)" som hjälper dig med vilka konstruktioner vi har att använda när vi hanterar DOM.
 
 1. Om du vill kan du i artikeln [Från Python till JavaScript](./laromaterial/ovning/kom-igang-med-javascript/python-to-js) se hur Python och JavaScript både liknar varandra och skijler sig åt i de vanligaste konstruktionerna.
 

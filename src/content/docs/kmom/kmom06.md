@@ -85,11 +85,11 @@ _(8-12 studietimmar)_
 
 ### Övningar
 
-Jobba igenom övningarna, de förbereder dig inför uppgifterna.
+Jobba igenom artiklarna, de förbereder dig inför uppgifterna.
 
-1. Jobba igenom övningen "XXX".
+1. Jobba igenom artikeln om "[objekt literaler](./laromaterial/ovning/kmom06/objectliteral/)".
 
-1. (läromaterial för att komma igång inför lab 6 i js)
+<!-- 1. (läromaterial för att komma igång inför lab 6 i js) -->
 
 
 
@@ -97,9 +97,9 @@ Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas.
 
-1. Utför laborationen "Lab 6: XXX".
+<!-- 1. Utför laborationen "Lab 6: XXX". -->
 
-1. Gör uppgiften "XXX".
+1. Gör uppgiften "[Duckhunt](./laromaterial/uppgift/kmom06-duckhunt)".
 
 
 
