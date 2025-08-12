@@ -1,3 +1,18 @@
+# Webbplats för kursen webtec
+
+Byggd med Starlight & Astro.
+
+Klona repot och gör:
+
+```
+npm install
+npm run dev
+```
+
+Nedan är automatgenererade detaljer från Starlight.
+
+
+
 # Starlight Starter Kit: Basics
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
