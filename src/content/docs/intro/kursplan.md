@@ -11,7 +11,7 @@ Kursplanen är kursens formella dokument som fastställts av högskolan. När ku
 
 ## Aktuell kursplan
 
-Från och med hösten 2025 hittar du [kursplanen genom att söka på kurskoden DV1704 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1704) och kursen heter "Webbteknologier".
+Från och med hösten 2025 hittar du [kursplanen genom att söka på kurskoden DV1704 via BTH's hemsida](https://plan.bth.se/courses/DV1704) och kursen heter "Webbteknologier".
 
 
 <!--

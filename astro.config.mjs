@@ -6,7 +6,7 @@ import starlightImageZoom from 'starlight-image-zoom'
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://webtec-2024.github.io/website/',
+	site: 'https://bth-webtec.github.io/website/',
 	base: '/website',
 	markdown: {
 		remarkPlugins: [remarkReadingTime],
@@ -26,10 +26,10 @@ export default defineConfig({
 				'./src/styles/dbwebb.css',
 			],
 			editLink: {
-				baseUrl: 'https://github.com/webtec-2024/website/tree/main',
+				baseUrl: 'https://github.com/bth-webtec/website/tree/main',
 			},
 			social: {
-				github: 'https://github.com/webtec-2024/website',
+				github: 'https://github.com/bth-webtec/website',
 			},
 			head: [
 				{
