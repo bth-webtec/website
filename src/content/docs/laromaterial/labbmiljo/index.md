@@ -17,6 +17,7 @@ Den allmänna labbmiljön för kursen omfattar följande verktyg.
 * Texteditor vscode
 * Terminal
 * Git
+* GitHub
 
 Specifik labbmiljö för kursen är följande verktyg.
 
