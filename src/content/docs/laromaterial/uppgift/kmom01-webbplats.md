@@ -53,9 +53,9 @@ Utför följande krav.
 
 1. Dina webbsidor skall validera i W3C CSS validator.
 
-1. Din webbplats skall passera `npm run lint`.
+1. Din webbplats skall passera `npx eslint`.
 
-1. Din webbplats skall gå att starta via `npm run dev`.
+1. Din webbplats skall gå att starta via `npx http-server`.
 
 
 

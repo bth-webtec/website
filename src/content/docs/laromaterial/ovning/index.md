@@ -2,12 +2,8 @@
 title: "Om övningar" 
 description: No description.
 sidebar:
-  order: 0030
+  order: 0000
 ---
 
-Berätta kort om syftet med övningar och hur de fungerar.
-
-
-
-
+Övningar är delar av kursmomenten. De förbereder dig inför de uppgifter du skall göra. Ofta innehåller övningarna delar av lösningen till uppgifterna.
 
