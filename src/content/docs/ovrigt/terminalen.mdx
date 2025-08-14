@@ -7,6 +7,7 @@ sidebar:
 import { FileTree } from '@astrojs/starlight/components';
 import Figure from '@components/CustomFigure.astro';
 import nano1 from '@assets/unix-guide/nano1.png';
+import man1 from '@assets/unix-guide/man1.png';
 
 Om man sen tidigare inte är bekant med hur terminaler fungerar så kan det vara svårt att snabbt komma igång med det. Här följer därför en guide för grundläggande användning av terminalen. Till hjälp har jag förskapat lite filer och kataloger. Startläget ser ut som följer:
 
@@ -29,6 +30,22 @@ klw@DESKTOP:~/git/work/unix-guide$ tree .
 Vi kan se tre kataloger: "action", "comedy" och "drama". Det finns sedan två filer i respektive katalog som representerar tv-serier.
 
 I ett unixsystem behöver vi inte ange filändelser utan den informationen finns i filen. Det kan vara bra utifrån ett användarvänligt perspektiv att ändå lägga till filändelsen.
+
+Du kan kopiera hela koden nedan och klistra in i terminalen så skapas samma struktur och innehåll.
+
+```console title="Skapa materialet, kopiera allt och klistra in i temrinalen."
+mkdir -p unix-guide
+cd unix-guide/
+mkdir -p action comedy drama
+touch action/{Daredevil,Reacher}.txt
+touch comedy/{Arrested_Development,Community}.txt
+touch drama/{Breaking_Bad,Peaky_Blinders}.txt
+echo "\"Breaking Bad\" is a crime drama series about Walter White,
+a high school chemistry teacher who, after being diagnosed with terminal lung cancer,
+partners with a former student, Jesse Pinkman,
+to cook and sell methamphetamine to secure his family's financial future." > drama/Breaking_Bad.txt
+```
+
 
 ## Förkunskaper
 
@@ -58,6 +75,12 @@ Här är exempel på ett kommando med ett argument, vilket ofta innefattar vad k
 ls katalognamn
 ```
 
+Du kan såklart blanda argument och options:
+
+```console title="Lista alla filer och kataloger i en specifik katalog (options, argument)"
+ls -al katalognamn
+```
+
 
 ## Tips att öva in från start
 
@@ -70,6 +93,8 @@ ls katalognamn
 4. Med kortkommandot `CTRL+E` hoppar man till slutet av raden.
 
 5. Med kortkommandot `CTRL+A` hoppar man till början av raden.
+
+6. Med kortkommandot `CTRL+PIL` kan du hoppa fram och tillbaka med markören ord för ord. 
 
 Nu kan vi börja testa kommandon och hantera de filer och kataloger som är skapade.
 
@@ -284,6 +309,10 @@ echo "hello world"
 echo "hello world" > hello.txt
 ```
 
+
+
+### Manualen (man)
+
 Det är inte lätt att komma ihåg vilka flaggor som kan användas eller vad de alla betyder, eller i vilken ordning man ska skriva vissa parametrar. Därför finns det så gott som alltid en manual för kommandona som nås av att använda kommandot `man`. Vill du t.ex veta mer om vad du kan göra med ls? 
 
 Så här får du upp manualen:
@@ -292,10 +321,42 @@ Så här får du upp manualen:
 man ls
 ```
 
+<Figure 
+    src={man1}
+    caption="Manualen över kommandot ls."
+/>
+
+Väl här kan du navigera med piltangenterna. Du kan också söka i manualen med `shift+/`. Om du till exempel vill se hur man listar *directories* söker du bara efter det och trycker `Enter`. Stega vidare till nästa sökträff med `n`.
+
+Du avslutar med `q` (quit).
+
+
+
+### History (history)
 Vill du se vilka kommandon du har skrivit tidigare?
 
 ```console title="history"
 history
+```
+
+### Om terminalen "låser sig"
+
+När vi skriver kod i en kodeditor vänjer man sig snabbt med att spara med `ctrl+s`. Om man skulle råka göra det i terminalen låser man den och döljer det man skriver. För att "låsa upp" igen är det `ctrl+q` som gäller. 
+
+
+
+### Öppna filhanteraren från WSL2
+
+Ibland kan man vilja se filer man jobbar med i filhanteraren istället. Du kan då exekvera kommandot `explorer.exe`:
+
+```console title="explorer.exe"
+explorer.exe
+```
+
+Nu öppnas filhanteraren i sin egna root. För att öppna den i nuvarande katalog man står i lägger man till en punkt för att markera *den nuvarande katalogen*:
+
+```console title="explorer.exe med nuvarande katalog"
+explorer.exe .
 ```
 
 
