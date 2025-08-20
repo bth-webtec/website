@@ -1,5 +1,5 @@
 ---
-title: "Kom igång med terminalen ⚠️" 
+title: "Kom igång med terminalen" 
 sidebar:
     order: 0010
 ---
@@ -8,6 +8,7 @@ import { FileTree } from '@astrojs/starlight/components';
 import Figure from '@components/CustomFigure.astro';
 import nano1 from '@assets/unix-guide/nano1.png';
 import man1 from '@assets/unix-guide/man1.png';
+import { Steps } from '@astrojs/starlight/components';
 
 Om man sen tidigare inte är bekant med hur terminaler fungerar så kan det vara svårt att snabbt komma igång med det. Här följer därför en guide för grundläggande användning av terminalen. Till hjälp har jag förskapat lite filer och kataloger. Startläget ser ut som följer:
 
@@ -90,11 +91,13 @@ ls -al katalognamn
 
 3. Vill man rensa skärmen kan man använda kortkommandot `CTRL+L` alternativt köra kommandot `clear`.
 
-4. Med kortkommandot `CTRL+E` hoppar man till slutet av raden.
+4. Med kortkommandot `CTRL+e` hoppar man till slutet av raden.
 
-5. Med kortkommandot `CTRL+A` hoppar man till början av raden.
+5. Med kortkommandot `CTRL+a` hoppar man till början av raden.
 
 6. Med kortkommandot `CTRL+PIL` kan du hoppa fram och tillbaka med markören ord för ord. 
+
+7. Med kortkommandot `CTRL+k` raderar du allt som kommer efter markören.
 
 Nu kan vi börja testa kommandon och hantera de filer och kataloger som är skapade.
 
@@ -200,7 +203,7 @@ klw@DESKTOP:~/git/work/unix-guide$ mkdir -p cartoon
 klw@DESKTOP:~/git/work/unix-guide$
 ```
 
-För att lägga till "The_Simpsons.txt" i den nya katalogen återanvänder en fil och byter sedan namn på den. Vi får då se några nya kommandon. Först kopierar vi en fil och lägger den i mappen "cartoon":
+För att lägga till "The_Simpsons.txt" i den nya katalogen återanvänder vi en fil och byter sedan namn på den. Vi får då se några nya kommandon. Först kopierar vi en fil och lägger den i mappen "cartoon":
 
 ```console title="cp <source> <target>"
 klw@DESKTOP:~/git/work/unix-guide$ cp drama/Breaking_Bad.txt cartoon/
@@ -231,6 +234,31 @@ klw@DESKTOP:~/git/work/unix-guide$ rm -r cartoon
 klw@DESKTOP:~/git/work/unix-guide$ ls
 action  comedy  drama
 ```
+
+
+## Sök i filsystemet
+
+För att enkelt hitta var filer och kataloger finns kan vi använda kommandot `find`:
+
+```console title="find"
+klw@work:~/git/work/unix-guide$ find -name Peaky_Blinders.txt
+./drama/Peaky_Blinders.txt
+```
+
+Vi utgår ifrån den katlog vi befinner oss i. För att söka i en annan katalog lägger vi till sökvägen dit som argument. Låt säga att vi vill söka i katalogen 'comedy':
+
+```console title="find med sökväg"
+klw@work:~/git/work/unix-guide$ find comedy -name Peaky_Blinders.txt
+```
+
+Där finns den inte så ingen utskrift syns. Med find kan vi med fördel även söka med ett så kallat *wildcard*. 
+
+```console title="find med wildcard"
+klw@work:~/git/work/unix-guide$ find -name Dare*
+./action/Daredevil.txt
+```
+
+Det passar bra om det finns flera filer med snarlika namn eller om man inte vet/orkar skriva hela filnamnet.
 
 
 
@@ -307,7 +335,19 @@ echo "hello world"
 
 ```console title="Skicka vidare utskriften till en fil"
 echo "hello world" > hello.txt
+cat hello.txt
+hello world
 ```
+
+För att "fylla på" filen utan att skriva över innehållet använder vi `>>`:
+
+```console title="Skicka vidare utskriften till en fil"
+echo "hello world again" >> hello.txt
+cat hello.txt
+hello world
+hello world again
+```
+
 
 
 
@@ -360,3 +400,82 @@ explorer.exe .
 ```
 
 
+
+## Cheatsheet över ovan kommandon
+
+| Kommando | Beskrivning |
+|----------|-------------|
+| PIL UPP  | Backa i *history*  |
+| TAB      | Autocompletion     |
+| CTRL+l / clear | Rensa terminalen |
+| CTRL+e    | Hoppa till slutet av raden |
+| CTRL+a    | Hoppa till början av raden |
+| CTRL+k    | Raderar allt efter markören |
+| pwd    | Skriver ut var du befinner dig |
+| ls       | Listar filer och kataloger |
+| cd       | Byter katalog |
+| mkdir       | Skapar en katalog |
+| cp \<source\> \<target\>     | Kopierar en fil/katalog (-r) |
+| mv \<source\> \<target\>     | Flyttar en fil/katalog |
+| rm      | Raderar en fil/katalog (-r) |
+| find      | Sök efter en fil/katalog |
+| nano      | En inbyggd terminaleditor |
+| cat      | Visar allt innehåll i en fil |
+| head      | Visar innehåll i en fil från start (-n) |
+| tail      | Visar innehåll i en fil från slutet (-n) |
+| $HOME      | Miljövariabel med sökväg till din hemmakatalog |
+| echo      | Skriver ut något i terminalen |
+| man      | Manualen |
+| history      | Visar dina tidigare exekverade kommandon |
+| CTRL+s      | Låser input och döljer den |
+| CTRL+q      | Låser upp input och visar det du skrivit |
+
+
+
+## Övning
+
+Nedan kommer en övning där du få på egen hand träna på några av de kommandon som tas upp i guiden. Ta det i din egna takt och försök få en känsla för vad kommandona gör och 
+<Steps>
+1. Börja med att ladda ned zip-filen från [dbwebb.bth.se/unix-ovning](https://dbwebb.bth.se/unix-ovning).
+
+2. Packa upp filerna i din WSl installation, förslagsvis i hemmakatalog och i en katalog med namnet 'unix-ovning'. Om du vill göra det från terminalen kan först flytta zip-filen till din hemmakatalog i WSL, till exempel:
+
+    ```console title="Flytta övningsfilerna"
+    cd $HOME
+    mv /mnt/c/Users/klw/Downloads/unix-ovning.zip .
+    ```
+    Notera att mitt användarnamn är "klw". Byt ut det mot ditt egna. Sökvägen kan också variera beroende på operativsystem etc.
+
+3.  Packa sedan upp zip-filen med följande kommando:
+
+    ```console title="Packa upp zip-filen till en katalog"
+    unzip unix-ovning.zip -d unix-ovning
+    ```
+4. Nu har du katalogerna och filerna i en katalog som heter `unix-ovning` i din hemmakatalog.
+    ```console title="Flytta dig in i katalogen"
+    cd unix-ovning
+    ```
+</Steps>
+
+Nu är du redo att börja med övningen.
+
+<Steps>
+1. Ta reda på var du befinner dig i strukturen och utforska innehållet i katalogerna.
+2. Vilka är de tre första böckerna skrivna av Sci-fi författaren Asimov?
+3. Vilka är de sista två böckerna skrivna av Sci-fi författaren Clarke?
+4. Skapa en ny genre `deckare`.
+Lägg till "larsson.txt" och följande böcker:
+*Män som hatar kvinnor*,
+*Flickan som lekte med elden* och
+*Luftslottet som sprängdes*.
+5. Kopiera `rowling.txt` till katalogen `klassiker` och ta bort orginalet.
+6. Kopiera `clarke.txt` till katalogen `klassiker`.
+7. Byt namn på `tolkien.txt` till `tolkien-LOTR.txt`.
+8. Slå ihop de svenska och engelska klassikerna till en fil som heter `alla-klassiker.txt`.
+9. Lägg till boken `Pebble in the sky` till författaren `Asimov`.
+10. Ta bort katalogen `sci-fi` och allt innehåll. 
+11. Ta reda på sökvägen till `Moby-Dick`.
+12. Vilka böcker har `rowling` skrivit?
+</Steps>
+
+Om du tappar bort dig kan du alltid gå till din hemmakatalog med till exempel `cd $HOME`.
