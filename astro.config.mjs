@@ -35,7 +35,7 @@ export default defineConfig({
 				{
 				  tag: 'base',
 				  attrs: {
-					href: '/website/'
+					href: ''
 				  }
 				}
 			],
