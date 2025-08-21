@@ -1,5 +1,5 @@
 ---
-title: "Vanliga konstruktioner 1⚠️" 
+title: "Vanliga konstruktioner 1" 
 sidebar:
     order: 0015
 ---
@@ -89,7 +89,7 @@ Vi tar och tittar på de vanligaste konstruktionerna och hur de se ut i JavaScri
 
 Vi kontrollerar om variablen `value` är större än, mindre än eller samma som `maxValue`.
 
-```js title="if statement"
+```js title="if/else/else if statement"
 const value = 42
 const maxValue = 40
 
@@ -101,6 +101,18 @@ if (value > maxValue) {
   console.log(`${value} is the same as ${maxValue}`)
 }
 ```
+
+Här radas alla tre upp direkt men man behöver inte använda alla på en gång. Om man till exempel bara vill kontrollera om `value` är större än `maxValue` räcker det med *if*:
+
+```js title="if statement"
+const value = 42
+const maxValue = 40
+
+if (value > maxValue) {
+  console.log(`${value} is higher than ${maxValue}`)
+} 
+```
+
 
 
 #### Switch statement
