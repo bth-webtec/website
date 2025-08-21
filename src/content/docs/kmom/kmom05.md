@@ -4,7 +4,7 @@ description: Lär dig hämta data med Fetch och async/await samt populera tabell
 ---
 
 :::danger
-Denna del är under arbete pch inte klar.
+Denna del är under arbete och inte klar.
 :::
 
 I den här uppgiften ska vi hämta data från en extern URL. Datan ska vi sedan filtrera och visa upp i en HTML tabell. 
@@ -40,11 +40,7 @@ Studera litteratur och resurser enligt följande.
 
 ### Video för orientering
 
-Titta på följande videor/filmer. Filmerna är tänkta att ge dig en allmän orientering i det område som behandlas i kursmomentet.
-
-* XXX (spellistan "kom igång med js"?)
-
-Videorna ovan finner du även i spellistan "Kursen webtec: Om webbteknologier HTML, CSS och JavaScript sat att bygga webbplatser och webbtjänster".
+Kom ihåg att du har alla videor i spellistan ["Kom igång med js - webtec 2025"](https://www.youtube.com/watch?v=ZfK9H6555xo&list=PLKtP9l5q3ce-IVBzwNsm32_cxxscvpc-W) att kika på.
 
 
 
