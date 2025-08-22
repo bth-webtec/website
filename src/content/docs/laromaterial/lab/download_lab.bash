@@ -30,11 +30,9 @@ fi
 BASE="https://raw.githubusercontent.com/bth-webtec/website/refs/heads/main/src/content/docs/laromaterial/lab"
 FILES=(
     "README.md"
-    "lab.html"
     "lab.js"
     "answer.js"
     ".solution.js"
-    "../src/dbw.js"
 )
 
 # Loop through the files to download
