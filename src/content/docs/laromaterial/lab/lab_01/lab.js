@@ -1,9 +1,9 @@
 /**
  * This file contains the assertions for testing each function in the lab.
- * 
+ *
  * Execute the labs like this.
  *   node lab
- * 
+ *
  * Execute the labs from the solutionsfile like this.
  *   node lab -s
  */
@@ -42,12 +42,12 @@ dbw.assert(lab.charAtPosition, ["programmering"], "r")
 dbw.assert(lab.upper, ["programming"], "PROGRAMMING")
 dbw.assert(lab.upper, ["webtec"], "WEBTEC")
 
-dbw.assert(lab.upperFirst, ["programming"], "Programming")
+dbw.assert(lab.upperFirst, ["programming"], "Programming", 2)
 dbw.assert(lab.upperFirst, ["javaScript"], "JavaScript")
 
-dbw.assert(lab.substring, ["Polarbear"], "ear")
+dbw.assert(lab.substring, ["Polarbear"], "ear", 2)
 
-dbw.assert(lab.wordIncludes, ["Polarbear"], true)
-dbw.assert(lab.wordIncludes, ["Lemon"], false)
+dbw.assert(lab.wordIncludes, ["Polarbear"], true, 2)
+dbw.assert(lab.wordIncludes, ["Lemon"], false, 2)
 
 dbw.done()
