@@ -1,10 +1,9 @@
 ---
-title: "Om uppgifter" 
-description: Uppgifter till kursens kmom.
+title: "Om studieguide" 
+description: Här finns bra att ha information som är relevant för kursen och din utbildning.
 sidebar:
-    order: 9999
+    order: 0000
 ---
 
-Uppgifter är kopplade till kursens kmom och skall utföras och lämnas in.
+Här finns information, tips och trix som hjälper dig att studera.
 
-Utgå alltid från vad det står i beskrivningen för de kmom som finns och de kommer att länka till rätt uppgift.
