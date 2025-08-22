@@ -2,7 +2,7 @@
 title: "Om uppgifter" 
 description: Uppgifter till kursens kmom.
 sidebar:
-    order: 9999
+    order: 0000
 ---
 
 Uppgifter är kopplade till kursens kmom och skall utföras och lämnas in.
