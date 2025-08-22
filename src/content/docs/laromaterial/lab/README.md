@@ -1,6 +1,6 @@
 ---
-title: "README" 
-description: No description.
+title: "README (för lärare)" 
+description: Dokumentation för labbverktyget.
 revision:
     2025-04-26: (B, mos) Visa hur en labb kan distribueras til en student. 
     2025-04-25: (A, mos) Första versionen. 
@@ -8,6 +8,10 @@ revision:
 
 :::note
 Detta dokument är enbart för lärare.
+:::
+
+:::note
+PS. Strukturen för filerna i labbarna är ändrad sedan 2025-08-22 och dokumentationen är inte uppdaterad.
 :::
 
 Detta dokument beskriver hur lärarna jobbar med utvecklingen av labbarna och hur labbar driftsätts hos studenterna.
