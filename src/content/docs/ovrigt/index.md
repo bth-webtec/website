@@ -1,10 +1,8 @@
 ---
-title: "Om uppgifter" 
-description: Uppgifter till kursens kmom.
+title: "Övrigt" 
+description: Övriga saker som är relevanta för kursen.
 sidebar:
-    order: 9999
+    order: 0000
 ---
 
-Uppgifter är kopplade till kursens kmom och skall utföras och lämnas in.
-
-Utgå alltid från vad det står i beskrivningen för de kmom som finns och de kommer att länka till rätt uppgift.
+Här finns övrigt material som har en koppling till kursen.
