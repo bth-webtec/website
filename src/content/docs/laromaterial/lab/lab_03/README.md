@@ -6,7 +6,7 @@ revision:
 ---
 
 
-Lab: JavaScript med loopar
+Lab: JavaScript med mer kontrollstrukturer
 ===========================
 
 I denna laboration får du träna på konceptet loop i JavaScript och du får använda for-loop och while-loop.
