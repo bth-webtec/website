@@ -82,8 +82,15 @@ export default defineConfig({
 						},
 						{ 
 							label: 'Lab',
-							autogenerate: { directory: 'laromaterial/lab' },
 							collapsed: true,
+							items: [
+								'laromaterial/lab',
+								'laromaterial/lab/lab_01/readme',
+								'laromaterial/lab/lab_02/readme',
+								'laromaterial/lab/lab_03/readme',
+								'laromaterial/lab/lab_04/readme',
+								'laromaterial/lab/readme',
+							],
 						},
 						{ 
 							label: 'Uppgift',
