@@ -5,7 +5,7 @@ author: mos
 revision:
     "2025-06-24": "(PA, mos) Första utkastet."
 sidebar:
-    order: 0001
+    order: 400
 ---
 
-Förklara hur studenten gör en PR
+Förklara hur studenten gör en PR, oklart var denna skall ligga.

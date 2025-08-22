@@ -1,13 +1,9 @@
 ---
 title: "Om instruktioner" 
-description: No description.
+description: Kursmaterial i form av instruktioner.
 sidebar:
-    order: 0020
+    order: 9999
 ---
 
-Berätta kort om syftet med instruktioner och hur de fungerar.
-
-
-
-
+Instruktioner är del av kursmateiralet som beskriver hur något skall utföras.
 

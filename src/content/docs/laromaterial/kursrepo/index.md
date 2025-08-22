@@ -5,7 +5,7 @@ author: mos
 revision:
     "2025-06-24": "(A, mos) Första utkastet."
 sidebar:
-    order: 0001
+    order: 0000
 ---
 
 ## Förutsättning

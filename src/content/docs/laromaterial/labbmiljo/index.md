@@ -2,7 +2,7 @@
 title: "Installera kursens labbmiljö" 
 description: Instruktioner om hur du installerar kursens labbmiljö.
 sidebar:
-    order: 100
+    order: 0100
 ---
 
 Labbmiljön bygger främst på verktyg som är fria och ofta erbjuds i form av öppen källkod.

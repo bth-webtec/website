@@ -52,7 +52,50 @@ export default defineConfig({
 				{
 					label: 'Läromaterial',
 					collapsed: true,
-					autogenerate: { directory: 'laromaterial' },
+					/* autogenerate: { directory: 'laromaterial' }, */
+					items: [
+						'laromaterial',
+						{ 
+							label: 'Labbmiljö',
+							autogenerate: { directory: 'laromaterial/labbmiljo' },
+							collapsed: true,
+						},
+						{ 
+							label: 'Kursrepo',
+							autogenerate: { directory: 'laromaterial/kursrepo' },
+							collapsed: true,
+						},
+						{ 
+							label: 'Kursrepo utvecklingsmiljö',
+							autogenerate: { directory: 'laromaterial/kursrepo-utvecklingsmiljo' },
+							collapsed: true,
+						},
+						{ 
+							label: 'Föreläsning',
+							autogenerate: { directory: 'laromaterial/forelasning' },
+							collapsed: true,
+						},
+						{ 
+							label: 'Övning',
+							autogenerate: { directory: 'laromaterial/ovning' },
+							collapsed: true,
+						},
+						{ 
+							label: 'Lab',
+							autogenerate: { directory: 'laromaterial/lab' },
+							collapsed: true,
+						},
+						{ 
+							label: 'Uppgift',
+							autogenerate: { directory: 'laromaterial/uppgift' },
+							collapsed: true,
+						},
+						{ 
+							label: 'Instruktion',
+							autogenerate: { directory: 'laromaterial/instruktion' },
+							collapsed: true,
+						},
+					],
 				},
 				{
 					label: 'Studieguide',

@@ -1,6 +1,6 @@
 ---
 title: "Om övningar" 
-description: No description.
+description: Om övningar som läraomaterial.
 sidebar:
   order: 0000
 ---

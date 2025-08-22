@@ -1,13 +1,10 @@
 ---
 title: "Om föreläsningar" 
-description: No description.
+description: Föreläsningar som läromaterial.
 sidebar:
-    order: 0010
+    order: 0000
 ---
 
-Berätta kort om syftet med dessa föreläsningar.
+Föreläsningar är ofta till för att förklara en del av kursens omfång, eller för att bredda bilden kring ett koncept. Kursmomenten länkar till föreläningarna när de är lämpliga att titta på.
 
-
-
-
-
+I föreläsningsmaterialet kan ingå tillgång till slides samt lästips, läsanvisningar och tips om övningar.
