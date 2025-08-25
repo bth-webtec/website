@@ -1,11 +1,16 @@
 ---
-title: "Bygg webbsidor med HTML, CSS och JavaScript (kmom01)" 
-description: Uppgift att bygga en webbplats i kmom01.
+title: "Bygg en responsiv webbplats (kmom02)" 
+description: Uppgift att bygga en responsiv webbplats i kmom02.
 sidebar:
-    order: 0010
+    order: 0020
+    hidden: true
 ---
 
-Denna uppgift görs som en del av kmom01 och den sätter kraven för den webbplats du skall bygga.
+Denna uppgift görs som en del av kmom02 och den sätter kraven för den webbplats du skall bygga.
+
+:::danger
+Skriv om till uppgift för responsiv kmom02
+:::
 
 
 
