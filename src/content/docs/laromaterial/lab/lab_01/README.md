@@ -9,8 +9,6 @@ Programmera grunderna i JavaScript
 
 I denna övningen får du träna på att programmera med grunderna i programmeringsspråket JavaScript med siffor, boolean, strängar och några inbyggda metoder.
 
-[[_TOC_]]
-
 <!--
 TODO
 
