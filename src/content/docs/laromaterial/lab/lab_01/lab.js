@@ -36,10 +36,10 @@ dbw.assert(lab.roundPI, [], 3.1416)
 
 dbw.assert(lab.concatinateString, ["Hello", "everyone"], "Hello everyone")
 
-dbw.assert(lab.charAtPosition, ["JavaScript"], "S")
+dbw.assert(lab.charAtPosition, ["JavaScript"], "S", 2)
 dbw.assert(lab.charAtPosition, ["programmering"], "r")
 
-dbw.assert(lab.upper, ["programming"], "PROGRAMMING")
+dbw.assert(lab.upper, ["programming"], "PROGRAMMING", 2)
 dbw.assert(lab.upper, ["webtec"], "WEBTEC")
 
 dbw.assert(lab.upperFirst, ["programming"], "Programming", 2)
@@ -48,6 +48,6 @@ dbw.assert(lab.upperFirst, ["javaScript"], "JavaScript")
 dbw.assert(lab.substring, ["Polarbear"], "ear", 2)
 
 dbw.assert(lab.wordIncludes, ["Polarbear"], true, 2)
-dbw.assert(lab.wordIncludes, ["Lemon"], false, 2)
+dbw.assert(lab.wordIncludes, ["Lemon"], false)
 
 dbw.done()
