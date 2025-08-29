@@ -41,7 +41,7 @@ Missing the deadline means you are sorted in another hat (or pile). All submissi
 
 ## When is later?
 
-You can be sure on that it will be graded at the next deadline for re-submission. There is "always" a next date to do re-submissions, that is considered as "later".
+You can be sure on that it will be graded at the next deadline for re-submission. There is "always" a next date to do re-submissions.
 
 
 
@@ -49,6 +49,6 @@ You can be sure on that it will be graded at the next deadline for re-submission
 
 Proceed with your work. Do your best. Submit when you are done, even if its is after the deadline.
 
-Try to imporve your skills of meeting a deadline. Such skills are highly appreciated in any work environment.
+Try to improve your skills of meeting a deadline. Such skills are highly appreciated in any work environment.
 
 Cross your thumbs and hope for the best of grading, it might come sooner, but expect the worse if you miss the deadline.
