@@ -156,3 +156,30 @@ import pages6 from '@assets/ghpages/pages6.png';
 I fortsättningen så publiceras din webbplats på nytt vid varje ny commit som du pushar till GitHub.
 
 Det kan ta ett par minuter för GitHub att jobba igenom sin action, men därefter ser du resultatet.
+
+
+
+## Lägg till en index.html
+
+För att slippa skriva in `me.html` i slutet av länken så kan du skapa en `index.html` som pekar på din startsida. Detta kan vi göra med hjälp av en symbolisk länk.
+
+Gör så här i terminalen, utgå från att du står i rooten av ditt repo.
+
+```bash title="Skapa en symbolisk länk som index.html."
+# Gå till rooten av ditt repo
+ln -s public/me.html public/index.html
+```
+
+Du kan se hur filen ser ut med `ls`.
+
+```bash title="Se att index.html finns som en symbolisk länk."
+ls -l public/index.html
+```
+
+Du kan nu se att filen index.html pekar på (symbolisk länk till) me.html.
+
+```console title="Se att index.html är en symbolisk länk."
+lrwxrwxrwx 1 mos mos 14 sep  3 09:49 public/index.html -> public/me.html
+```
+
+Nu har du skapat en symbolisk länk som heter `index.html` som pekar på `me.html`. När du nu går till din webbplats utan att ange en specifik sida så kommer `index.html` att laddas och den i sin tur visar `me.html`. På detta sättet så räcker det nu att du anger webblänken du får i GitHub Pages utan att behöva lägga till `me.html` i slutet.
