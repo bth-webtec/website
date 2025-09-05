@@ -1,54 +1,38 @@
 ---
-title: "Kmom02: Responsiv webbplats ⚠️" 
+title: "Kmom02: Responsiv webbplats"
 description: Lär dig grunderna i hur man bygger en responsiv webbplats.
 ---
 
-:::danger
-Detta kursmoment är under framtagande och ännu inte släppt.
-:::
-
-Vi jobba med konceptet responsiv webbplats och uppgraderar vår webbplats så den fungerar lika bra i en desktop dator som i en mobil eller läsplatta.
-
-{/*
-Mer HTML, CSS och JavaScript med fokus på en responsiv webbplats.
-
-Fokus på en övning likt kmom01, som fokuserar på att bygga en responsiv webbplats med media queries. 
-
-Alla kolumner stackas och kanske slänger man om ordningen i main/aside.
-
-Det behövs en hamburgermeny (med ett färdigt js).
-
-Bilder behöver justeras höger/vänster/mitten (float). (clearfix, clearfloat)
-
-Storlek på typsnitt förändras för att öka läsbarhet på små skärmar.
-
-(Något med query string, via formulär, som förändra sidans utseende, eller spara till kmom03?)
-
-* (js) querysträng med säkerhet (dagens namn från api, dagens datum, någon intro till DOM, idag är det fredag? Delar av denna kan även upprepas som en övning/uppgift i kmom03)
-
-(Lägg som bokmärke mobil, visa skillnad) Lägg till på hemskärmen. Behöver förklara poängen med webapp på detta viset?
+import Figure from '@components/CustomFigure.astro';
+import YouTube from '@components/YouTube.astro';
 
 
 
+import resp21 from '@assets/resp/resp21.png';
 
-:::danger
-Gammalt material längre ned
-:::
+<Figure 
+    src={resp21}
+    caption="En responsiv navbar."
+/>
+
+import resp9 from '@assets/resp/resp9.png';
+
+<Figure 
+  src={resp9}
+  caption="Kolumn layout för en, två och tre kolumner - på ett responsivt sätt."
+/>
 
 
-Vi fortsätter att jobba på den webbplats vi byggde i förra kursmomentet och nu handlar det om att styla upp webbplatsens olika delar och lära oss mer om CSS.
 
-Vi utgår från en ostylad sida, likt följande.
+Vi jobbar med konceptet responsiv webbplats och uppgraderar vår webbplats så den fungerar lika bra i en desktop dator som i en mobil eller läsplatta.
 
-_Bild. En ostylad webbplats att utgå ifrån._
+En responsiv webbplats innebär att vi kan bygga en och samma webbplats som visas med olika style på olika enheter. Vi använder oss av CSS media queries för att anpassa layouten och storleken på olika element beroende på skärmstorlek.
 
-När vi är klara har vi stylat navbar, header, footer, innehåll med article och aside med kolumnbaserad layout och vi har provat konstruktioner som float och flex och vi har dessutom byggt en responsiv funktion i webbplatsen.
+Tanken är att vi har en enda grund för webbplatsen och med hjälp av CSS och lite JavaScript så får webbplatsen ändra utseende beroende av hur stor skärmen är på den enhet som visar webbpaltsn.
 
-Resultatet blir individuellt men min egen variant ser ut så här.
+På små enheter som mobiler så kan webbsidan inte vara för bred och navigeringen behöver vara ändamålsenlig. På bredare skärmar har webbplatsen mer utrymme och kan jobba mer i kolumner.
 
-_En stylad webbplats när övningen är klar._
-
-Lycka till när du nu kastar dig in i en underbar värld av CSS konstruktioner.
+Vi fortsätter också med att jobba med grunderna i JavaScript och det finns en ny labb att jobba igenom.
 
 
 
@@ -62,7 +46,9 @@ Här kan du på egen hand studera och förbereda dig inför övningar och uppgif
 
 Titta på följande inspelade föreläsningar. Föreläsningarna kan innehålla tips om läsanvisningar.
 
-1. [Introduktion till CSS](./laromaterial/forelasning/introduktion-till-css)
+1. [Introduktion till CSS](/website/laromaterial/forelasning/introduktion-till-css) där vi går igenom grunderna i CSS och utgår från standarden och kikar på struktur, konstruktioner och hur det fungerar.
+
+1. [Responsiv webbdesign](/website/laromaterial/forelasning/responsiv-webbdesign) visar tankarna bakom konceptet och vissa grundstenar för att komma igång med responsiva webbplatser.
 
 
 
@@ -70,7 +56,9 @@ Titta på följande inspelade föreläsningar. Föreläsningarna kan innehålla 
 
 Studera litteratur och resurser enligt följande.
 
-1. XXX
+1. Studera grunderna för responsiva webbplatser i artikeln "[MDN: Responsive design](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)".
+
+1. En bra guide för att första de olika delarna av hur flexbox fungerar är guiden [CSS Flexbox Layout Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), titta gärna kort i den och använd den som uppslagsverk för att se vilka amöjligheter som finns.
 
 
 
@@ -78,53 +66,54 @@ Studera litteratur och resurser enligt följande.
 
 Titta på följande videor/filmer. Filmerna är tänkta att ge dig en allmän orientering i det område som behandlas i kursmomentet.
 
-* XXX
+{/* Leta reda på någon kort video om responsiv webbdesign och flytta någon av dessa till nästa kmom */}
 
-Videorna ovan finner du även i spellistan "Kursen webtec: Om webbteknologier HTML, CSS och JavaScript sat att bygga webbplatser och webbtjänster".
+* 5 CSS Tips & Tricks for better Responsive Web Design (9 min)
+* Top 10 Advanced CSS Responsive Design Concepts You Should Know (20 min)
+* How to create a Responsive Navigation Bar (for beginners) (15 min)
+
+Videorna ovan finner du även i spellistan "[Om webbteknologier (HTML, CSS, JavaScript)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8ODK-01sIVTEfrtxPO05GD)".
+
+För JavaScript den här veckan kikar du på de videor som berör:
+
+* if
+* Switch/case
+
+Videorna ovan finner du i spellistan ["Kom igång med js - webtec 2025"](https://www.youtube.com/watch?v=ZfK9H6555xo&list=PLKtP9l5q3ce-IVBzwNsm32_cxxscvpc-W).
 
 
 
-### Instuderingsfrågor
+### Ai som lärare (instuderingsfrågor)
 
 Här finns ett antal instuderingsfrågor som hjälper dig att finna information på egen hand för att träna på de koncept som är relevanta för detta kmom.
 
 <details>
-<summary>Instuderingsfrågor om HTML</summary>
+<summary>Instuderingsfrågor om responsiv webbdesign</summary>
 
-1. Vad står HTML för?
+1. Berätta kort om bakgrunden till responsiv webbdesign och hur det har växt fram.
+1. Vilka andra närliggande tekniker finns som syftar till att lösa samma eller liknande problematik?
+1. Hur står sig tekniken responsiv webbdesign idag?
+1. Vilka är de grundläggande delar som jag behöver lära mig för att förstå responsiv webbdesign, som ett första steg?
+1. Vad innebär en hamburger-meny?
 
-</details>
-
-<details>
-<summary>Instuderingsfrågor om CSS</summary>
-
-1. Vad står CSS för?
+Här är en [utskrift av när en frågesession genomförts](https://chatgpt.com/share/68bafa23-4b84-8005-a745-451d43258c9a). Dina svar kan skifta från de som visas. Var alltid kritisk till dina källor.
 
 </details>
 
 <details>
 <summary>Instuderingsfrågor om JavaScript</summary>
 
-1. Ge en kort historik över programmeringsspråket JavaScript.
+1. Vad händer om jag skriver node  i terminalen?
+
+1. Hur fungerar if satser i JavaScript?
+
+1. Hur fungerar switch case i JavaScript?
 
 </details>
 
 
 
-### Video för orientering
-
-Titta på följande videor/filmer. Filmerna är tänkta att ge dig en allmän orientering i det område som behandlas i kursmomentet.
-
-* Evolution of Web Design 1990-2019 (8 min)
-* Bad Web Design: A Look At The Most Hilariously Terrible Websites From Around The Web (11 min)
-
-Videorna ovan finner du även i spellistan "[Om webbteknologier (HTML, CSS, JavaScript)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8ODK-01sIVTEfrtxPO05GD)".
-
-
-
 ## Övningar & Uppgifter
-
-_(8-12 studietimmar)_
 
 Övningar är träning inför uppgifterna, det är ofta klokt att jobba igenom övningarna då de förbereder dig inför uppgifterna. Uppgifter skall utföras och redovisas.
 
@@ -134,15 +123,9 @@ _(8-12 studietimmar)_
 
 Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 
-:::note
-Här dyker vi in mer i css och dess konstruktioner.
-:::
+1. Jobba igenom övningen "[Bygg en responsiv webbplats](/website/laromaterial/ovning/bygg-en-responsiv-webbplats)".
 
-1. Jobba igenom övningen "Styla din webbsida med HTML, CSS och JavaScript".
-
-
-1. Gå igenom artikeln om [de vanligaste konstruktionerna del 1](./laromaterial/ovning/kom-igang-med-javascript/common-structures-1) i JavaScript.
-
+1. Gå igenom artikeln om [de vanligaste konstruktionerna del 1](/website/laromaterial/ovning/kom-igang-med-javascript/common-structures-1) i JavaScript.
 
 
 
@@ -152,7 +135,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas.
 
 1. Utför laborationen "[Lab 2: JavaScript med kontrollstrukturer (statements)](/website/laromaterial/lab/lab_02/readme/)".
 
-1. Gör uppgiften "Styla din rapportsida till webtec-kursen".
+1. Gör uppgiften "[Bygg en responsiv webbplats](/website/laromaterial/uppgift/kmom02-responsiv/)".
 
 
 
@@ -162,9 +145,12 @@ Läs [instruktionen om hur du skall redovisa](/website/laromaterial/instruktion/
 
 Se till att följande frågor besvaras i din redovisningstext i din rapportsida.
 
-* Berätta om din upplevelse att jobba med styling och CSS, hur kändes det?
-* Försök reflektera över vilka eventuella svårigheter som finns för en nybörjare att komma igång med CSS.
-* Är du nöjd med utseendet på din webbplats eller är det sakr du hade velat ändra på?
-* Vilken är din TIL för detta kmom?
+* Berätta om hur det gick att jobba igenom övningen och uppgiften, gav övningen det du behövde för att lösa uppgiften? Fastnade du på något?
 
-*/}
+* Har du tidigare reflekterat över att webbplatser kan vara responsiva, eller att det kan vara skillnad på hur en webbplats visas på små och stora skärmar?
+
+* Är du nöjd med utseendet på din webbplats eller är det något du hade velat ändra på om tiden hade medgett?
+
+* Vad är din uppfattning om programmeringsspråket JavaScript, så här långt?
+
+* Vilken är din TIL för detta kmom?
