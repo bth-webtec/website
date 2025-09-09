@@ -44,7 +44,7 @@ Utför följande krav.
 
 1. Din triptych footer skall vara responsiv och stackas.
 
-1. Uppdatera din stylesheet så att den skiljer sig i utseende jämfört med hur resultatet såg ut i övningen från kmom01. Försök göra en personlig stil som passar dig, men försök också göra en stil som är accepterad av en bredare användarbas. Detta kravet är et tkrav som återkommer i nästa kmom så du kan själv välja hur mycket tid du lägger på det.
+1. Uppdatera din stylesheet så att den skiljer sig i utseende jämfört med hur resultatet såg ut i övningen från kmom01. Försök göra en personlig stil som passar dig, men försök också göra en stil som är accepterad av en bredare användarbas. Detta kravet är ett krav som återkommer i nästa kmom så du kan själv välja hur mycket tid du lägger på det.
 
 1. Dina webbsidor skall validera i W3C HTML validator.
 
