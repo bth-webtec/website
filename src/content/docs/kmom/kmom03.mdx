@@ -1,13 +1,11 @@
 ---
-title: "Kmom03: Struktur och stil ⚠️" 
-description: HTML och CSS har många olika konstruktioner, låt oss prova på några av dem för att lära oss mer om hur vi kan strukturera innehållet och styla det i en webbplats.
+title: "Kmom03: Struktur och stil" 
+description: Vi bygger en webbplats som får plats på en webbsida, en "One-page" webbplats och samtidigt så tränar vi på fler konstruktioner av HTML och CSS.
 ---
 
-:::danger
-Detta kursmoment är under framtagande och ännu inte släppt.
-:::
+Vi har nu ägnat ett par veckor åt att lära oss grunder i HTML och CSS (och JavaScript) och nu är det dags att utföra ett mindre arbete som visar hur mycket vi lärt oss så här långt.
 
-Låt oss titta mer på olika konstruktorer i HTML och CSS för att jobba med struktur och stil av webbplatsen.
+Vi skall bygga en webbplats som kallas "One-page" webbplats. Det är en webbplats som får plats på en webbsida. Allt innehåll ligger på en och samma sida. Det finns en guide som visar hur du kommer igång med grunderna för en sådan webbplats och uppgiften är att bygga en sådan webbplats till en tänkt (påhittad) kund, företag eller organisation.
 
 {/*
 
@@ -25,6 +23,8 @@ Vilka HTML-delar kan vara av intresse?
 * bakgrundsbilder, färg
 * ljud, bild
 * position absolute/fixed
+* float
+* inbyggda css-funktioner
 * Kolumner lika höjd (träna flexbox)
 * Ändra små delar av texten, typ stor bokstav inledning av paragraf, första meningen bold...
 
@@ -42,32 +42,30 @@ Gammalt material längre ned
 
 Mer HTML, CSS och JavaScript med fokus på en responsiv webbplats.
 
-_(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt – planera och prioritera var du vill lägga tiden.)_
-
+*/}
 
 
 ## Läs & Studera
-
-_(2-4 studietimmar)_
 
 Här kan du på egen hand studera och förbereda dig inför övningar och uppgifter.
 
 
 
-
 ### Föreläsning
 
+Det finns inga inspelade föreläsningar till detta kursmomentet.
+
+{/*
 Titta på följande inspelade föreläsningar. Föreläsningarna kan innehålla tips om läsanvisningar.
 
 1. XXX
+*/}
 
 
 
 ### Litteratur
 
-Studera litteratur och resurser enligt följande.
-
-1. XXX
+Det finns ingen särskild litteratur eller läsanvisningar till detta kursmomentet.
 
 
 
@@ -75,9 +73,19 @@ Studera litteratur och resurser enligt följande.
 
 Titta på följande videor/filmer. Filmerna är tänkta att ge dig en allmän orientering i det område som behandlas i kursmomentet.
 
-* XXX
+* Evolution of Web Design 1990-2019 (8 min)
+* Bad Web Design: A Look At The Most Hilariously Terrible Websites From Around The Web (11 min)
 
-Videorna ovan finner du även i spellistan "Kursen webtec: Om webbteknologier HTML, CSS och JavaScript sat att bygga webbplatser och webbtjänster".
+Videorna ovan finner du även i spellistan "[Om webbteknologier (HTML, CSS, JavaScript)](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8ODK-01sIVTEfrtxPO05GD)".
+
+
+För JavaScript den här veckan kikar du på de videor som berör:
+
+* forloop
+* while
+* Smygkika på funktioner
+
+Videorna ovan finner du i spellistan ["Kom igång med js - webtec 2025"](https://www.youtube.com/watch?v=ZfK9H6555xo&list=PLKtP9l5q3ce-IVBzwNsm32_cxxscvpc-W).
 
 
 
@@ -86,31 +94,33 @@ Videorna ovan finner du även i spellistan "Kursen webtec: Om webbteknologier HT
 Här finns ett antal instuderingsfrågor som hjälper dig att finna information på egen hand för att träna på de koncept som är relevanta för detta kmom.
 
 <details>
-<summary>Instuderingsfrågor om HTML</summary>
+<summary>Instuderingsfrågor om HTML/CSS</summary>
 
-1. Vad står HTML för?
+1. Finns det ett koncept som heter "One-page" webbplats?
+1. Vad skall man tänka på när man bygger en sådan webbplats?
+1. Kan man göra en grundstruktur för sidan med HTML där man delar in sidan i rader och varje rad har kolumner med innehåll?
+1. Kan man göra en grundstruktur för sidan med HTML där man delar in sidan i rader och varje rad har kolumner med innehåll?
 
-</details>
-
-<details>
-<summary>Instuderingsfrågor om CSS</summary>
-
-1. Vad står CSS för?
+[Här är ett exempel på en session från en Ai-kompis](https://chatgpt.com/share/68c427e6-ff74-8005-811c-b7fff295da80).
 
 </details>
 
 <details>
 <summary>Instuderingsfrågor om JavaScript</summary>
 
-1. Ge en kort historik över programmeringsspråket JavaScript.
+1. Hur fungerar en forloop i JavaScript?
+
+1. Hur fungerar en whileloop i JavaScript?
+
+1. Hur fungerar funktioner i JavaScript?
+
+Tänk på att vi namnger inte funktioner med svenska namn, framförallt inte ÅÄÖ.
 
 </details>
 
 
 
 ## Övningar & Uppgifter
-
-_(8-12 studietimmar)_
 
 Övningar är träning inför uppgifterna, det är ofta klokt att jobba igenom övningarna då de förbereder dig inför uppgifterna. Uppgifter skall utföras och redovisas.
 
@@ -120,13 +130,9 @@ _(8-12 studietimmar)_
 
 Jobba igenom övningarna, de förbereder dig inför uppgifterna.
 
-:::note
-Här löser vi mobil responsivitet.
-:::
+1. Jobba igenom övningen "[Bygg grunden för en One-page webbplats](/website/laromaterial/ovning/bygg-en-one-page-webbplats)".
 
-1. Jobba igenom övningen "Bygg en responsiv webbplats med HTML, CSS och JavaScript".
-
-1. Gå igenom artikeln om [de vanligaste konstruktionerna del 2](./laromaterial/ovning/kom-igang-med-javascript/common-structures-2) i JavaScript.
+1. Gå igenom artikeln om [de vanligaste konstruktionerna del 2](/website/laromaterial/ovning/kom-igang-med-javascript/common-structures-2) i JavaScript.
 
 
 
@@ -134,20 +140,24 @@ Här löser vi mobil responsivitet.
 
 Följande uppgifter skall utföras och resultatet skall redovisas.
 
-1. Utför laborationen "Lab 3: XXX".
+1. Utför laborationen "[Lab 3: JavaScript med mer kontrollstrukturer](/website/laromaterial/lab/lab_02/readme/)".
 
-1. Gör uppgiften "Bygg en responsiv webbplats".
+1. Gör uppgiften "[Bygg en One-page webbplats](/website/laromaterial/uppgift/kmom03-one-page-website/)".
 
 
 
 ## Resultat & Redovisning
 
-_(1-2 studietimmar)_
+Läs [instruktionen om hur du skall redovisa](/website/laromaterial/instruktion/resultat-och-redovisning).
 
-Läs [instruktionen om hur du skall redovisa]().
+Se till att följande frågor besvaras i din redovisningstext i din rapportsida.
 
-Se till att följande frågor besvaras i din redovisningstext.
+* Berätta om temat för din One-page webbplats, vilket är det och vad handlar det om samt hur du tänkte när du valde färgpaletten.
+
+* Hur hittade du resurser likt bilder, text och inspiration till din webbplats?
+
+* Fanns det några hinder eller utmaningar när du byggde din webbplats?
+
+* Har du några råd till den som är nybörjare på CSS, vad skall man börja med?
 
 * Vilken är din TIL för detta kmom?
-
-*/}
