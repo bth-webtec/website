@@ -84,7 +84,7 @@ Utför följande krav.
 
 1. Det skall finnas minst en sektion med en bakgrundsbild.
 
-1. Minst en sektion skall ha innehåll med vertikal skrollbar.
+1. Minst en sektion skall ha innehåll med horisontell skrollbar.
 
 1. Minst en sektion skall ha innehåll som wrappas.
 
