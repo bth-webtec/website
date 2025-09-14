@@ -60,6 +60,8 @@ Utför följande krav.
 
 1. I kmom02 byggde du vidare på den webbplatsen, alla krav från den uppgiften skall vara uppfyllda i din webbplats.
 
+1. I din webbplats, lägg till en länk "Onepage" i navbaren, som leder till den webbplatsen du skall bygga nedan.
+
 
 
 ### Krav One-page webbplats
@@ -72,7 +74,9 @@ Utför följande krav.
 
 1. Din webbplats skall vara responsiv och stacka innehåll när bredden blir för smal och det skall finnas en hamburger-meny som aktiveras när sidan blir för smal.
 
-1. Din webbplats skall ha en header med logo, sidans titel och responsiv navbar.
+1. Din webbplats skall ha en header med logo, sidans titel.
+
+1. Din sida skall ha en vanlig navbar och en responsiv navbar (hamburgermeny) som länkar till delar av sidan.
 
 1. Din sida skall ha en footer med tre kolumner med relevant innehåll.
 
