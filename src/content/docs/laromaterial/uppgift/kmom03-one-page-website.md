@@ -84,6 +84,8 @@ Utför följande krav.
 
 1. Minst en sektion skall ha innehåll som wrappas.
 
+1. Din webbplats är byggd med HTML och CSS. JavaScript används till navbaren. Du använder inga ramverk eller extern kod.
+
 
 
 ### Krav inlämning
