@@ -15,14 +15,14 @@
  * @returns {number} The resulting sum.
  */
 export function sumLoop (stop) {
-    // TODO: Write your code here.
-    let sum = 0
+  // TODO: Write your code here.
+  let sum = 0
 
-    for (let i = 0; i < stop; i++) {
-        sum += i
-    }
+  for (let i = 0; i < stop; i++) {
+    sum += i
+  }
 
-    return sum
+  return sum
 }
 
 
@@ -39,7 +39,7 @@ export function sumLoop2 (start, stop) {
   let sum = 0
 
   for (let i = start; i < stop; i++) {
-      sum += i
+    sum += i
   }
 
   return sum
