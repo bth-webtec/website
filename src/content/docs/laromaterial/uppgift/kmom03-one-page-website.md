@@ -66,7 +66,7 @@ Utför följande krav.
 
 ### Krav One-page webbplats
 
-1. Skapa en ny webbsida `public/onepage.html` med tillhörande stylesheet `public/css/onepage.css` och en JavaScript-fil `public/js/onepage.css`. 
+1. Skapa en ny webbsida `public/onepage.html` med tillhörande stylesheet `public/css/onepage.css` och en JavaScript-fil `public/js/onepage.js`. 
 
 1. Välj ett tema för din webbplats. Det kan vara på riktigt eller påhittat. När du skapar innehåll i form av text och bilder i webbplatsen så skall det vara anpassat till temat.
 
