@@ -28,6 +28,14 @@ class Statistic {
 
 export class dbw {
   /**
+   * Color output
+   */
+  static RESET = "\x1b[0m";
+  static GREEN = "\x1b[32m";
+  static RED = "\x1b[31m";
+  static YELLOW = "\x1b[33m";
+
+  /**
    * Define the levels to PASS, PASS W HONOUR, PASS TOTAL.
    */
   static PASS = 15
@@ -146,24 +154,23 @@ export class dbw {
 
     const pointStr = pointArray
       .map((pass, idx) => {
-        if (pass) return " ⦿ "
+        if (pass) return this.GREEN + " ⦿ " + this.RESET
         if (idx + 1 === this.PASS) return " 😁 "
         if (idx + 1 === this.PASS_W_HONOUR) return " 😍 "
         if (idx + 1 === this.PASS_TOTAL) return " 🙌 "
-        return " ⦾ "
+        return this.RED + " ⦾ " + this.RESET
       })
       .join("")
 
     const summary = `
 --------------------------------------------------------------------
-| Total: ${total}, Passed ✅: ${passed}, Failed ❌: ${failed}
-| Points needed to PASS=${this.PASS}, PASS WITH HONOUR=${this.PASS_W_HONOUR}, TOTAL=${this.PASS_TOTAL}
+| Points: ${result}/${this.PASS_TOTAL} (PASS:${this.PASS} HONOUR:${this.PASS_W_HONOUR}) Tests: ${total} (✅ ${passed} ❌ ${failed})
 | ${pointStr}
-| 
-| You have ${result} points. ${this.feedback(result)}
+| ${this.feedback(result)}
 --------------------------------------------------------------------
 `
 
     console.log(summary)
+    return result
   }
 }

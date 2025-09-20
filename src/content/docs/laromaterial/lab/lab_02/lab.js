@@ -62,12 +62,4 @@ dbw.assert(lab.calculator, [10, 5, "/"], 2)
 dbw.assert(lab.calculator, [67, 4, "%"], 3)
 dbw.assert(lab.calculator, [10, 5, "/", true], 0.5)
 
-
-
-
-
-
-
-
-
-dbw.done()
+process.exit(dbw.done())

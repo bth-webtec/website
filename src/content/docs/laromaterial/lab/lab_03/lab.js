@@ -40,25 +40,4 @@ dbw.assert(lab.reverseString, ["42 is life!"], "!efil si 24")
 dbw.assert(lab.fibonacci, [10], "0, 1, 1, 2, 3, 5, 8, 13, 21, 34", 5)
 dbw.assert(lab.fibonacci, [13], "0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-dbw.done()
+process.exit(dbw.done())

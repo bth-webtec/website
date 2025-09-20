@@ -44,4 +44,4 @@ dbw.assert(lab.firstLast, [['melon', 'banana', 'apple', 'orange', 'lemon']], "me
 dbw.assert(lab.findindex, [['melon', 'banana', 'apple', 'orange', 'lemon'], 'apple'], 2, 3)
 dbw.assert(lab.findindex, [['melon', 'banana', 'apple', 'orange', 'lemon'], 'cactus'], -1)
 
-dbw.done()
+process.exit(dbw.done())

@@ -50,4 +50,4 @@ dbw.assert(lab.substring, ["Polarbear"], "ear", 2)
 dbw.assert(lab.wordIncludes, ["Polarbear"], true, 2)
 dbw.assert(lab.wordIncludes, ["Lemon"], false)
 
-dbw.done()
+process.exit(dbw.done())
