@@ -1,6 +1,8 @@
 ---
 title: "Bygg webbsidor med HTML, CSS och JavaScript (kmom01)" 
 description: Uppgift att bygga en webbplats i kmom01.
+revision:
+    "2025-09-18": "(A) Lade till filnamnet css/style.css."
 sidebar:
     order: 0010
 ---
@@ -47,7 +49,7 @@ Utför följande krav.
     
     1. Skriv en kort beskrivning av den kurs du går. Lägg till en länk till kursens kursrepo på GitHub och infoga en bild som du anser är representativ för kursen.
 
-1. Du kan behålla den style som finns i övningen, men du kan också justera den till att bli mer "din egen style" för din variant av kursens webbplats. Vi kommer jobba mer med stylen under de kommande kursmomenten.
+1. Du kan behålla den style som finns i övningen och stylen skall utgå från filen `css/style.css` och där importerar du övriga css-moduler likt övningen. Du ska justera stilen till att bli mer "din egen style" för din variant av kursens webbplats. Vi kommer jobba mer med stylen under de kommande kursmomenten.
 
 1. Dina webbsidor skall validera i W3C HTML validator.
 
