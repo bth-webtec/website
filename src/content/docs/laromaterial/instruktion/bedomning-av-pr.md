@@ -19,7 +19,7 @@ Om du missar en deadline så kan du inte räkna med att det blir rättat. Men de
 
 ## Automatiserade tester
 
-I samband med att din inlämning bedöms så körs ett antal automatiserade tester som kontrollerar att din inlämning uppfyller allr krav i de kmomsom inlämningen omfattar.
+I samband med att din inlämning bedöms så körs ett antal automatiserade tester som kontrollerar att din inlämning uppfyller alla krav i de kmom som inlämningen omfattar.
 
 Du kan själv installera verktyget som kör dessa tester så att du kan köra dem själv, innan läraren gör det. Läs mer om hur du installerar och använder verktyget i "[Automatiserade tester](/website/laromaterial/instruktion/automatiserade-tester/)".
 
