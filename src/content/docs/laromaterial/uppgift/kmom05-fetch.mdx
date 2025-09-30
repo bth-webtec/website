@@ -65,7 +65,9 @@ När du är klar bör du ha följande filer, tillsammans med dina tidigare:
 
 #### 1. Hämta datan
 
-1. Användaren ska via ett `select` element och en eventlyssnare kunna hämta data från alla filer. När man väljer ett årtal ska funktionen `fetchData()` triggas.
+Ett tips är att börja med en tom tabell och ett "select element".
+
+1. Användaren ska via ett `select` element och en eventlyssnare kunna hämta data från alla filer. När man väljer ett årtal ska funktionen `fetchData()` triggas och du ska läsa in datan från alla tre länderna och det valda året.
 2. Filerna ska hämtas med fetch API.
 3. Använd async/await för att invänta datan.
 4. Man ska bara kunna välja år mellan `1900` och `2019`.
@@ -74,6 +76,8 @@ När du är klar bör du ha följande filer, tillsammans med dina tidigare:
 
 1. Datan ska presenteras i en tabell med minst tre kolumner förutom landets namn.
 2. Välj ut minst ett värde som ska jämföras och "vinnarens" cell ska markeras, tex grön bakgrundsfärg.
+3. Alla tre länderna med respektive data ska visas i tabellen.
+4. Väljer man ett nytt årtal rensas tabellen och den nya datan läses in och presenteras.
 
 ### Validering
 
