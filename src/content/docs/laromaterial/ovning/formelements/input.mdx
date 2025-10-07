@@ -188,6 +188,32 @@ button.addEventListener("click", getInputData)
 ```
 
 
+### form elementet
+
+En del funktionalitet behöver som sagt finnas i ett formularelement och knappen behöver då vara av typen `submit`. Då får man till exempel en notis om man väljer en siffra som är större än det valda `max=<number>` och så vidare. Vill man använda ett formulärelement och submit-knapp behöver man stoppa formulärets "defaultbeteende" vilket är att skickas någonstans:
+
+```html title="form"
+<form>
+  <h1>Input element</h1>
+  <label for="mytext">Skriv något: </label>
+  <input id="mytext" type="text">
+
+  <label for="mynumber">Ange en siffra: </label>
+  <input id="mynumber" type="number" max="3">
+
+  <input type="submit" id="start" value="Starta">
+</form>
+```
+
+I JavaScripten:
+
+```javascript title="preventdefault"
+button.addEventListener("click", function(event) {
+  event.preventDefault() // Förhindra "defaultbeteende"
+  getInputData()
+})
+```
+
 ### Avslutningsvis
 
 Det finns en hel del input element med olika betydelse och funktionalitet. Ge dg gärna ut och testa like olika och kika på vilka attribut de tillhandahåller.
