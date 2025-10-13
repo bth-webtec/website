@@ -5,6 +5,8 @@ description: Detta kursmoment examinerar och avslutar kursen.
 
 import Figure from '@components/CustomFigure.astro';
 import YouTube from '@components/YouTube.astro';
+import { FileTree } from '@astrojs/starlight/components';
+
 
 :::danger
 Detta kursmoment är under framtagande och ännu inte släppt.
@@ -49,21 +51,72 @@ Det finns optionella delar som du kan välja att göra för att höja betyget.
 
 ## Projektspecifikation
 
-Det är dags att marknadsföra dig själv och dina kunskaper. Spelet Duckhunt blev en succé världen över och markanden skriker efter en uppföljare. Du funderar på om det ska bli "Duckhunt 2" eller ett helt nytt tema. 
+Det är dags att marknadsföra dig själv och dina kunskaper. Spelet Duckhunt blev en succé världen över och markanden skriker efter en uppföljare. Du funderar på om det ska bli "Duckhunt 2" eller ett helt nytt tema. Det du vet är att det behöver vara samma funktionalitet. Dina testare har meddelat att det inte ska vara samma bakgrundsbilder eller samma anka som tidigare. Här ska du då antingen hitta eller skapa andra bilder.
+
+
+
+#### Generell struktur
+
+Du jobbar i mappen `public/`.
+
+1. Skapa filen `public/project.html` och lägg till menyvalet i navbaren likt tidigare.
+
+2. Skapa filen `public/js/project.js` och läs in den i `project.html`. Det är "startfilen" för din JavaScript.
+
+3. Skapa filen `public/css/project.css` som sköter stylen för uppgiften.
+
+När du är klar bör du ha följande filer, tillsammans med dina tidigare:
+
+<FileTree>
+
+- public
+  - js
+    - **project.js**
+  - css
+    - **project.css**
+  - **project.html**
+
+</FileTree>
+
+
 
 ### Krav 1: Landningssida för spelet, onepage
+
+Du ska lansera spelet och skapa en presentationssida som inkluderar möjligheten att testa det. I den säljande texten ska du även berätta om de olika kraven som är implementerade och vad man kan göra i spelet. 
+
 
 
 ### Krav 2: Spelet Duckhunt, version 2
 
+Du ska vidareutveckla ditt spel från kursmoment 06. Det behöver fixas till lite så några nya krav är att:
+
+1. Konfigurationen som styr svårighetsgraden ska flyttas till egna filer (easy.json, normal.json och hard.json). Konfigurationen som ska läsas in med `fetch` gäller tex hastigheten och storleken på föremålet.
+
+1. Från startläget ska man kunna välja vilken svårighetsgrad man vill spela. Rätt JSON-fil ska då läsas in.
+
+Glöm inte att lägga till funktionaliteten i din säljtext.
+
+
 
 ### Krav 3: Highscorelista i tabell
+
+Efter varje runda man spelat spelet ska poängen läggas till i en tabell tillsammans med svårighetsgraden. Tabellen ska synas på sidan och nollställas när sidan laddas om.
+
+Glöm inte att lägga till funktionaliteten i din säljtext.
+
 
 
 ### Krav 4 (optionellt): CSS animationer
 
+1. När man klickar på objektet försvinner det med en animation. Kanske exploderar/imploderar det?
+
+1. Objektet ska röra sig på skärmen och inte växelvis försvinna/dyka upp. Det ska förflytta sig i sidled, uppifrån och ned eller hur som helst. 
+
+Glöm inte att lägga till funktionaliteten i din säljtext.
+
 
 ### Krav 5 (optionellt): XXX
+
 
 
 ### Krav 6 (optionellt): Duckhunt spelbart på mobilen
