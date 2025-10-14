@@ -1,19 +1,11 @@
 ---
-title: "Kmom10: Projekt och examination ⚠️" 
+title: "Kmom10: Projekt och examination" 
 description: Detta kursmoment examinerar och avslutar kursen.
 ---
 
 import Figure from '@components/CustomFigure.astro';
 import YouTube from '@components/YouTube.astro';
 import { FileTree } from '@astrojs/starlight/components';
-
-
-:::danger
-Detta kursmoment är under framtagande och ännu inte släppt.
-
-Projektet släpps tisdag i vecka 07.
-:::
-
 
 Detta kursmoment avslutar och examinerar kursen.
 
@@ -51,11 +43,11 @@ Det finns optionella delar som du kan välja att göra för att öka dina chanse
 
 ## Projektspecifikation
 
-Det är dags att marknadsföra dig själv och dina kunskaper. Spelet Duckhunt blev en succé världen över och markanden skriker efter en uppföljare. Du funderar på om det ska bli "Duckhunt 2" eller ett helt nytt tema.
+Det är dags att marknadsföra dig själv och dina kunskaper. Spelet Duckhunt blev en succé världen över och marknaden skriker efter en uppföljare. Du funderar på om det ska bli "Duckhunt 2" eller ett helt nytt tema.
 
-{/* Formulera om nedan */}
+Du skall alltså utveckla Duckhunt 2, eller ett liknande spel där du själv kan bestämma temat för det spelet.
 
-Det du vet är att det behöver vara samma funktionalitet. Dina testare har meddelat att det inte ska vara samma bakgrundsbilder eller samma anka som tidigare. Här ska du då antingen hitta eller skapa andra bilder.
+Du skall göra en onepage som marknadsför spelet och som innehåller information om spelet.
 
 
 
@@ -84,15 +76,22 @@ När du är klar bör du ha följande filer, tillsammans med dina tidigare:
 
 </FileTree>
 
-Spelet ska vara i en html-sida. Spela spelet direkt i onepage är överkurs.
+
+När man går till `project.html` så kommer man till din onepage som visar upp och makrnadsför ditt spel.
+
+Själva spelet kan du göra spelbart antingen direkt i din onepage eller i en separat fil. Om du gör spelet spelbart direkt i din onepage så skall spelet täcka hela webbsidans utrymme.
+
+
 
 ### Krav 1: Landningssida för spelet, onepage
 
-Du ska lansera spelet och skapa en presentations- och marknadsföringssida som inkluderar möjligheten att testa det. Detta skapar du i form av en onepage för spelet.
+Du ska lansera spelet och skapa en presentations- och marknadsföringssida som inkluderar möjligheten att testa spelet. Detta skapar du i form av en onepage.
 
-I den säljande texten ska du även berätta om de olika kraven som är implementerade och vad man kan göra i spelet. 
+I den säljande texten ska du berätta om de olika kraven som är implementerade och vad man kan göra i spelet. 
 
-Visualisera spelet med skärmdumpar och/eller bilder. Du kan även skapa en kort video som visar spelet i aktion (video får betrakts som överkurs, men ett trevligt inslag).
+Visualisera spelet med skärmdumpar och/eller bilder. Du kan även skapa en kort video som visar spelet i aktion (video får betrakts som ren överkurs, men ett trevligt inslag).
+
+Gör vad du kan för att sälja in spelet och skapa intresse för det. Tänk:
 
 > "Make it look good."
 
@@ -102,9 +101,13 @@ Visualisera spelet med skärmdumpar och/eller bilder. Du kan även skapa en kort
 
 1. Din onepage skall vara vara responsiv.
 
-1. Din onepage skall innehålla en header med en navbar. I inledningen av din onepage skall det finnas bilder som refererar till spelet. Det skall finnas en footer som är indelad i tre delar. Informationen som presenteras skall vara relevant för projektet och spelet.
+1. Din onepage skall innehålla en header med en navbar. I inledningen av din onepage skall det finnas bilder som refererar till spelet. 
+
+1. Det skall finnas en footer som är indelad i tre delar. Informationen som presenteras skall vara relevant för projektet och spelet.
 
 {/*
+Flyttas till redovisningssidan istället.
+
 1. I sista sektionen på sidan skall du skriva en kort redogörelse för varje krav du löst (krav 1-6) och berätta hur du tänkte och gick tillväga när du löste kravet. Betygsättningen startar i denna text så se till att du skriver väl. Gör ett stycke där du summerar dina erfarenheter från projektet och där du kort berättar hur arbetet flöt på. Avsluta med att lägga till din TIL; för projektet.
 */}
 
@@ -112,21 +115,19 @@ Visualisera spelet med skärmdumpar och/eller bilder. Du kan även skapa en kort
 
 ### Krav 2: Spelet Duckhunt, version 2
 
-Du ska vidareutveckla ditt spel från kursmoment 06. Din inlämning skall uppfylla kraven från kmom06 samt dessa krav:
+Du ska vidareutveckla ditt spel från kursmoment 06, alternativt gör du en egen liknande spelídé där liknande krav kan uppfyllas.
+
+Din inlämning skall uppfylla kraven från kmom06 samt nedanstående krav.
 
 1. Konfigurationen som styr spelets inställningar ska flyttas till egna filer (`easy.json`, `normal.json` och `hard.json`). Konfigurationen som ska läsas in med `fetch`. Inspelningar kan gälla till exempel svårighetsgraden på spelet, hastigheten och storleken på föremålet, tid som föremål visas, med mera.
 
 1. Innan man startar spelet skall man kunna välja vilken "svårighetsgrad" man vill spela på via ett formulär. Rätt JSON-fil ska då läsas in och användas i spelomgången.
 
-1. Du skall ha nya bakgrundsbilder och bya bilder på ankor. Här ska du då antingen hitta eller skapa andra bilder.
+1. Du skall ha nya bakgrundsbilder och nya bilder på ankor. Här ska du då antingen hitta eller skapa andra bilder.
 
 1. Gör en sektion i din onepage där du berättar som spelet och spelidén. Lägg till en bild för att visualisera hur spelet ser ut. Förklara för användaren hur spelet fungerar och styrs.
 
-1. I din onepage skall det finnas en rad/sektion som visar hur man kommer igång med spelet och spelar en spelomgång.
-
-Själva spelet placerar du i en separat fil. Du kan göra inställningar för spelet och därefter starta spelet i en ny webbsida.
-
- {/* Fundera en gång till på hur man startar spelet borde ligga i egen fil eller inte... */} 
+1. I din onepage skall det finnas en rad/sektion som visar hur man kommer igång med spelet och spelar en spelomgång. Spelet kan startas i din onepage eller i en separata fil.
 
 
 
@@ -134,9 +135,11 @@ Själva spelet placerar du i en separat fil. Du kan göra inställningar för sp
 
 Ditt spel skall innehålla poängberäkning och highscorelista.
 
-Visa poängens när man spelar en spelomgång.
-
 Efter varje runda man spelat spelet ska poängen tillsammans med svårighetsgraden sparas i en highscorelista. När man spelat en spelomgång så visas highscorelistan i en tabell. När sidan för spelet laddas om i webbläsaren så kan highscorelistan nollställas.
+
+1. Visa poängen när man spelar en spelomgång.
+
+1. En spelomgång har en tidsbegränsning, t.ex. 30 sekunder. Man ser att tiden räknas ner när man spelar spelet. När tiden når 0 är spelomgången över.
 
 Gör en sektion i din onepage där du beskriver denna "feature" och hur den fungerar. Lägg till en bild för att visualisera hur highscorelistan ser ut.
 
@@ -173,8 +176,6 @@ Gör ditt spel mer intressant och roligt med extra features. Välj minst tre av 
     1. Ett objekt som ger extra tid.
     1. Ett objekt som förstör alla andra objekt, om man klickar på det.
 
-1. Fler nivåer: Gör så att spelet har flera nivåer och efter varje spelomgång så ökar spelets nivå ett steg i svårighetsgrad.
-
 1. Valfri likvärdig feature.
 
 Gör en sektion i din onepage där du beskriver dessa extra features och hur de fungerar. Lägg till bilder för att visualisera.
@@ -183,9 +184,20 @@ Gör en sektion i din onepage där du beskriver dessa extra features och hur de 
 
 ### Krav 6 (optionellt): Duckhunt spelbart på mobil/läsplatta
 
+_Du måste ha utfört krav 4 och 5, för att kunna göra detta krav._
+
 Gör så att ditt spel går att spela på mobilen eller på en läsplatta.
 
 Gör en sektion i din onepage som beskriver hur du gjort för att spelet ska gå att spela på mobil/läsplatta. Lägg till bilder för att visualisera hur det ser ut på mobilen/läsplattan.
+
+**ALTERNATIVT**
+
+Gör så att spelet är indelat i olika nivåer med ökande svårighetsgrad. Du kan t.ex. börja med att göra en "easy" nivå, sedan en "normal" nivå och slutligen en "hard" nivå.
+
+För att klara en nivå måste man nå ett visst antal poäng innan tiden är slut. Klarar man det så hoppar man till nästa nivå. Annars är spelet över.
+
+Lägg till i highscorelistan vilken pong och nivå och svårighetsgrad som spelaren nådde.
+
 
 {/*
 
